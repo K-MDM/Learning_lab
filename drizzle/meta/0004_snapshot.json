@@ -1,0 +1,2017 @@
+{
+  "id": "848fc9aa-fa0e-49ef-b2fc-19b33d7b3582",
+  "prevId": "9f8dd28a-b983-418c-a7ff-68def805f26e",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "langlab.activation_challenges": {
+      "name": "activation_challenges",
+      "schema": "langlab",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "licence_id": {
+          "name": "licence_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "device_public_key": {
+          "name": "device_public_key",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "platform": {
+          "name": "platform",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "purpose": {
+          "name": "purpose",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "nonce": {
+          "name": "nonce",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "generation": {
+          "name": "generation",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "expires_at": {
+          "name": "expires_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "consumed_at": {
+          "name": "consumed_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {
+        "challenge_expiry": {
+          "name": "challenge_expiry",
+          "columns": [
+            {
+              "expression": "expires_at",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "activation_challenges_licence_id_licences_id_fk": {
+          "name": "activation_challenges_licence_id_licences_id_fk",
+          "tableFrom": "activation_challenges",
+          "tableTo": "licences",
+          "schemaTo": "langlab",
+          "columnsFrom": [
+            "licence_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "challenge_platform": {
+          "name": "challenge_platform",
+          "value": "\"langlab\".\"activation_challenges\".\"platform\" IN ('android','windows')"
+        },
+        "challenge_purpose": {
+          "name": "challenge_purpose",
+          "value": "\"langlab\".\"activation_challenges\".\"purpose\" IN ('activate','status')"
+        }
+      },
+      "isRLSEnabled": true
+    },
+    "langlab.activation_rate_limits": {
+      "name": "activation_rate_limits",
+      "schema": "langlab",
+      "columns": {
+        "scope": {
+          "name": "scope",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "window_start": {
+          "name": "window_start",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "requests": {
+          "name": "requests",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {
+        "activation_rate_window": {
+          "name": "activation_rate_window",
+          "columns": [
+            {
+              "expression": "window_start",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "activation_rate_positive": {
+          "name": "activation_rate_positive",
+          "value": "\"langlab\".\"activation_rate_limits\".\"requests\">0"
+        }
+      },
+      "isRLSEnabled": true
+    },
+    "langlab.admin_audit_events": {
+      "name": "admin_audit_events",
+      "schema": "langlab",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "actor_user_id": {
+          "name": "actor_user_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "action": {
+          "name": "action",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "entity_type": {
+          "name": "entity_type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "entity_id": {
+          "name": "entity_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "admin_audit_events_actor_user_id_users_id_fk": {
+          "name": "admin_audit_events_actor_user_id_users_id_fk",
+          "tableFrom": "admin_audit_events",
+          "tableTo": "users",
+          "schemaTo": "auth",
+          "columnsFrom": [
+            "actor_user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": true
+    },
+    "langlab.admin_memberships": {
+      "name": "admin_memberships",
+      "schema": "langlab",
+      "columns": {
+        "user_id": {
+          "name": "user_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "status": {
+          "name": "status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'active'"
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "admin_memberships_user_id_users_id_fk": {
+          "name": "admin_memberships_user_id_users_id_fk",
+          "tableFrom": "admin_memberships",
+          "tableTo": "users",
+          "schemaTo": "auth",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {
+        "own_membership": {
+          "name": "own_membership",
+          "as": "PERMISSIVE",
+          "for": "SELECT",
+          "to": [
+            "authenticated"
+          ],
+          "using": "\"langlab\".\"admin_memberships\".\"user_id\"=auth.uid()"
+        }
+      },
+      "checkConstraints": {
+        "admin_memberships_check_0": {
+          "name": "admin_memberships_check_0",
+          "value": "status IN ('active','disabled')"
+        }
+      },
+      "isRLSEnabled": true
+    },
+    "langlab.admin_roles": {
+      "name": "admin_roles",
+      "schema": "langlab",
+      "columns": {
+        "user_id": {
+          "name": "user_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "role": {
+          "name": "role",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "admin_roles_user_id_admin_memberships_user_id_fk": {
+          "name": "admin_roles_user_id_admin_memberships_user_id_fk",
+          "tableFrom": "admin_roles",
+          "tableTo": "admin_memberships",
+          "schemaTo": "langlab",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "user_id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "admin_roles_user_id_role_pk": {
+          "name": "admin_roles_user_id_role_pk",
+          "columns": [
+            "user_id",
+            "role"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "policies": {
+        "own_roles": {
+          "name": "own_roles",
+          "as": "PERMISSIVE",
+          "for": "SELECT",
+          "to": [
+            "authenticated"
+          ],
+          "using": "\"langlab\".\"admin_roles\".\"user_id\"=auth.uid()"
+        }
+      },
+      "checkConstraints": {
+        "admin_roles_check_0": {
+          "name": "admin_roles_check_0",
+          "value": "role IN ('owner','licence_manager','content_editor','publisher')"
+        }
+      },
+      "isRLSEnabled": true
+    },
+    "langlab.assets": {
+      "name": "assets",
+      "schema": "langlab",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "object_key": {
+          "name": "object_key",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "sha256": {
+          "name": "sha256",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "byte_size": {
+          "name": "byte_size",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "mime_type": {
+          "name": "mime_type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "assets_object_key_unique": {
+          "name": "assets_object_key_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "object_key"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "assets_check_0": {
+          "name": "assets_check_0",
+          "value": "sha256 ~ '^[a-f0-9]{64}$'"
+        },
+        "assets_check_1": {
+          "name": "assets_check_1",
+          "value": "byte_size>=0"
+        }
+      },
+      "isRLSEnabled": true
+    },
+    "langlab.collection_units": {
+      "name": "collection_units",
+      "schema": "langlab",
+      "columns": {
+        "collection_id": {
+          "name": "collection_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "unit_id": {
+          "name": "unit_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {
+        "collection_unit_reverse": {
+          "name": "collection_unit_reverse",
+          "columns": [
+            {
+              "expression": "unit_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "collection_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "collection_units_collection_id_content_collections_id_fk": {
+          "name": "collection_units_collection_id_content_collections_id_fk",
+          "tableFrom": "collection_units",
+          "tableTo": "content_collections",
+          "schemaTo": "langlab",
+          "columnsFrom": [
+            "collection_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "collection_units_unit_id_units_id_fk": {
+          "name": "collection_units_unit_id_units_id_fk",
+          "tableFrom": "collection_units",
+          "tableTo": "units",
+          "schemaTo": "langlab",
+          "columnsFrom": [
+            "unit_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "collection_units_collection_id_unit_id_pk": {
+          "name": "collection_units_collection_id_unit_id_pk",
+          "columns": [
+            "collection_id",
+            "unit_id"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": true
+    },
+    "langlab.content_challenges": {
+      "name": "content_challenges",
+      "schema": "langlab",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "licence_id": {
+          "name": "licence_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "activation_id": {
+          "name": "activation_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "device_public_key": {
+          "name": "device_public_key",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "generation": {
+          "name": "generation",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "path": {
+          "name": "path",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "nonce": {
+          "name": "nonce",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "expires_at": {
+          "name": "expires_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "consumed_at": {
+          "name": "consumed_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {
+        "content_challenge_expiry": {
+          "name": "content_challenge_expiry",
+          "columns": [
+            {
+              "expression": "expires_at",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "content_challenges_licence_id_licences_id_fk": {
+          "name": "content_challenges_licence_id_licences_id_fk",
+          "tableFrom": "content_challenges",
+          "tableTo": "licences",
+          "schemaTo": "langlab",
+          "columnsFrom": [
+            "licence_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "content_challenges_activation_id_device_activations_id_fk": {
+          "name": "content_challenges_activation_id_device_activations_id_fk",
+          "tableFrom": "content_challenges",
+          "tableTo": "device_activations",
+          "schemaTo": "langlab",
+          "columnsFrom": [
+            "activation_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": true
+    },
+    "langlab.content_collections": {
+      "name": "content_collections",
+      "schema": "langlab",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "code": {
+          "name": "code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "title": {
+          "name": "title",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "name": "status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'draft'"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "content_collections_code_unique": {
+          "name": "content_collections_code_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "code"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "content_collections_check_0": {
+          "name": "content_collections_check_0",
+          "value": "status IN ('draft','active','withdrawn')"
+        }
+      },
+      "isRLSEnabled": true
+    },
+    "langlab.courses": {
+      "name": "courses",
+      "schema": "langlab",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "language_code": {
+          "name": "language_code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "level_id": {
+          "name": "level_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "title": {
+          "name": "title",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {
+        "course_catalogue": {
+          "name": "course_catalogue",
+          "columns": [
+            {
+              "expression": "language_code",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "level_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "courses_language_code_languages_code_fk": {
+          "name": "courses_language_code_languages_code_fk",
+          "tableFrom": "courses",
+          "tableTo": "languages",
+          "schemaTo": "langlab",
+          "columnsFrom": [
+            "language_code"
+          ],
+          "columnsTo": [
+            "code"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "courses_level_id_learning_levels_id_fk": {
+          "name": "courses_level_id_learning_levels_id_fk",
+          "tableFrom": "courses",
+          "tableTo": "learning_levels",
+          "schemaTo": "langlab",
+          "columnsFrom": [
+            "level_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": true
+    },
+    "langlab.curriculum_outcomes": {
+      "name": "curriculum_outcomes",
+      "schema": "langlab",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "authority": {
+          "name": "authority",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "reference": {
+          "name": "reference",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "description": {
+          "name": "description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "curriculum_outcomes_unique_0": {
+          "name": "curriculum_outcomes_unique_0",
+          "nullsNotDistinct": false,
+          "columns": [
+            "authority",
+            "reference"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": true
+    },
+    "langlab.device_activations": {
+      "name": "device_activations",
+      "schema": "langlab",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "licence_id": {
+          "name": "licence_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "device_public_key": {
+          "name": "device_public_key",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "platform": {
+          "name": "platform",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "generation": {
+          "name": "generation",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "activated_at": {
+          "name": "activated_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "ended_at": {
+          "name": "ended_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {
+        "one_current_device_per_licence": {
+          "name": "one_current_device_per_licence",
+          "columns": [
+            {
+              "expression": "licence_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": true,
+          "where": "ended_at IS NULL",
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "device_activations_licence_id_licences_id_fk": {
+          "name": "device_activations_licence_id_licences_id_fk",
+          "tableFrom": "device_activations",
+          "tableTo": "licences",
+          "schemaTo": "langlab",
+          "columnsFrom": [
+            "licence_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "device_activations_unique_2": {
+          "name": "device_activations_unique_2",
+          "nullsNotDistinct": false,
+          "columns": [
+            "licence_id",
+            "generation"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "device_activations_check_0": {
+          "name": "device_activations_check_0",
+          "value": "platform IN ('android','windows')"
+        },
+        "device_activations_check_1": {
+          "name": "device_activations_check_1",
+          "value": "generation>0"
+        },
+        "device_activations_check_3": {
+          "name": "device_activations_check_3",
+          "value": "ended_at IS NULL OR ended_at>=activated_at"
+        }
+      },
+      "isRLSEnabled": true
+    },
+    "langlab.languages": {
+      "name": "languages",
+      "schema": "langlab",
+      "columns": {
+        "code": {
+          "name": "code",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "native_name": {
+          "name": "native_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": true
+    },
+    "langlab.learning_levels": {
+      "name": "learning_levels",
+      "schema": "langlab",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "code": {
+          "name": "code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "stage": {
+          "name": "stage",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "grade": {
+          "name": "grade",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "proficiency": {
+          "name": "proficiency",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "learning_levels_code_unique": {
+          "name": "learning_levels_code_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "code"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "learning_levels_check_0": {
+          "name": "learning_levels_check_0",
+          "value": "grade BETWEEN 1 AND 12"
+        }
+      },
+      "isRLSEnabled": true
+    },
+    "langlab.lesson_outcome_mappings": {
+      "name": "lesson_outcome_mappings",
+      "schema": "langlab",
+      "columns": {
+        "lesson_version_id": {
+          "name": "lesson_version_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "outcome_id": {
+          "name": "outcome_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "lesson_outcome_mappings_lesson_version_id_lesson_versions_id_fk": {
+          "name": "lesson_outcome_mappings_lesson_version_id_lesson_versions_id_fk",
+          "tableFrom": "lesson_outcome_mappings",
+          "tableTo": "lesson_versions",
+          "schemaTo": "langlab",
+          "columnsFrom": [
+            "lesson_version_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "lesson_outcome_mappings_outcome_id_curriculum_outcomes_id_fk": {
+          "name": "lesson_outcome_mappings_outcome_id_curriculum_outcomes_id_fk",
+          "tableFrom": "lesson_outcome_mappings",
+          "tableTo": "curriculum_outcomes",
+          "schemaTo": "langlab",
+          "columnsFrom": [
+            "outcome_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "lesson_outcome_mappings_lesson_version_id_outcome_id_pk": {
+          "name": "lesson_outcome_mappings_lesson_version_id_outcome_id_pk",
+          "columns": [
+            "lesson_version_id",
+            "outcome_id"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": true
+    },
+    "langlab.lesson_versions": {
+      "name": "lesson_versions",
+      "schema": "langlab",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "lesson_id": {
+          "name": "lesson_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "version": {
+          "name": "version",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "payload": {
+          "name": "payload",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "review_status": {
+          "name": "review_status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'draft'"
+        },
+        "published_at": {
+          "name": "published_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "lesson_versions_lesson_id_lessons_id_fk": {
+          "name": "lesson_versions_lesson_id_lessons_id_fk",
+          "tableFrom": "lesson_versions",
+          "tableTo": "lessons",
+          "schemaTo": "langlab",
+          "columnsFrom": [
+            "lesson_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "lesson_versions_unique_3": {
+          "name": "lesson_versions_unique_3",
+          "nullsNotDistinct": false,
+          "columns": [
+            "lesson_id",
+            "version"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "lesson_versions_check_0": {
+          "name": "lesson_versions_check_0",
+          "value": "version>0"
+        },
+        "lesson_versions_check_1": {
+          "name": "lesson_versions_check_1",
+          "value": "jsonb_typeof(payload)='object'"
+        },
+        "lesson_versions_check_2": {
+          "name": "lesson_versions_check_2",
+          "value": "review_status IN ('draft','reviewed')"
+        },
+        "lesson_versions_check_4": {
+          "name": "lesson_versions_check_4",
+          "value": "published_at IS NULL OR review_status='reviewed'"
+        }
+      },
+      "isRLSEnabled": true
+    },
+    "langlab.lessons": {
+      "name": "lessons",
+      "schema": "langlab",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "unit_id": {
+          "name": "unit_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "skill_code": {
+          "name": "skill_code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "position": {
+          "name": "position",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "lessons_unit_id_units_id_fk": {
+          "name": "lessons_unit_id_units_id_fk",
+          "tableFrom": "lessons",
+          "tableTo": "units",
+          "schemaTo": "langlab",
+          "columnsFrom": [
+            "unit_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "lessons_skill_code_skills_code_fk": {
+          "name": "lessons_skill_code_skills_code_fk",
+          "tableFrom": "lessons",
+          "tableTo": "skills",
+          "schemaTo": "langlab",
+          "columnsFrom": [
+            "skill_code"
+          ],
+          "columnsTo": [
+            "code"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "lessons_unique_1": {
+          "name": "lessons_unique_1",
+          "nullsNotDistinct": false,
+          "columns": [
+            "unit_id",
+            "position"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "lessons_check_0": {
+          "name": "lessons_check_0",
+          "value": "position>=0"
+        }
+      },
+      "isRLSEnabled": true
+    },
+    "langlab.licence_entitlements": {
+      "name": "licence_entitlements",
+      "schema": "langlab",
+      "columns": {
+        "licence_id": {
+          "name": "licence_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "collection_id": {
+          "name": "collection_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "licence_entitlements_licence_id_licences_id_fk": {
+          "name": "licence_entitlements_licence_id_licences_id_fk",
+          "tableFrom": "licence_entitlements",
+          "tableTo": "licences",
+          "schemaTo": "langlab",
+          "columnsFrom": [
+            "licence_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "licence_entitlements_collection_id_content_collections_id_fk": {
+          "name": "licence_entitlements_collection_id_content_collections_id_fk",
+          "tableFrom": "licence_entitlements",
+          "tableTo": "content_collections",
+          "schemaTo": "langlab",
+          "columnsFrom": [
+            "collection_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "licence_entitlements_licence_id_collection_id_pk": {
+          "name": "licence_entitlements_licence_id_collection_id_pk",
+          "columns": [
+            "licence_id",
+            "collection_id"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": true
+    },
+    "langlab.licence_events": {
+      "name": "licence_events",
+      "schema": "langlab",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "licence_id": {
+          "name": "licence_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "activation_id": {
+          "name": "activation_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "actor_user_id": {
+          "name": "actor_user_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "action": {
+          "name": "action",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "metadata": {
+          "name": "metadata",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'{}'::jsonb"
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "licence_event_history": {
+          "name": "licence_event_history",
+          "columns": [
+            {
+              "expression": "licence_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "created_at",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "licence_events_licence_id_licences_id_fk": {
+          "name": "licence_events_licence_id_licences_id_fk",
+          "tableFrom": "licence_events",
+          "tableTo": "licences",
+          "schemaTo": "langlab",
+          "columnsFrom": [
+            "licence_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "licence_events_activation_id_device_activations_id_fk": {
+          "name": "licence_events_activation_id_device_activations_id_fk",
+          "tableFrom": "licence_events",
+          "tableTo": "device_activations",
+          "schemaTo": "langlab",
+          "columnsFrom": [
+            "activation_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "licence_events_actor_user_id_users_id_fk": {
+          "name": "licence_events_actor_user_id_users_id_fk",
+          "tableFrom": "licence_events",
+          "tableTo": "users",
+          "schemaTo": "auth",
+          "columnsFrom": [
+            "actor_user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "licence_events_check_0": {
+          "name": "licence_events_check_0",
+          "value": "jsonb_typeof(metadata)='object'"
+        }
+      },
+      "isRLSEnabled": true
+    },
+    "langlab.licence_issuance_requests": {
+      "name": "licence_issuance_requests",
+      "schema": "langlab",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "actor_user_id": {
+          "name": "actor_user_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "licence_issuance_requests_actor_user_id_users_id_fk": {
+          "name": "licence_issuance_requests_actor_user_id_users_id_fk",
+          "tableFrom": "licence_issuance_requests",
+          "tableTo": "users",
+          "schemaTo": "auth",
+          "columnsFrom": [
+            "actor_user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": true
+    },
+    "langlab.licences": {
+      "name": "licences",
+      "schema": "langlab",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "key_digest": {
+          "name": "key_digest",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "digest_key_version": {
+          "name": "digest_key_version",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 1
+        },
+        "display_suffix": {
+          "name": "display_suffix",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "name": "status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'pending'"
+        },
+        "duration_months": {
+          "name": "duration_months",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 12
+        },
+        "first_activated_at": {
+          "name": "first_activated_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "expires_at": {
+          "name": "expires_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "generation": {
+          "name": "generation",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "1"
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "licence_status_expiry": {
+          "name": "licence_status_expiry",
+          "columns": [
+            {
+              "expression": "status",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "expires_at",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "licences_key_digest_unique": {
+          "name": "licences_key_digest_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "key_digest"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "licences_check_0": {
+          "name": "licences_check_0",
+          "value": "key_digest ~ '^[a-f0-9]{64}$'"
+        },
+        "licences_check_1": {
+          "name": "licences_check_1",
+          "value": "digest_key_version>0"
+        },
+        "licences_check_2": {
+          "name": "licences_check_2",
+          "value": "status IN ('pending','active','expired','revoked')"
+        },
+        "licences_check_3": {
+          "name": "licences_check_3",
+          "value": "duration_months=12"
+        },
+        "licences_check_4": {
+          "name": "licences_check_4",
+          "value": "generation>0"
+        },
+        "licences_check_5": {
+          "name": "licences_check_5",
+          "value": "(first_activated_at IS NULL)=(expires_at IS NULL)"
+        },
+        "licences_check_6": {
+          "name": "licences_check_6",
+          "value": "expires_at IS NULL OR expires_at>first_activated_at"
+        },
+        "licences_check_7": {
+          "name": "licences_check_7",
+          "value": "status<>'active' OR first_activated_at IS NOT NULL"
+        }
+      },
+      "isRLSEnabled": true
+    },
+    "langlab.package_assets": {
+      "name": "package_assets",
+      "schema": "langlab",
+      "columns": {
+        "release_id": {
+          "name": "release_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "asset_id": {
+          "name": "asset_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "relative_path": {
+          "name": "relative_path",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {
+        "package_asset_reverse": {
+          "name": "package_asset_reverse",
+          "columns": [
+            {
+              "expression": "asset_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "package_assets_release_id_package_releases_id_fk": {
+          "name": "package_assets_release_id_package_releases_id_fk",
+          "tableFrom": "package_assets",
+          "tableTo": "package_releases",
+          "schemaTo": "langlab",
+          "columnsFrom": [
+            "release_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "package_assets_asset_id_assets_id_fk": {
+          "name": "package_assets_asset_id_assets_id_fk",
+          "tableFrom": "package_assets",
+          "tableTo": "assets",
+          "schemaTo": "langlab",
+          "columnsFrom": [
+            "asset_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "package_assets_release_id_relative_path_pk": {
+          "name": "package_assets_release_id_relative_path_pk",
+          "columns": [
+            "release_id",
+            "relative_path"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "package_assets_check_0": {
+          "name": "package_assets_check_0",
+          "value": "relative_path !~ '(^/|\\\\|:|(^|/)\\.\\.(/|$))'"
+        }
+      },
+      "isRLSEnabled": true
+    },
+    "langlab.package_lessons": {
+      "name": "package_lessons",
+      "schema": "langlab",
+      "columns": {
+        "release_id": {
+          "name": "release_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "lesson_version_id": {
+          "name": "lesson_version_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "position": {
+          "name": "position",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {
+        "package_lesson_reverse": {
+          "name": "package_lesson_reverse",
+          "columns": [
+            {
+              "expression": "lesson_version_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "package_lessons_release_id_package_releases_id_fk": {
+          "name": "package_lessons_release_id_package_releases_id_fk",
+          "tableFrom": "package_lessons",
+          "tableTo": "package_releases",
+          "schemaTo": "langlab",
+          "columnsFrom": [
+            "release_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "package_lessons_lesson_version_id_lesson_versions_id_fk": {
+          "name": "package_lessons_lesson_version_id_lesson_versions_id_fk",
+          "tableFrom": "package_lessons",
+          "tableTo": "lesson_versions",
+          "schemaTo": "langlab",
+          "columnsFrom": [
+            "lesson_version_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "package_lessons_release_id_lesson_version_id_pk": {
+          "name": "package_lessons_release_id_lesson_version_id_pk",
+          "columns": [
+            "release_id",
+            "lesson_version_id"
+          ]
+        }
+      },
+      "uniqueConstraints": {
+        "package_lessons_unique_1": {
+          "name": "package_lessons_unique_1",
+          "nullsNotDistinct": false,
+          "columns": [
+            "release_id",
+            "position"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "package_lessons_check_0": {
+          "name": "package_lessons_check_0",
+          "value": "position>=0"
+        }
+      },
+      "isRLSEnabled": true
+    },
+    "langlab.package_releases": {
+      "name": "package_releases",
+      "schema": "langlab",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "unit_id": {
+          "name": "unit_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "version": {
+          "name": "version",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "name": "status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'draft'"
+        },
+        "manifest": {
+          "name": "manifest",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "manifest_digest": {
+          "name": "manifest_digest",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "minimum_app_version": {
+          "name": "minimum_app_version",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "published_at": {
+          "name": "published_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "package_releases_unit_id_units_id_fk": {
+          "name": "package_releases_unit_id_units_id_fk",
+          "tableFrom": "package_releases",
+          "tableTo": "units",
+          "schemaTo": "langlab",
+          "columnsFrom": [
+            "unit_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "package_releases_unique_4": {
+          "name": "package_releases_unique_4",
+          "nullsNotDistinct": false,
+          "columns": [
+            "unit_id",
+            "version"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "package_releases_check_0": {
+          "name": "package_releases_check_0",
+          "value": "version ~ '^[0-9]+\\.[0-9]+\\.[0-9]+$'"
+        },
+        "package_releases_check_1": {
+          "name": "package_releases_check_1",
+          "value": "status IN ('draft','published','withdrawn')"
+        },
+        "package_releases_check_2": {
+          "name": "package_releases_check_2",
+          "value": "jsonb_typeof(manifest)='object'"
+        },
+        "package_releases_check_3": {
+          "name": "package_releases_check_3",
+          "value": "manifest_digest ~ '^[a-f0-9]{64}$'"
+        },
+        "package_releases_check_5": {
+          "name": "package_releases_check_5",
+          "value": "status='draft' OR published_at IS NOT NULL"
+        }
+      },
+      "isRLSEnabled": true
+    },
+    "langlab.skills": {
+      "name": "skills",
+      "schema": "langlab",
+      "columns": {
+        "code": {
+          "name": "code",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": true
+    },
+    "langlab.units": {
+      "name": "units",
+      "schema": "langlab",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "course_id": {
+          "name": "course_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "title": {
+          "name": "title",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "position": {
+          "name": "position",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "units_course_id_courses_id_fk": {
+          "name": "units_course_id_courses_id_fk",
+          "tableFrom": "units",
+          "tableTo": "courses",
+          "schemaTo": "langlab",
+          "columnsFrom": [
+            "course_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "units_unique_1": {
+          "name": "units_unique_1",
+          "nullsNotDistinct": false,
+          "columns": [
+            "course_id",
+            "position"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "units_check_0": {
+          "name": "units_check_0",
+          "value": "position>=0"
+        }
+      },
+      "isRLSEnabled": true
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
