@@ -7,6 +7,7 @@ import {database} from '../../../../db';
 import {createDraft,reviewOrPublish,previewContent,ContentError,type DraftInput} from '../../../../lib/content';
 import {privateStore} from '../../../../lib/content-storage';
 import {attachContentMedia} from '../../../../lib/content-media';
+import {isAllowedOrigin} from '../../../../lib/request-origin';
 export const runtime='nodejs';
 const headers={'Cache-Control':'no-store'};
 async function boundedBody(request:Request,maximum:number){
@@ -19,7 +20,7 @@ const demo:DraftInput={courseTitle:'English reading — demonstration',unitTitle
   language:'en',level:'grade-6',story:'Riya visits the library after school. She borrows a book about birds. At home, she reads about a small blue bird. The next day, she tells her friend what she learned.',
   question:"What is Riya's book about?",options:['Birds','Cars','Cooking'],correctIndex:0,demonstration:true};
 export async function POST(request:Request){
-  if(request.headers.get('origin')!==new URL(request.url).origin)return Response.json({error:'Invalid origin'},{status:403,headers});
+  if(!isAllowedOrigin(request))return Response.json({error:'Invalid origin'},{status:403,headers});
   try{
     const client=await staffClient(true),staff=client?await getStaff(client):null;
     if(!staff)return Response.json({error:'Sign in to continue.'},{status:401,headers});

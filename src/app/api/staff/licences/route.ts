@@ -1,10 +1,11 @@
 import {staffClient,getStaff} from '../../../../lib/staff-auth';
 import {database} from '../../../../db';
 import {issueLicences,changeLicence,LicenceError} from '../../../../lib/licences';
+import {isAllowedOrigin} from '../../../../lib/request-origin';
 export const runtime='nodejs';
 const headers={'Cache-Control':'no-store'};
 export async function POST(request:Request){
-  if(request.headers.get('origin')!==new URL(request.url).origin)return Response.json({error:'Invalid origin'},{status:403,headers});
+  if(!isAllowedOrigin(request))return Response.json({error:'Invalid origin'},{status:403,headers});
   if(!request.headers.get('content-type')?.startsWith('application/json'))return Response.json({error:'Expected JSON'},{status:415,headers});
   // Bounded body: no learner data or arbitrary payloads belong in this endpoint.
   const reader=request.body?.getReader();const chunks:Uint8Array[]=[];let size=0;
