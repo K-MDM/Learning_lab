@@ -5,8 +5,9 @@ import * as schema from './schema';
 
 let connection: ReturnType<typeof postgres> | undefined;
 export function database() {
-  const url=process.env.DATABASE_URL;
-  if(!url)throw new Error('Database connection is not configured');
-  connection??=postgres(url,{prepare:false,max:5,connect_timeout:10});
-  return drizzle(connection,{schema});
+  const rawUrl = process.env.DATABASE_URL;
+  if (!rawUrl) throw new Error('DATABASE_URL environment variable is not configured');
+  const url = rawUrl.trim().replace(/^["']|["']$/g, '');
+  connection ??= postgres(url, { prepare: false, max: 5, connect_timeout: 10, ssl: 'require' });
+  return drizzle(connection, { schema });
 }

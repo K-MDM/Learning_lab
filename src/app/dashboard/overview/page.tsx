@@ -16,5 +16,8 @@ export default async function Overview(){
       <div className="stat-grid">{['published','draft','withdrawn'].map(status=><Link className={`stat-card stat-${status}`} href={`/dashboard/content?status=${status}`} key={status}><span>{status==='published'?'Published units':status==='draft'?'Drafts to work on':'Withdrawn releases'}</span><strong>{totals.find(t=>t.status===status)?.total??0}</strong><small>Open content library →</small></Link>)}</div>
       <section className="panel"><div className="section-heading"><h2>Continue your work</h2><Link href="/dashboard/content">All content →</Link></div>{recent.length===0?<p className="empty">No drafts yet. Open the content library to create a unit or add an English demo.</p>:recent.map(row=><div className="work-row" key={row.id}><div><strong>{row.unitTitle}</strong><small>{row.courseTitle}</small></div><span className="badge">Draft</span><Link href="/dashboard/content">Open library →</Link></div>)}</section>
       <div className="notice"><strong>Learning stays on each device.</strong><p>This console manages content and licences. Learners' recordings and progress remain local.</p></div></main>;
-  }catch{return <main className="console"><h1>Overview</h1><p className="notice" role="alert">Could not load workspace totals. Check the database connection and try again.</p><Link href="/dashboard/content">Open content library</Link></main>;}
+  }catch(err: any){
+    console.error('Failed to load workspace totals:', err);
+    return <main className="console"><h1>Overview</h1><p className="notice" role="alert">Could not load workspace totals: {err?.message ?? String(err)}</p><Link href="/dashboard/content">Open content library</Link></main>;
+  }
 }
