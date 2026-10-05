@@ -44,7 +44,7 @@ export default function ActivityFields({item,manifest,onChange}:{item:Activity;m
     {item.type==='glossary'&&json('entries','Word cards: JSON list of {id, term, definition, example?, reference_asset?}')}
     {item.type==='book'&&json('pages','Book pages: JSON list of {id, text, image_asset?, alt_text?, reference_asset?}')}
     {item.type==='dialogue'&&json('turns','Dialogue: JSON list of {speaker, text, reference_asset?}')}
-    {item.type==='writing'&&<><label>Writing mode<select value={item.writing_mode} onChange={event=>change('writing_mode',event.target.value)}><option>guided</option><option>free</option></select></label>{area('starters','Optional starter sentences (one per line)')}<p>Writing stays on the device and is not automatically scored.</p></>}
+    {item.type==='writing'&&<p role="alert">Open-ended writing is unavailable. Remove this activity and add an MCQ with selectable answers.</p>}
     {item.type==='listening'&&media('reference_asset','Optional narration; no file uses offline TTS',['audio/wav'])}
     {item.type==='media'&&media('reference_asset','Audio or video file',['audio/wav','video/mp4'])}
     {item.type==='reading'&&<label>Reading format<select value={item.reading_kind??'story'} onChange={event=>change('reading_kind',event.target.value)}>{['story','passage','phonics','words','sentences'].map(value=><option key={value}>{value}</option>)}</select></label>}
