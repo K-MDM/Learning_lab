@@ -48,14 +48,16 @@ function challengeMessage(row:Challenge){return Buffer.from(['KEEEL-LANGLAB-ACTI
   row.devicePublicKey,row.platform,row.generation.toString(),row.expiresAt.toISOString(),row.purpose].join('\n'),'utf8');}
 export async function limited(db:DB,scope:string,now:Date){
   // Limits are committed even when the subsequent activation transaction fails.
+  const isContent = scope.startsWith('content:');
+  const scopeLimit = isContent ? 1000 : 120;
   await db.transaction(async tx=>{
-    for(const [key,max] of [['global',1000],[scope,20]] as const){
+    for(const [key,max] of [['global',10000],[scope,scopeLimit]] as const){
       const [row]=await tx.insert(schema.activationRateLimits).values({scope:key,windowStart:now,requests:1})
         .onConflictDoUpdate({target:schema.activationRateLimits.scope,set:{
           windowStart:sql`CASE WHEN ${schema.activationRateLimits.windowStart}<=${now.toISOString()}::timestamptz-interval '1 minute' THEN ${now.toISOString()}::timestamptz ELSE ${schema.activationRateLimits.windowStart} END`,
           requests:sql`CASE WHEN ${schema.activationRateLimits.windowStart}<=${now.toISOString()}::timestamptz-interval '1 minute' THEN 1 ELSE ${schema.activationRateLimits.requests}+1 END`
         }}).returning();
-      if(row.requests>max)throw new ActivationError(429,'Too many activation requests. Wait one minute and retry.');
+      if(row.requests>max)throw new ActivationError(429, isContent ? 'Too many content download requests. Wait one minute and retry.' : 'Too many activation requests. Wait one minute and retry.');
     }
     await tx.execute(sql`DELETE FROM langlab.activation_rate_limits WHERE scope IN
       (SELECT scope FROM langlab.activation_rate_limits WHERE window_start<${now.toISOString()}::timestamptz-interval '1 day' LIMIT 100)`);
