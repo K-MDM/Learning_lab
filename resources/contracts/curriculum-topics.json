@@ -1,0 +1,371 @@
+{
+  "version": 1,
+  "applicability": "Planning inventory; curriculum specialists must determine grade and language applicability. Tags are not approval.",
+  "topics": [
+    {
+      "id": "listening.rhymes",
+      "skill": "listening",
+      "label": "Rhymes"
+    },
+    {
+      "id": "listening.words_sentences",
+      "skill": "listening",
+      "label": "Words Sentences"
+    },
+    {
+      "id": "listening.stories",
+      "skill": "listening",
+      "label": "Stories"
+    },
+    {
+      "id": "listening.dialogues",
+      "skill": "listening",
+      "label": "Dialogues"
+    },
+    {
+      "id": "listening.dictation",
+      "skill": "listening",
+      "label": "Dictation"
+    },
+    {
+      "id": "listening.instructions",
+      "skill": "listening",
+      "label": "Instructions"
+    },
+    {
+      "id": "listening.sound_discrimination",
+      "skill": "listening",
+      "label": "Sound Discrimination"
+    },
+    {
+      "id": "listening.listening_comprehension",
+      "skill": "listening",
+      "label": "Listening Comprehension"
+    },
+    {
+      "id": "speaking.words",
+      "skill": "speaking",
+      "label": "Words"
+    },
+    {
+      "id": "speaking.sentences",
+      "skill": "speaking",
+      "label": "Sentences"
+    },
+    {
+      "id": "speaking.phonics",
+      "skill": "speaking",
+      "label": "Phonics"
+    },
+    {
+      "id": "speaking.syllables",
+      "skill": "speaking",
+      "label": "Syllables"
+    },
+    {
+      "id": "speaking.stress",
+      "skill": "speaking",
+      "label": "Stress"
+    },
+    {
+      "id": "speaking.intonation",
+      "skill": "speaking",
+      "label": "Intonation"
+    },
+    {
+      "id": "speaking.fluency",
+      "skill": "speaking",
+      "label": "Fluency"
+    },
+    {
+      "id": "speaking.role_play",
+      "skill": "speaking",
+      "label": "Role Play"
+    },
+    {
+      "id": "speaking.self_introduction",
+      "skill": "speaking",
+      "label": "Self Introduction"
+    },
+    {
+      "id": "speaking.picture_description",
+      "skill": "speaking",
+      "label": "Picture Description"
+    },
+    {
+      "id": "speaking.story_narration",
+      "skill": "speaking",
+      "label": "Story Narration"
+    },
+    {
+      "id": "speaking.question_answer",
+      "skill": "speaking",
+      "label": "Question Answer"
+    },
+    {
+      "id": "speaking.discussion",
+      "skill": "speaking",
+      "label": "Discussion"
+    },
+    {
+      "id": "speaking.presentation",
+      "skill": "speaking",
+      "label": "Presentation"
+    },
+    {
+      "id": "speaking.situational",
+      "skill": "speaking",
+      "label": "Situational"
+    },
+    {
+      "id": "reading.phonics",
+      "skill": "reading",
+      "label": "Phonics"
+    },
+    {
+      "id": "reading.word_reading",
+      "skill": "reading",
+      "label": "Word Reading"
+    },
+    {
+      "id": "reading.sentence_reading",
+      "skill": "reading",
+      "label": "Sentence Reading"
+    },
+    {
+      "id": "reading.picture_reading",
+      "skill": "reading",
+      "label": "Picture Reading"
+    },
+    {
+      "id": "reading.stories",
+      "skill": "reading",
+      "label": "Stories"
+    },
+    {
+      "id": "reading.sequencing",
+      "skill": "reading",
+      "label": "Sequencing"
+    },
+    {
+      "id": "reading.comprehension",
+      "skill": "reading",
+      "label": "Comprehension"
+    },
+    {
+      "id": "reading.contextual_reading",
+      "skill": "reading",
+      "label": "Contextual Reading"
+    },
+    {
+      "id": "reading.books",
+      "skill": "reading",
+      "label": "Books"
+    },
+    {
+      "id": "writing.spelling",
+      "skill": "writing",
+      "label": "Spelling"
+    },
+    {
+      "id": "writing.word_formation",
+      "skill": "writing",
+      "label": "Word Formation"
+    },
+    {
+      "id": "writing.sentence_formation",
+      "skill": "writing",
+      "label": "Sentence Formation"
+    },
+    {
+      "id": "writing.sentence_rearrangement",
+      "skill": "writing",
+      "label": "Sentence Rearrangement"
+    },
+    {
+      "id": "writing.guided",
+      "skill": "writing",
+      "label": "Guided"
+    },
+    {
+      "id": "writing.paragraph",
+      "skill": "writing",
+      "label": "Paragraph"
+    },
+    {
+      "id": "writing.creative_story",
+      "skill": "writing",
+      "label": "Creative Story"
+    },
+    {
+      "id": "writing.dialogue",
+      "skill": "writing",
+      "label": "Dialogue"
+    },
+    {
+      "id": "writing.essay",
+      "skill": "writing",
+      "label": "Essay"
+    },
+    {
+      "id": "writing.analytical",
+      "skill": "writing",
+      "label": "Analytical"
+    },
+    {
+      "id": "writing.error_correction",
+      "skill": "writing",
+      "label": "Error Correction"
+    },
+    {
+      "id": "grammar.nouns",
+      "skill": "grammar",
+      "label": "Nouns"
+    },
+    {
+      "id": "grammar.pronouns",
+      "skill": "grammar",
+      "label": "Pronouns"
+    },
+    {
+      "id": "grammar.verbs",
+      "skill": "grammar",
+      "label": "Verbs"
+    },
+    {
+      "id": "grammar.adjectives",
+      "skill": "grammar",
+      "label": "Adjectives"
+    },
+    {
+      "id": "grammar.adverbs",
+      "skill": "grammar",
+      "label": "Adverbs"
+    },
+    {
+      "id": "grammar.articles",
+      "skill": "grammar",
+      "label": "Articles"
+    },
+    {
+      "id": "grammar.prepositions",
+      "skill": "grammar",
+      "label": "Prepositions"
+    },
+    {
+      "id": "grammar.conjunctions",
+      "skill": "grammar",
+      "label": "Conjunctions"
+    },
+    {
+      "id": "grammar.tenses",
+      "skill": "grammar",
+      "label": "Tenses"
+    },
+    {
+      "id": "grammar.subject_verb_agreement",
+      "skill": "grammar",
+      "label": "Subject Verb Agreement"
+    },
+    {
+      "id": "grammar.modals",
+      "skill": "grammar",
+      "label": "Modals"
+    },
+    {
+      "id": "grammar.voice",
+      "skill": "grammar",
+      "label": "Voice"
+    },
+    {
+      "id": "grammar.narration",
+      "skill": "grammar",
+      "label": "Narration"
+    },
+    {
+      "id": "grammar.sentence_structure",
+      "skill": "grammar",
+      "label": "Sentence Structure"
+    },
+    {
+      "id": "grammar.question_formation",
+      "skill": "grammar",
+      "label": "Question Formation"
+    },
+    {
+      "id": "grammar.common_errors",
+      "skill": "grammar",
+      "label": "Common Errors"
+    },
+    {
+      "id": "vocabulary.meanings",
+      "skill": "vocabulary",
+      "label": "Meanings"
+    },
+    {
+      "id": "vocabulary.synonyms",
+      "skill": "vocabulary",
+      "label": "Synonyms"
+    },
+    {
+      "id": "vocabulary.antonyms",
+      "skill": "vocabulary",
+      "label": "Antonyms"
+    },
+    {
+      "id": "vocabulary.contextual",
+      "skill": "vocabulary",
+      "label": "Contextual"
+    },
+    {
+      "id": "vocabulary.word_formation",
+      "skill": "vocabulary",
+      "label": "Word Formation"
+    },
+    {
+      "id": "vocabulary.prefixes",
+      "skill": "vocabulary",
+      "label": "Prefixes"
+    },
+    {
+      "id": "vocabulary.suffixes",
+      "skill": "vocabulary",
+      "label": "Suffixes"
+    },
+    {
+      "id": "vocabulary.spelling",
+      "skill": "vocabulary",
+      "label": "Spelling"
+    },
+    {
+      "id": "vocabulary.phrases",
+      "skill": "vocabulary",
+      "label": "Phrases"
+    },
+    {
+      "id": "vocabulary.expressions",
+      "skill": "vocabulary",
+      "label": "Expressions"
+    },
+    {
+      "id": "vocabulary.idioms",
+      "skill": "vocabulary",
+      "label": "Idioms"
+    },
+    {
+      "id": "vocabulary.confused_words",
+      "skill": "vocabulary",
+      "label": "Confused Words"
+    },
+    {
+      "id": "vocabulary.everyday",
+      "skill": "vocabulary",
+      "label": "Everyday"
+    },
+    {
+      "id": "vocabulary.academic",
+      "skill": "vocabulary",
+      "label": "Academic"
+    }
+  ]
+}

@@ -1,0 +1,431 @@
+[
+  {
+    "key": "class10-reading",
+    "skill": "reading",
+    "title": "The Ethics of Artificial Intelligence",
+    "courseTitle": "English · Class 10",
+    "unitTitle": "Analytical Reading: Technological Frontiers",
+    "level": "grade-10",
+    "summary": "Explore discursive prose on machine intelligence, algorithmic bias, and human agency.",
+    "outcome": "Analyze discursive text, extract critical arguments, draw inferences, and sequence analytical evidence.",
+    "curriculum_references": [
+      "CBSE-ENG-X-READ-01",
+      "NCERT-ENG-X-DISCURSIVE"
+    ],
+    "activities": [
+      {
+        "type": "reading",
+        "reading_kind": "passage",
+        "topic": "reading.contextual_reading",
+        "prompt": "As artificial intelligence systems increasingly influence governance, criminal justice, and medical diagnosis, questions regarding algorithmic transparency become vital. Unlike deterministic code where every calculation can be audited step by step, deep neural networks often operate as statistical black boxes. When automated models inherit historic societal biases from imperfect training data, they risk entrenching inequality under the guise of objective calculation. Meaningful accountability demands that critical decisions remain open to human scrutiny and ethical oversight."
+      },
+      {
+        "type": "comprehension",
+        "topic": "reading.comprehension",
+        "prompt": "According to the passage, why do deep neural networks present unique transparency challenges?",
+        "passage": "Unlike deterministic code where every calculation can be audited step by step, deep neural networks often operate as statistical black boxes.",
+        "comprehension_focus": "inference",
+        "options": [
+          "They rely on outdated hardware architectures.",
+          "They function as statistical black boxes whose internal computations are difficult to audit step by step.",
+          "They cannot be programmed to process text data.",
+          "They operate strictly without training data."
+        ],
+        "correct_index": 1,
+        "explanation": "The text explicitly states that unlike deterministic code, deep neural networks often operate as statistical black boxes where calculations cannot be audited step by step."
+      },
+      {
+        "type": "sequencing",
+        "topic": "reading.sequencing",
+        "prompt": "Reconstruct the author's logical progression in the text:",
+        "items": [
+          {
+            "id": "step1",
+            "text": "AI increasingly impacts critical civic, medical, and judicial institutions."
+          },
+          {
+            "id": "step2",
+            "text": "Complex deep neural networks function as opaque black boxes."
+          },
+          {
+            "id": "step3",
+            "text": "Flawed training data causes systems to perpetuate historical inequalities."
+          },
+          {
+            "id": "step4",
+            "text": "Robust human oversight and ethical auditing are urgently required."
+          }
+        ],
+        "correct_order": [
+          "step1",
+          "step2",
+          "step3",
+          "step4"
+        ]
+      },
+      {
+        "type": "quiz",
+        "topic": "reading.comprehension",
+        "prompt": "What is the central thesis of the author's argument?",
+        "options": [
+          "Automated systems should replace human decision-makers across all domains.",
+          "Algorithmic decision-making must remain subject to ethical human scrutiny to prevent injustice.",
+          "Statistical calculations are inherently immune to human prejudice.",
+          "Artificial intelligence research should be entirely discontinued."
+        ],
+        "correct_index": 1,
+        "explanation": "The author emphasizes that accountability requires critical decisions to remain open to human scrutiny and ethical oversight."
+      }
+    ]
+  },
+  {
+    "key": "class10-writing",
+    "skill": "writing",
+    "title": "Writing: Sentence Structure and Editing",
+    "courseTitle": "English · Class 10",
+    "unitTitle": "Writing: Sentence Structure and Editing",
+    "level": "grade-10",
+    "summary": "Choose formal sentences, connectors and punctuation. No typing.",
+    "outcome": "Identify well-formed formal sentences, connectors and punctuation from given options.",
+    "curriculum_references": [
+      "CBSE-ENG-X-WRIT-02",
+      "NCERT-ENG-X-ANALYTICAL-PARAGRAPH"
+    ],
+    "activities": [
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_rearrangement",
+        "prompt": "Choose the correctly ordered formal sentence.",
+        "options": [
+          "Although initial investments remain substantial, renewable energy infrastructure delivers long-term benefits.",
+          "Although initial investments remain substantial renewable energy, infrastructure delivers long-term benefits.",
+          "Renewable energy although infrastructure initial investments delivers substantial remain benefits."
+        ],
+        "correct_index": 0,
+        "explanation": "The opening although-clause is followed by a comma and a complete main clause."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_formation",
+        "prompt": "Choose the connector: ___ the initial cost is high, solar panels can reduce later energy bills.",
+        "options": [
+          "Therefore",
+          "Although",
+          "Because"
+        ],
+        "correct_index": 1,
+        "explanation": "Although introduces a contrast between the high initial cost and later savings."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.error_correction",
+        "prompt": "Choose the sentence with correct subject-verb agreement.",
+        "options": [
+          "The benefits of renewable energy is significant.",
+          "The benefits of renewable energy are significant.",
+          "The benefits of renewable energy be significant."
+        ],
+        "correct_index": 1,
+        "explanation": "The subject benefits is plural, so use are."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_formation",
+        "prompt": "Choose the most suitable formal request in a letter to an editor.",
+        "options": [
+          "You must print my views right now!",
+          "I request that you highlight the importance of digital literacy.",
+          "Hey, put this in your paper."
+        ],
+        "correct_index": 1,
+        "explanation": "I request that you is a polite and formal way to introduce this request."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_formation",
+        "prompt": "Choose the connector: The proposal has clear benefits. ___, its initial cost needs careful planning.",
+        "options": [
+          "Because",
+          "Similarly",
+          "However"
+        ],
+        "correct_index": 2,
+        "explanation": "However connects the benefits with a contrasting concern about cost."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.error_correction",
+        "prompt": "Choose the correctly punctuated sentence.",
+        "options": [
+          "If schools provide training students can use technology responsibly.",
+          "If schools provide training, students can use technology responsibly.",
+          "If, schools provide training students can use technology responsibly."
+        ],
+        "correct_index": 1,
+        "explanation": "Use a comma after the opening if-clause."
+      }
+    ]
+  },
+  {
+    "key": "class10-grammar",
+    "skill": "grammar",
+    "title": "Syntax Master: Concord, Modals & Reported Speech",
+    "courseTitle": "English · Class 10",
+    "unitTitle": "Grammar: Applied Syntax & Error Correction",
+    "level": "grade-10",
+    "summary": "Master subject-verb agreement, modal auxiliaries, conditional clauses, and indirect narration.",
+    "outcome": "Identify and rectify concord discrepancies and transform direct dialogue into reported speech.",
+    "curriculum_references": [
+      "CBSE-ENG-X-GRAM-03",
+      "NCERT-ENG-X-CONCORD-TENSES"
+    ],
+    "activities": [
+      {
+        "type": "error_correction",
+        "topic": "grammar.subject_verb_agreement",
+        "prompt": "Identify the concord error and rewrite the sentence correctly:",
+        "source_text": "Neither the principal nor the senior teachers was informed about the schedule change.",
+        "accepted_answers": [
+          "Neither the principal nor the senior teachers were informed about the schedule change."
+        ],
+        "explanation": "In sentences with 'neither... nor', the verb agrees with the subject closest to it ('senior teachers' is plural, so use 'were')."
+      },
+      {
+        "type": "gap_fill",
+        "topic": "grammar.tenses",
+        "prompt": "Complete the conditional sentence with the correct past perfect verb phrase:",
+        "segments": [
+          "Had the environmental delegates ",
+          " the empirical data sooner, the treaty would have been ratified."
+        ],
+        "answers": [
+          [
+            "examined",
+            "reviewed",
+            "analyzed"
+          ]
+        ],
+        "explanation": "An inverted third conditional begins with 'Had' followed by the subject and the past participle ('examined' / 'reviewed' / 'analyzed')."
+      },
+      {
+        "type": "quiz",
+        "topic": "grammar.narration",
+        "prompt": "Convert into correct indirect speech: The researcher said, 'Will the experiment yield conclusive evidence?'",
+        "options": [
+          "The researcher inquired whether the experiment would yield conclusive evidence.",
+          "The researcher asked that if the experiment will yield conclusive evidence.",
+          "The researcher told that the experiment would yield conclusive evidence.",
+          "The researcher inquired would the experiment yield conclusive evidence."
+        ],
+        "correct_index": 0,
+        "explanation": "In indirect speech for yes/no questions, use 'whether/if', change 'will' to 'would', and remove question word order."
+      },
+      {
+        "type": "quiz",
+        "topic": "grammar.modals",
+        "prompt": "Which sentence correctly uses a modal auxiliary to express strong moral duty in civic society?",
+        "options": [
+          "Every citizen ought to safeguard public property and uphold environmental integrity.",
+          "Every citizen might safeguard public property and uphold environmental integrity.",
+          "Every citizen could safeguard public property and uphold environmental integrity.",
+          "Every citizen may safeguard public property and uphold environmental integrity."
+        ],
+        "correct_index": 0,
+        "explanation": "'Ought to' expresses moral obligation and civic responsibility."
+      }
+    ]
+  },
+  {
+    "key": "class10-listening",
+    "skill": "listening",
+    "title": "Audio Discourse: Sustainable Architecture",
+    "courseTitle": "English · Class 10",
+    "unitTitle": "Listening: Informational Comprehension & Critical Analysis",
+    "level": "grade-10",
+    "summary": "Listen attentively to complex expository lectures and extract technical facts and inferences.",
+    "outcome": "Recall technical evidence and synthesize central points from spoken informational passages.",
+    "curriculum_references": [
+      "CBSE-ENG-X-LIST-04",
+      "NCERT-ENG-X-ORAL-COMPREHENSION"
+    ],
+    "activities": [
+      {
+        "type": "listening",
+        "topic": "listening.listening_comprehension",
+        "prompt": "Listen carefully to this architectural brief: Sustainable urban architecture prioritizes passive solar design, natural cross-ventilation, and recycled building materials. By aligning window placement with seasonal solar azimuths, buildings reduce reliance on artificial heating and cooling by up to thirty-five percent. Simultaneously, urban green roofs mitigate the heat island phenomenon while creating habitats for indigenous pollinators."
+      },
+      {
+        "type": "quiz",
+        "topic": "listening.listening_comprehension",
+        "prompt": "According to the speaker, by how much can passive solar design reduce reliance on artificial heating and cooling?",
+        "options": [
+          "Up to thirty-five percent",
+          "Exactly ten percent",
+          "More than seventy-five percent",
+          "Virtually zero percent"
+        ],
+        "correct_index": 0,
+        "explanation": "The speaker explicitly mentions that passive solar alignment reduces artificial thermal reliance by up to thirty-five percent."
+      },
+      {
+        "type": "multi_select",
+        "topic": "listening.listening_comprehension",
+        "prompt": "Select the two direct environmental advantages of urban green roofs cited by the speaker:",
+        "options": [
+          "Mitigating the urban heat island phenomenon",
+          "Creating habitats for indigenous pollinators",
+          "Supplying municipal hydroelectric energy",
+          "Replacing subterranean subway infrastructure"
+        ],
+        "correct_indices": [
+          0,
+          1
+        ],
+        "explanation": "The brief cites both heat island mitigation and the preservation of indigenous pollinator habitats."
+      }
+    ]
+  },
+  {
+    "key": "class10-speaking",
+    "skill": "speaking",
+    "title": "Persuasive Rhetoric & Parliamentary Dialogue",
+    "courseTitle": "English · Class 10",
+    "unitTitle": "Speaking: Rhetorical Delivery, Debate & Presentation",
+    "level": "grade-10",
+    "summary": "Practice formal conversation turn-taking, persuasive pitch delivery, and structured presentations.",
+    "outcome": "Demonstrate clear articulation, proper syllable stress, and persuasive rhetorical delivery.",
+    "curriculum_references": [
+      "CBSE-ENG-X-SPK-05",
+      "NCERT-ENG-X-CONVERSATION-DEBATE"
+    ],
+    "activities": [
+      {
+        "type": "dialogue",
+        "topic": "speaking.discussion",
+        "prompt": "Engage in this formal dialogue between a symposium moderator and an environmental scholar:",
+        "turns": [
+          {
+            "speaker": "Moderator",
+            "text": "Distinguished speaker, how can developing nations reconcile immediate industrial growth with stringent emissions targets?"
+          },
+          {
+            "speaker": "Scholar",
+            "text": "Economic expansion and environmental stewardship are mutually reinforcing, provided clean technology transfers are prioritized."
+          },
+          {
+            "speaker": "Moderator",
+            "text": "What practical incentive can governments offer private industries to accelerate this transition?"
+          },
+          {
+            "speaker": "Scholar",
+            "text": "Targeted tax credits and transparent green procurement policies stimulate immediate commercial innovation."
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "speaking_kind": "sentences",
+        "topic": "speaking.stress",
+        "prompt": "Read aloud with deliberate cadence and emphatic word stress: 'Universal access to quality education is not an expendable luxury; it is the fundamental foundation of democracy.'",
+        "rubric": [
+          {
+            "criterion": "Clarity of articulation and pronunciation",
+            "maximum_score": 5
+          },
+          {
+            "criterion": "Rhetorical modulation and sentence stress",
+            "maximum_score": 5
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "speaking_kind": "presentation",
+        "topic": "speaking.presentation",
+        "prompt": "Deliver a concise two-minute presentation proposing a solution to mitigate plastic pollution in your local community. Focus on logical sequencing and persuasive register.",
+        "rubric": [
+          {
+            "criterion": "Coherent logical organization",
+            "maximum_score": 5
+          },
+          {
+            "criterion": "Formal vocabulary and persuasive delivery",
+            "maximum_score": 5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "class10-vocabulary",
+    "skill": "vocabulary",
+    "title": "Lexical Mastery: Academic & Literary Diction",
+    "courseTitle": "English · Class 10",
+    "unitTitle": "Vocabulary: Academic Collocations, Idioms & Nuance",
+    "level": "grade-10",
+    "summary": "Expand academic vocabulary with high-frequency scholarly words, nuanced collocations, and contextual definitions.",
+    "outcome": "Apply advanced academic terminology, differentiate nuanced synonyms, and spell sophisticated words accurately.",
+    "curriculum_references": [
+      "CBSE-ENG-X-VOC-06",
+      "NCERT-ENG-X-LEXICON"
+    ],
+    "activities": [
+      {
+        "type": "glossary",
+        "topic": "vocabulary.academic",
+        "prompt": "Examine these critical academic terms, definitions, and contextual exemplars:",
+        "entries": [
+          {
+            "id": "juxtaposition",
+            "term": "juxtaposition",
+            "definition": "The deliberate placement of two contrasting ideas, entities, or scenes side by side.",
+            "example": "The author uses the juxtaposition of opulent banquets and impoverished tenements to dramatize social divide."
+          },
+          {
+            "id": "pragmatic",
+            "term": "pragmatic",
+            "definition": "Dealing with challenges through practical, empirical measures rather than purely theoretical ideals.",
+            "example": "Faced with immediate supply shortages, the administrators devised a pragmatic distribution plan."
+          },
+          {
+            "id": "ubiquitous",
+            "term": "ubiquitous",
+            "definition": "Present, encountered, or existing everywhere simultaneously.",
+            "example": "In the modern era, digital screens have become ubiquitous in daily interpersonal communication."
+          }
+        ]
+      },
+      {
+        "type": "matching",
+        "topic": "vocabulary.synonyms",
+        "prompt": "Match each academic word with its closest contextual equivalent:",
+        "pairs": [
+          {
+            "id": "m1",
+            "left": "Pragmatic",
+            "right": "Practical"
+          },
+          {
+            "id": "m2",
+            "left": "Ubiquitous",
+            "right": "Omnipresent"
+          },
+          {
+            "id": "m3",
+            "left": "Juxtaposition",
+            "right": "Contrast"
+          }
+        ]
+      },
+      {
+        "type": "spelling",
+        "topic": "vocabulary.spelling",
+        "prompt": "Spell the academic adjective meaning 'present everywhere simultaneously' (starts with 'u'):",
+        "accepted_answers": [
+          "ubiquitous"
+        ],
+        "explanation": "Ubiquitous is spelled u-b-i-q-u-i-t-o-u-s."
+      }
+    ]
+  }
+]

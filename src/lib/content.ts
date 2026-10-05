@@ -1,5 +1,5 @@
 import {assertKnownAnswerWriting} from './writing-policy';
-import registry from '../../../contracts/learning-registry.json';
+import registry from '../../resources/contracts/learning-registry.json';
 import {validWav} from './media-validation';
 import {randomUUID,createHash} from 'node:crypto';
 import {and,desc,eq,sql,lt,ilike,or} from 'drizzle-orm';

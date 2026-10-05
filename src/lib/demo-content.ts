@@ -1,6 +1,6 @@
 import {randomUUID} from 'node:crypto';
 import {eq,sql} from 'drizzle-orm';
-import templates from '../../../content/demos/english.json';
+import templates from '../../resources/content/demos/english.json';
 import * as s from '../db/schema';
 import {contentStaff,createDraft,ContentError} from './content';
 import {saveContentDraft} from './content-edit';

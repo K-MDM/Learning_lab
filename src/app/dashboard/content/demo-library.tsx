@@ -1,5 +1,5 @@
 'use client';
-import templates from '../../../../../content/demos/english.json';
+import templates from '../../../../resources/content/demos/english.json';
 export default function DemoLibrary({busy,onAdd}:{busy:boolean;onAdd:(key:string)=>void}){
   return <section className="panel"><p className="eyebrow">LITTLE DISCOVERIES</p><h2>English demonstration library</h2><p>Six short units to explore every skill. Each uses offline text-to-speech; audio uploads are optional. Add a unit, review its lessons, then publish it for licensed devices.</p><div className="demo-grid">{templates.map(t=><article key={t.key} className="demo-card"><span className="badge">{t.skill==='vocabulary'?'Words':t.skill}</span><h3>{t.title}</h3><p>{t.summary}</p><small>{t.level.replace('grade-','Grade ')} · {t.activities.length} activities</small><button className="secondary" disabled={busy} onClick={()=>onAdd(t.key)}>Add demonstration draft</button></article>)}</div><p className="muted">Demonstrations contain original example text. Repeated additions reuse the existing unit; staff review and publication are still required.</p></section>;
 }

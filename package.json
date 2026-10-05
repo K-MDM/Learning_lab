@@ -15,7 +15,9 @@
     "db:baseline": "tsx src/db/baseline.ts",
     "db:seed:demos": "tsx ../tools/seed-english-demos.ts",
     "db:seed:class10": "tsx ../tools/seed-grade-10-english.ts",
-    "db:seed:writing": "tsx ../tools/update-writing-seeds.ts"
+    "db:seed:writing": "tsx ../tools/update-writing-seeds.ts",
+    "prebuild": "node scripts/sync-resources.mjs",
+    "predev": "node scripts/sync-resources.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.0",

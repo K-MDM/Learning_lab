@@ -1,5 +1,5 @@
 'use client';
-import registry from '../../../../../contracts/learning-registry.json';
+import registry from '../../../../resources/contracts/learning-registry.json';
 import {useState} from 'react';
 import {useRouter} from 'next/navigation';
 import ReleaseEditor from './release-editor';

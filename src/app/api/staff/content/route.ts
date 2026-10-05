@@ -41,7 +41,7 @@ export async function POST(request:Request){
     const text=(await boundedBody(request,768*1024)).toString('utf8');
     let body:Record<string,unknown>;try{body=JSON.parse(text);if(!body||typeof body!=='object')throw new Error();}catch{throw new ContentError(400,'Invalid content request.');}
     if(body.action==='demo'&&typeof body.demoKey==='string')return Response.json(await addEnglishDemo(database(),staff.id,body.demoKey),{status:201,headers});
-    if(body.action==='demo')return Response.json(await createDraft(database(),staff.id,demo,await readFile(resolve(process.cwd(),'../content/samples/library-story.wav')),privateStore()),{status:201,headers});
+    if(body.action==='demo')return Response.json(await createDraft(database(),staff.id,demo,await readFile(resolve(process.cwd(),'resources/content/samples/library-story.wav')),privateStore()),{status:201,headers});
     const validId=(value:unknown)=>typeof value==='string'&&/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/.test(value);
     if(body.action==='save'&&validId(body.id)&&typeof body.expectedDigest==='string')return Response.json(await saveContentDraft(database(),staff.id,body.id as string,body.expectedDigest,body.manifest),{headers});
     if(body.action==='revision'&&validId(body.id))return Response.json(await createContentRevision(database(),staff.id,body.id as string),{status:201,headers});

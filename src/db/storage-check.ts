@@ -13,7 +13,7 @@ async function main(){
   const created=await client.storage.createBucket(bucket,{public:false,fileSizeLimit:20*1024*1024,allowedMimeTypes:['audio/wav']});
   if(created.error)throw new Error('bucket creation');
  }else if(state.data.public)throw new Error('bucket must be private');
- const object=`verification/${randomUUID()}.wav`,bytes=await readFile('../content/samples/library-story.wav');
+ const object=`verification/${randomUUID()}.wav`,bytes=await readFile('resources/content/samples/library-story.wav');
  const upload=await client.storage.from(bucket).upload(object,bytes,{contentType:'audio/wav',upsert:false});
  if(upload.error)throw new Error('upload');
  try{

@@ -1,0 +1,5 @@
+{
+  "languages": [{"code":"en","name":"English","script":"Latn"},{"code":"hi","name":"Hindi","script":"Deva"},{"code":"sa","name":"Sanskrit","script":"Deva"},{"code":"fr","name":"French","script":"Latn"},{"code":"de","name":"German","script":"Latn"}],
+  "stages": ["foundational","preparatory","middle","secondary"],
+  "proficiencies": ["beginner","intermediate","advanced","remedial"]
+}

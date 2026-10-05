@@ -1,0 +1,340 @@
+[
+  {
+    "key": "reading",
+    "skill": "reading",
+    "title": "The very curious bird",
+    "level": "grade-3",
+    "summary": "A story about Mina, a book and a new discovery.",
+    "outcome": "Find key details and put story events in order.",
+    "activities": [
+      {
+        "type": "reading",
+        "reading_kind": "story",
+        "prompt": "Mina finds a book under a tree. She opens it and sees a bright blue sea. “Come and look!” she calls to her friends. They sit together and read about a curious bird."
+      },
+      {
+        "type": "comprehension",
+        "prompt": "What does Mina find?",
+        "passage": "Mina finds a book under a tree.",
+        "comprehension_focus": "literal",
+        "options": [
+          "A book",
+          "A shell",
+          "A kite"
+        ],
+        "correct_index": 0,
+        "explanation": "The first sentence tells us that Mina finds a book."
+      },
+      {
+        "type": "sequencing",
+        "prompt": "Put the story in order.",
+        "items": [
+          {
+            "id": "find",
+            "text": "Mina finds a book."
+          },
+          {
+            "id": "open",
+            "text": "She opens the book."
+          },
+          {
+            "id": "call",
+            "text": "She calls her friends."
+          }
+        ],
+        "correct_order": [
+          "find",
+          "open",
+          "call"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "listening",
+    "skill": "listening",
+    "title": "A morning in the garden",
+    "level": "grade-3",
+    "summary": "Listen closely for sounds, people and places.",
+    "outcome": "Recall details from a short spoken passage.",
+    "activities": [
+      {
+        "type": "listening",
+        "prompt": "Listen to this garden story. Sam opens the garden gate. He hears two birds singing in a tree. His sister waters the red flowers. They sit on a bench and listen to the breeze."
+      },
+      {
+        "type": "quiz",
+        "prompt": "What does Sam hear in the tree?",
+        "options": [
+          "Birds singing",
+          "A dog barking",
+          "A bell ringing"
+        ],
+        "correct_index": 0,
+        "explanation": "Two birds are singing in the tree."
+      },
+      {
+        "type": "multi_select",
+        "prompt": "Choose the two things from the story.",
+        "options": [
+          "Red flowers",
+          "A garden bench",
+          "A snowman"
+        ],
+        "correct_indices": [
+          0,
+          1
+        ],
+        "explanation": "The garden has red flowers and a bench."
+      }
+    ]
+  },
+  {
+    "key": "speaking",
+    "skill": "speaking",
+    "title": "Hello, new friend!",
+    "level": "grade-3",
+    "summary": "Practise clear greetings and a short introduction.",
+    "outcome": "Speak clearly and take turns in a simple conversation.",
+    "activities": [
+      {
+        "type": "dialogue",
+        "prompt": "Listen to the conversation and practise each turn.",
+        "turns": [
+          {
+            "speaker": "Mina",
+            "text": "Hello! My name is Mina."
+          },
+          {
+            "speaker": "Sam",
+            "text": "Hello, Mina. I am Sam. What do you like to read?"
+          },
+          {
+            "speaker": "Mina",
+            "text": "I like stories about animals."
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "speaking_kind": "sentences",
+        "prompt": "Say this greeting in a clear, friendly voice: Hello! It is nice to meet you.",
+        "rubric": [
+          {
+            "criterion": "Clear words",
+            "maximum_score": 5
+          },
+          {
+            "criterion": "Friendly expression",
+            "maximum_score": 5
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "speaking_kind": "self_introduction",
+        "prompt": "Introduce yourself using a pretend name. Tell us one thing you like. You can listen to and record another try.",
+        "rubric": [
+          {
+            "criterion": "Complete introduction",
+            "maximum_score": 5
+          },
+          {
+            "criterion": "Clear speech",
+            "maximum_score": 5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "writing",
+    "skill": "writing",
+    "title": "Build a little adventure",
+    "level": "grade-4",
+    "summary": "Choose words, spellings and correctly formed sentences. No typing.",
+    "outcome": "Select correct words, spellings and sentences from given options.",
+    "activities": [
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_formation",
+        "prompt": "Choose the sentence with the words in the correct order.",
+        "options": [
+          "Found we a map.",
+          "We a found map.",
+          "We found a map."
+        ],
+        "correct_index": 2,
+        "explanation": "We found a map. puts the subject before the verb and ends with a full stop."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_formation",
+        "prompt": "Choose the word to complete: Yesterday we ___ a map.",
+        "options": [
+          "find",
+          "found",
+          "finding"
+        ],
+        "correct_index": 1,
+        "explanation": "The past form of find is found."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_formation",
+        "prompt": "Choose the sentence with the correct capital letter and full stop.",
+        "options": [
+          "we found a map.",
+          "We found a map.",
+          "We found a map"
+        ],
+        "correct_index": 1,
+        "explanation": "Start with a capital W and finish with a full stop."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.spelling",
+        "prompt": "Choose the correct spelling of the word made from m - a - p.",
+        "options": [
+          "map",
+          "mpa",
+          "pam"
+        ],
+        "correct_index": 0,
+        "explanation": "The letters m, a and p spell map."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.error_correction",
+        "prompt": "Choose the correct sentence.",
+        "options": [
+          "She have a map.",
+          "She has a map.",
+          "She having a map."
+        ],
+        "correct_index": 1,
+        "explanation": "Use has with she in the present tense."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_formation",
+        "prompt": "Choose the word that means below: The map was ___ the tree.",
+        "options": [
+          "above",
+          "beside",
+          "under"
+        ],
+        "correct_index": 2,
+        "explanation": "Under means below something."
+      }
+    ]
+  },
+  {
+    "key": "grammar",
+    "skill": "grammar",
+    "title": "Sentence builders",
+    "level": "grade-4",
+    "summary": "Choose verbs, fill a gap and repair a sentence.",
+    "outcome": "Use simple present verbs that agree with the subject.",
+    "activities": [
+      {
+        "type": "quiz",
+        "prompt": "Choose the sentence with the correct verb.",
+        "options": [
+          "She walks to school.",
+          "She walk to school.",
+          "She walking to school."
+        ],
+        "correct_index": 0,
+        "explanation": "Use walks with she in the simple present."
+      },
+      {
+        "type": "gap_fill",
+        "prompt": "Complete the sentence.",
+        "segments": [
+          "The birds ",
+          " in the morning."
+        ],
+        "answers": [
+          [
+            "sing"
+          ]
+        ],
+        "explanation": "Birds is plural, so the verb is sing."
+      },
+      {
+        "type": "error_correction",
+        "topic": "subject_verb_agreement",
+        "prompt": "Rewrite the sentence with the correct verb.",
+        "source_text": "He play in the garden.",
+        "accepted_answers": [
+          "He plays in the garden."
+        ],
+        "explanation": "Use plays with he."
+      }
+    ]
+  },
+  {
+    "key": "vocabulary",
+    "skill": "vocabulary",
+    "title": "Words for curious minds",
+    "level": "grade-3",
+    "summary": "Discover new words and connect them to meanings.",
+    "outcome": "Recognise and use vocabulary from familiar stories.",
+    "activities": [
+      {
+        "type": "glossary",
+        "prompt": "Explore these words. Listen to them and read the examples.",
+        "entries": [
+          {
+            "id": "curious",
+            "term": "curious",
+            "definition": "Wanting to learn or know more.",
+            "example": "The curious bird looked inside the book."
+          },
+          {
+            "id": "discover",
+            "term": "discover",
+            "definition": "To find something new.",
+            "example": "We discover a path in the garden."
+          },
+          {
+            "id": "breeze",
+            "term": "breeze",
+            "definition": "A gentle wind.",
+            "example": "A cool breeze moves the leaves."
+          }
+        ]
+      },
+      {
+        "type": "matching",
+        "prompt": "Match each word to its meaning.",
+        "pairs": [
+          {
+            "id": "c",
+            "left": "Curious",
+            "right": "Wanting to know more"
+          },
+          {
+            "id": "d",
+            "left": "Discover",
+            "right": "Find something new"
+          },
+          {
+            "id": "b",
+            "left": "Breeze",
+            "right": "A gentle wind"
+          }
+        ]
+      },
+      {
+        "type": "spelling",
+        "prompt": "Spell the word that means a gentle wind.",
+        "accepted_answers": [
+          "breeze"
+        ],
+        "explanation": "Breeze is spelled b-r-e-e-z-e."
+      }
+    ]
+  }
+]

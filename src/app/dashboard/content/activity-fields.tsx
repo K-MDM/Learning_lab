@@ -1,5 +1,5 @@
 'use client';
-import topics from '../../../../../contracts/curriculum-topics.json';
+import topics from '../../../../resources/contracts/curriculum-topics.json';
 import type {Activity,Manifest} from '../../../lib/package';
 export function newActivity(type:Activity['type'],manifest:Manifest):Activity {
   const base:Activity={id:crypto.randomUUID(),type,prompt:'Enter instructions.',scoring_version:1,normalization:'NFC'};

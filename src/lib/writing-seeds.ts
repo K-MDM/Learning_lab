@@ -1,6 +1,6 @@
 import {eq, sql} from 'drizzle-orm';
-import demos from '../../../content/demos/english.json';
-import curriculum from '../../../content/curriculum/english-grade-10.json';
+import demos from '../../resources/content/demos/english.json';
+import curriculum from '../../resources/content/curriculum/english-grade-10.json';
 import * as s from '../db/schema';
 import {contentStaff, ContentError} from './content';
 import {createContentRevision, saveContentDraft} from './content-edit';

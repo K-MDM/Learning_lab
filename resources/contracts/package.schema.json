@@ -1,0 +1,821 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://keeel.example/contracts/package-v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "release_id",
+    "unit_id",
+    "version",
+    "language",
+    "level",
+    "minimum_app_version",
+    "publication_status",
+    "lessons",
+    "assets"
+  ],
+  "properties": {
+    "schema_version": {
+      "enum": [
+        1,
+        2
+      ]
+    },
+    "release_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "unit_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "language": {
+      "type": "string",
+      "pattern": "^[a-z]{2,3}(-[A-Za-z0-9]+)*$"
+    },
+    "level": {
+      "type": "string",
+      "minLength": 1
+    },
+    "minimum_app_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "publication_status": {
+      "enum": [
+        "draft",
+        "reviewed"
+      ]
+    },
+    "lessons": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/definitions/lesson"
+      },
+      "maxItems": 100
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/asset"
+      },
+      "maxItems": 100
+    },
+    "age_reviewed": {
+      "type": "boolean"
+    },
+    "thumbnail_asset": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Optional image asset used on the downloaded library card."
+    }
+  },
+  "definitions": {
+    "lesson": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "version",
+        "title",
+        "skill",
+        "activities",
+        "curriculum_references"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "skill": {
+          "enum": [
+            "listening",
+            "speaking",
+            "reading",
+            "writing",
+            "grammar",
+            "vocabulary"
+          ]
+        },
+        "curriculum_references": {
+          "type": "array",
+          "minItems": 0,
+          "maxItems": 30,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          }
+        },
+        "activities": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/activity"
+          },
+          "maxItems": 100
+        },
+        "learning_outcomes": {
+          "type": "array",
+          "maxItems": 30,
+          "items": {
+            "maxLength": 500,
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "activity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "prompt",
+        "scoring_version"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,100}$"
+        },
+        "type": {
+          "enum": [
+            "reading",
+            "listening",
+            "quiz",
+            "multi_select",
+            "matching",
+            "gap_fill",
+            "spelling",
+            "token_order",
+            "sequencing",
+            "picture",
+            "comprehension",
+            "glossary",
+            "writing",
+            "media",
+            "book",
+            "dialogue",
+            "speaking",
+            "error_correction"
+          ]
+        },
+        "prompt": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 10000
+        },
+        "scoring_version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "reference_asset": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "options": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 8,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          }
+        },
+        "correct_index": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "rubric": {
+          "type": "array",
+          "maxItems": 10,
+          "items": {
+            "properties": {
+              "maximum_score": {
+                "minimum": 1,
+                "type": "integer",
+                "maximum": 100
+              },
+              "criterion": {
+                "maxLength": 500,
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "type": "object",
+            "required": [
+              "criterion",
+              "maximum_score"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "correct_indices": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 8,
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "explanation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "case_sensitive": {
+          "type": "boolean"
+        },
+        "normalization": {
+          "const": "NFC"
+        },
+        "pairs": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 30,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_-]{1,100}$"
+              },
+              "left": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              },
+              "right": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              }
+            },
+            "required": [
+              "id",
+              "left",
+              "right"
+            ]
+          }
+        },
+        "segments": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 31,
+          "items": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 10000
+          }
+        },
+        "answers": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 30,
+          "items": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 8,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 500
+            }
+          }
+        },
+        "accepted_answers": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 20,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          }
+        },
+        "items": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 30,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_-]{1,100}$"
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1000
+              }
+            },
+            "required": [
+              "id",
+              "text"
+            ]
+          }
+        },
+        "correct_order": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 30,
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{1,100}$"
+          }
+        },
+        "image_asset": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "alt_text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "passage": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 10000
+        },
+        "comprehension_focus": {
+          "enum": [
+            "literal",
+            "main_idea",
+            "inference",
+            "vocabulary",
+            "listening"
+          ]
+        },
+        "entries": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 20,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_-]{1,100}$"
+              },
+              "term": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              },
+              "definition": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "example": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "reference_asset": {
+                "type": "string",
+                "format": "uuid"
+              }
+            },
+            "required": [
+              "id",
+              "term",
+              "definition"
+            ]
+          }
+        },
+        "writing_mode": {
+          "enum": [
+            "guided",
+            "free"
+          ]
+        },
+        "starters": {
+          "type": "array",
+          "minItems": 0,
+          "maxItems": 10,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          }
+        },
+        "pages": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 20,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_-]{1,100}$"
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 10000
+              },
+              "image_asset": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "alt_text": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              },
+              "reference_asset": {
+                "type": "string",
+                "format": "uuid"
+              }
+            },
+            "required": [
+              "id",
+              "text"
+            ]
+          }
+        },
+        "turns": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 20,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "speaker": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              "reference_asset": {
+                "type": "string",
+                "format": "uuid"
+              }
+            },
+            "required": [
+              "speaker",
+              "text"
+            ]
+          }
+        },
+        "reading_kind": {
+          "enum": [
+            "story",
+            "passage",
+            "phonics",
+            "words",
+            "sentences"
+          ]
+        },
+        "topic": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "source_text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 10000
+        },
+        "speaking_kind": {
+          "enum": [
+            "words",
+            "sentences",
+            "phonics",
+            "syllables",
+            "stress",
+            "intonation",
+            "fluency",
+            "role_play",
+            "self_introduction",
+            "picture_description",
+            "story_narration",
+            "question_answer",
+            "discussion",
+            "presentation",
+            "situational"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "speaking"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "speaking_kind",
+              "rubric"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "error_correction"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "source_text",
+              "accepted_answers"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "quiz"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "options",
+              "correct_index"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "multi_select"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "options",
+              "correct_indices"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "matching"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "pairs"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "gap_fill"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "segments",
+              "answers"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "spelling"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "accepted_answers"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "token_order"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "items",
+              "correct_order"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "sequencing"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "items",
+              "correct_order"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "picture"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "image_asset",
+              "alt_text",
+              "accepted_answers"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "comprehension"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "passage",
+              "options",
+              "correct_index",
+              "comprehension_focus"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "glossary"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "entries"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "writing"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "writing_mode"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "media"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "reference_asset"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "book"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "pages"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "dialogue"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "turns"
+            ]
+          }
+        }
+      ]
+    },
+    "asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "relative_path",
+        "sha256",
+        "byte_size",
+        "mime_type"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "relative_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "byte_size": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "mime_type": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "schema_version": {
+            "const": 2
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "age_reviewed"
+        ]
+      }
+    }
+  ]
+}

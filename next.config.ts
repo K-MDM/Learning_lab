@@ -1,7 +1,7 @@
 import type {NextConfig} from 'next';
-import path from 'node:path';
 const config: NextConfig = {
-  turbopack: {root: path.resolve(process.cwd(), '..')},
-  outputFileTracingRoot: path.resolve(process.cwd(), '..'),
+  turbopack: {root: process.cwd()},
+  outputFileTracingRoot: process.cwd(),
+  outputFileTracingIncludes: {'/api/staff/content': ['./resources/content/samples/library-story.wav']},
 };
 export default config;

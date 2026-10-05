@@ -1,5 +1,4 @@
-import {readFileSync} from 'node:fs';
-import {resolve} from 'node:path';
+import topics from '../../resources/contracts/curriculum-topics.json';
 import {and,desc,eq,inArray,lt} from 'drizzle-orm';
 import type {PgDatabase,PgQueryResultHKT} from 'drizzle-orm/pg-core';
 import * as s from '../db/schema';
@@ -7,7 +6,7 @@ import {contentStaff,ContentError} from './content';
 import {validateManifest,type Manifest} from './package';
 type DB=PgDatabase<PgQueryResultHKT,typeof s>;
 export const evidenceKinds=['rights_attested','expert_review','submitted','correction_requested','correction_resolved','authority_approval','authority_rejection'] as const;
-export const curriculumTopics=JSON.parse(readFileSync(resolve(process.cwd(),'../contracts/curriculum-topics.json'),'utf8')) as {applicability:string;topics:{id:string;skill:string;label:string}[]};
+export const curriculumTopics=topics as {applicability:string;topics:{id:string;skill:string;label:string}[]};
 const languages=['en','hi','sa','fr','de'],levels=['foundational','preparatory','middle','secondary',...Array.from({length:12},(_,i)=>`grade-${i+1}`),'beginner','intermediate','advanced','remedial'],skills=['listening','speaking','reading','writing','grammar','vocabulary'];
 export type CoverageCell={language:string;level:string;skill:string;draft:number;published:number;mapped:number;ageReviewed:number;evidenceRecorded:number;topics:string[];missingTopics:string[]};
 export function emptyCoverage():CoverageCell[]{return languages.flatMap(language=>levels.flatMap(level=>skills.map(skill=>({language,level,skill,draft:0,published:0,mapped:0,ageReviewed:0,evidenceRecorded:0,topics:[],missingTopics:curriculumTopics.topics.filter(t=>t.skill===skill).map(t=>t.id)}))));}

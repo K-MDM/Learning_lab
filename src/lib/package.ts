@@ -1,6 +1,6 @@
 import Ajv from 'ajv';
 import addFormats from 'ajv-formats';
-import contract from '../../../contracts/package.schema.json';
+import contract from '../../resources/contracts/package.schema.json';
 import {createHash,sign} from 'node:crypto';
 import type {ActivationConfig,Envelope} from './activation';
 import {validateActivity,type Activity} from './activity-contract';
