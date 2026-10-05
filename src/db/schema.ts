@@ -278,6 +278,25 @@ export const adminAuditEvents=lab.table('admin_audit_events',{
 ]).enableRLS();
 
 export type Licence=typeof licences.$inferSelect;
+export const curriculumReviewEvents=lab.table('curriculum_review_events',{
+  id:uuid('id').primaryKey(),
+  releaseId:uuid('release_id').notNull().references(()=>packageReleases.id),
+  manifestDigest:text('manifest_digest').notNull(),
+  kind:text('kind').notNull(),
+  actorUserId:uuid('actor_user_id').notNull().references(()=>authUsers.id),
+  reviewer:text('reviewer').notNull(),
+  reference:text('reference').notNull(),
+  documentUrl:text('document_url').notNull(),
+  documentDigest:text('document_digest').notNull(),
+  notes:text('notes').notNull().default(''),
+  parentEventId:uuid('parent_event_id'),
+  createdAt:timestamp('created_at',{withTimezone:true}).notNull().defaultNow()
+},t=>[
+  index('curriculum_release_evidence').on(t.releaseId,t.manifestDigest,t.createdAt),
+  check('curriculum_event_kind',sql`${t.kind} IN ('rights_attested','expert_review','submitted','correction_requested','correction_resolved','authority_approval','authority_rejection')`),
+  check('curriculum_digest_bound',sql`${t.manifestDigest} ~ '^[a-f0-9]{64}$' AND ${t.documentDigest} ~ '^[a-f0-9]{64}$'`),
+  check('curriculum_text_bounds',sql`length(${t.reviewer}) BETWEEN 1 AND 200 AND length(${t.reference}) BETWEEN 1 AND 500 AND length(${t.documentUrl}) BETWEEN 1 AND 2000 AND length(${t.notes})<=4000`)
+]).enableRLS();
 export type NewLicence=typeof licences.$inferInsert;
 export type DeviceActivation=typeof deviceActivations.$inferSelect;
 export type PackageRelease=typeof packageReleases.$inferSelect;

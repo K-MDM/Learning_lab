@@ -7,5 +7,5 @@ export async function POST(request:Request){
   if(typeof email!=='string'||typeof password!=='string'||!email.trim()||email.length>254||!password||password.length>1024)return Response.redirect(new URL('/login?error=invalid',url),303);
   const {error}=await client.auth.signInWithPassword({email:email.trim(),password});
   if(error||!await getStaff(client)){await client.auth.signOut();return Response.redirect(new URL('/login?error=denied',url),303);}
-  return Response.redirect(new URL('/dashboard',url),303);
+  return Response.redirect(new URL('/dashboard/overview',url),303);
 }

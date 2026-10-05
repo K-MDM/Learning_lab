@@ -1,6 +1,7 @@
 import registry from '../../../contracts/learning-registry.json';
+import {validWav} from './media-validation';
 import {randomUUID,createHash} from 'node:crypto';
-import {and,desc,eq,sql} from 'drizzle-orm';
+import {and,desc,eq,sql,lt,ilike,or} from 'drizzle-orm';
 import type {PgDatabase,PgQueryResultHKT} from 'drizzle-orm/pg-core';
 import * as s from '../db/schema';
 import {canonical,manifestDigest,validateManifest,type Manifest} from './package';
@@ -25,7 +26,7 @@ function validateDraft(input:DraftInput){
 }
 export async function createDraft(db:DB,actor:string,input:DraftInput,audio:Buffer|null,store?:AssetStore){
   validateDraft(input);
-  if(audio&&(audio.length<44||audio.length>20*1024*1024||audio.toString('ascii',0,4)!=='RIFF'||audio.toString('ascii',8,12)!=='WAVE'))throw new ContentError(400,'Upload a WAV narration up to 20 MB.');
+  if(audio&&!validWav(audio))throw new ContentError(400,'Upload a valid WAV narration up to 20 MB.');
   await db.transaction(tx=>contentStaff(tx,actor,['owner','content_editor']));
   const assetId=randomUUID(),key=`assets/${assetId}.wav`,releaseId=randomUUID(),unitId=randomUUID(),lessonId=randomUUID(),collectionId=randomUUID();
   const title=input.lessonTitle.trim()+(input.demonstration?' — demonstration':'');
@@ -38,6 +39,8 @@ export async function createDraft(db:DB,actor:string,input:DraftInput,audio:Buff
   validateManifest(manifest);if(audio){if(!store)throw new ContentError(503,'Audio storage is not configured.');await store.upload(key,audio,'audio/wav');}
   try{return await db.transaction(async tx=>{
     await contentStaff(tx,actor,['owner','content_editor']);
+    const language=registry.languages.find(item=>item.code===input.language)!;
+    await tx.insert(s.languages).values({code:language.code,name:language.name,nativeName:language.name}).onConflictDoNothing();
     const [level]=await tx.insert(s.learningLevels).values({code:input.level,stage:input.level.startsWith('grade-')?(Number(input.level.slice(6))<=2?'foundational':Number(input.level.slice(6))<=5?'preparatory':Number(input.level.slice(6))<=8?'middle':'secondary'):registry.stages.includes(input.level)?input.level:'proficiency',grade:input.level.startsWith('grade-')?Number(input.level.slice(6)):null,proficiency:registry.proficiencies.includes(input.level)?input.level:null}).onConflictDoUpdate({target:s.learningLevels.code,set:{code:input.level}}).returning();
     const [course]=await tx.insert(s.courses).values({languageCode:input.language,levelId:level.id,title:input.courseTitle.trim()}).returning();
     await tx.insert(s.units).values({id:unitId,courseId:course.id,title:input.unitTitle.trim(),position:0});
@@ -52,7 +55,7 @@ export async function createDraft(db:DB,actor:string,input:DraftInput,audio:Buff
     await audit(tx,actor,releaseId,'draft_created');return {id:releaseId};
   });}catch(error){try{if(audio&&store)await store.remove(key);}catch{/* Orphan is private; retained for operator cleanup. */}throw error;}
 }
-export async function reviewOrPublish(db:DB,actor:string,id:string,action:'review'|'publish'){
+export async function reviewOrPublish(db:DB,actor:string,id:string,action:'review'|'publish',ageAppropriate=false){
   return db.transaction(async tx=>{
     await contentStaff(tx,actor,['owner','publisher']);
     const [release]=await tx.select().from(s.packageReleases).where(eq(s.packageReleases.id,id)).for('update');
@@ -60,7 +63,9 @@ export async function reviewOrPublish(db:DB,actor:string,id:string,action:'revie
     const manifest=validateManifest(release.manifest),links=await tx.select({version:s.lessonVersions}).from(s.packageLessons)
       .innerJoin(s.lessonVersions,eq(s.lessonVersions.id,s.packageLessons.lessonVersionId)).where(eq(s.packageLessons.releaseId,id));
     if(action==='review'){
+      if(manifest.schema_version===2&&!ageAppropriate)throw new ContentError(400,'Confirm staff review of age suitability for the declared level. This is not formal curriculum approval.');
       if(manifest.publication_status==='reviewed')throw new ContentError(409,'Draft already reviewed.');manifest.publication_status='reviewed';
+      if(manifest.schema_version===2)manifest.age_reviewed=true;
       for(const row of links)await tx.update(s.lessonVersions).set({reviewStatus:'reviewed'}).where(eq(s.lessonVersions.id,row.version.id));
       await tx.update(s.packageReleases).set({manifest,manifestDigest:manifestDigest(manifest)}).where(eq(s.packageReleases.id,id));
     }else{
@@ -78,19 +83,23 @@ export async function reviewOrPublish(db:DB,actor:string,id:string,action:'revie
       const collections=await tx.select().from(s.collectionUnits).where(eq(s.collectionUnits.unitId,release.unitId));
       for(const collection of collections)await tx.update(s.contentCollections).set({status:'active'}).where(eq(s.contentCollections.id,collection.collectionId));
     }
-    await audit(tx,actor,id,action==='review'?'content_reviewed':'content_published');return {id};
+    await audit(tx,actor,id,action==='review'?(manifest.schema_version===2?'content_and_age_reviewed':'content_reviewed'):'content_published');return {id};
   });
 }
-export async function listContent(db:DB,actor:string){return db.transaction(async tx=>{
+export async function listContent(db:DB,actor:string,filters:{cursor?:string;search?:string;status?:string}={}){return db.transaction(async tx=>{
   await contentStaff(tx,actor,['owner','content_editor','publisher','licence_manager']);
-  return tx.select({id:s.packageReleases.id,status:s.packageReleases.status,manifest:s.packageReleases.manifest,manifestDigest:s.packageReleases.manifestDigest,publishedAt:s.packageReleases.publishedAt,
+  const search=filters.search?.trim().slice(0,120).replace(/[\\%_]/g,'\\$&');
+  return tx.selectDistinctOn([s.packageReleases.id],{id:s.packageReleases.id,status:s.packageReleases.status,manifest:s.packageReleases.manifest,manifestDigest:s.packageReleases.manifestDigest,publishedAt:s.packageReleases.publishedAt,
     unitTitle:s.units.title,courseTitle:s.courses.title,collectionId:s.contentCollections.id})
     .from(s.packageReleases).innerJoin(s.units,eq(s.units.id,s.packageReleases.unitId)).innerJoin(s.courses,eq(s.courses.id,s.units.courseId))
-    .innerJoin(s.collectionUnits,eq(s.collectionUnits.unitId,s.units.id)).innerJoin(s.contentCollections,eq(s.contentCollections.id,s.collectionUnits.collectionId)).orderBy(desc(s.packageReleases.id)).limit(100);
+    .innerJoin(s.collectionUnits,eq(s.collectionUnits.unitId,s.units.id)).innerJoin(s.contentCollections,eq(s.contentCollections.id,s.collectionUnits.collectionId))
+    .where(and(filters.cursor?lt(s.packageReleases.id,filters.cursor):undefined,filters.status&&['draft','published','withdrawn'].includes(filters.status)?eq(s.packageReleases.status,filters.status):undefined,search?or(ilike(s.units.title,`%${search}%`),ilike(s.courses.title,`%${search}%`),ilike(s.courses.languageCode,`%${search}%`)):undefined))
+    .orderBy(desc(s.packageReleases.id)).limit(101);
 });}
 export async function previewContent(db:DB,actor:string,id:string,store:AssetStore){return db.transaction(async tx=>{
   await contentStaff(tx,actor,['owner','content_editor','publisher']);
-  const files=await tx.select({key:s.assets.objectKey}).from(s.packageAssets).innerJoin(s.assets,eq(s.assets.id,s.packageAssets.assetId)).where(eq(s.packageAssets.releaseId,id));
-  return {urls:await Promise.all(files.map(row=>store.signedUrl(row.key)))};
+  const files=await tx.select({key:s.assets.objectKey,mimeType:s.assets.mimeType,path:s.packageAssets.relativePath}).from(s.packageAssets).innerJoin(s.assets,eq(s.assets.id,s.packageAssets.assetId)).where(eq(s.packageAssets.releaseId,id));
+  const assets=await Promise.all(files.map(async row=>({url:await store.signedUrl(row.key),mimeType:row.mimeType,path:row.path})));
+  return {urls:assets.map(asset=>asset.url),assets};
 });}
 

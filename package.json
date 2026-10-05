@@ -7,12 +7,13 @@
     "build": "next build",
     "start": "next start --port 3100",
     "typecheck": "tsc --noEmit",
-    "test": "tsx --test ../tools/contracts.test.mjs ../tools/database.test.mjs ../tools/licences.test.ts ../tools/activation.test.ts ../tools/content.test.ts",
+    "test": "tsx --test ../tools/contracts.test.mjs ../tools/database.test.mjs ../tools/licences.test.ts ../tools/activation.test.ts ../tools/content.test.ts ../tools/activities.test.ts ../tools/remaining-activities.test.ts ../tools/curriculum.test.ts ../tools/demo-content.test.ts",
     "db:generate": "drizzle-kit generate",
     "db:studio": "drizzle-kit studio",
     "db:migrate": "tsx src/db/migrate.ts",
     "db:inspect": "tsx src/db/inspect.ts",
-    "db:baseline": "tsx src/db/baseline.ts"
+    "db:baseline": "tsx src/db/baseline.ts",
+    "db:seed:demos": "tsx ../tools/seed-english-demos.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.0",

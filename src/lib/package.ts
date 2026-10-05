@@ -3,17 +3,21 @@ import addFormats from 'ajv-formats';
 import contract from '../../../contracts/package.schema.json';
 import {createHash,sign} from 'node:crypto';
 import type {ActivationConfig,Envelope} from './activation';
-export type ActivityType="reading"|"listening"|"quiz";
-export type Activity={id:string;type:ActivityType;prompt:string;scoring_version:number;reference_asset?:string;options?:string[];correct_index?:number;rubric?:{criterion:string;maximum_score:number}[]};
+import {validateActivity,type Activity} from './activity-contract';
+export type {Activity,ActivityType} from './activity-contract';
 export type Lesson={id:string;version:number;title:string;skill:string;curriculum_references:string[];learning_outcomes?:string[];activities:Activity[]};
 export type Asset={id:string;relative_path:string;sha256:string;byte_size:number;mime_type:string};
-export type Manifest={schema_version:1;release_id:string;unit_id:string;version:string;language:string;level:string;
-  minimum_app_version:string;publication_status:'draft'|'reviewed';lessons:Lesson[];assets:Asset[]};
+export type Manifest={schema_version:1|2;age_reviewed?:boolean;release_id:string;unit_id:string;version:string;language:string;level:string;
+  thumbnail_asset?:string;minimum_app_version:string;publication_status:'draft'|'reviewed';lessons:Lesson[];assets:Asset[]};
 const ajv=new Ajv({allErrors:true});addFormats(ajv);const validate=ajv.compile(contract);
 export function validateManifest(value:unknown,publish=false):Manifest{
   if(!validate(value))throw new Error('Package structure is invalid.');
   const manifest=value as Manifest;
+  if(Buffer.byteLength(canonical(manifest),'utf8')>512*1024)throw new Error('Package metadata is too large.');
+  const minimum=manifest.minimum_app_version.split('.').map(Number);
+  if(manifest.schema_version===2&&(minimum[0]<1||(minimum[0]===1&&minimum[1]<2)))throw new Error('Package v2 requires app1.2.0 or newer.');
   if(publish&&manifest.publication_status!=='reviewed')throw new Error('Content review is required.');
+  if(publish&&manifest.schema_version===2&&!manifest.age_reviewed)throw new Error('Staff age review is required.');
   const unique=(values:string[])=>new Set(values.map(value=>value.toLowerCase())).size===values.length;
   if(manifest.lessons.length>100||manifest.assets.length>100||!unique(manifest.lessons.map(x=>x.id))||
     !unique(manifest.assets.map(x=>x.id))||!unique(manifest.assets.map(x=>x.relative_path)))throw new Error('Duplicate or excessive package entries.');
@@ -22,10 +26,12 @@ export function validateManifest(value:unknown,publish=false):Manifest{
       asset.relative_path.split('/').some(segment=>/^(con|prn|aux|nul|com[1-9]|lpt[1-9])(?:\.|$)/i.test(segment)))throw new Error('Unsafe asset path or size.');
   }
   if(manifest.assets.reduce((sum,x)=>sum+x.byte_size,0)>100*1024*1024)throw new Error('Package is too large.');
+  if(manifest.thumbnail_asset&&!manifest.assets.some(asset=>asset.id===manifest.thumbnail_asset&&['image/png','image/jpeg'].includes(asset.mime_type)))throw new Error('Library thumbnail must reference an attached PNG or JPEG image.');
   for(const lesson of manifest.lessons){
     if(lesson.activities.length>100||!unique(lesson.activities.map(x=>x.id)))throw new Error('Duplicate or excessive activities.');
     for(const activity of lesson.activities){
-      if(!['reading','listening','quiz'].includes(activity.type))throw new Error('This release supports reading, listening and quizzes.');
+      validateActivity(activity,manifest.assets,manifest.schema_version);
+      if(['speaking','error_correction'].includes(activity.type)&&(minimum[0]<1||(minimum[0]===1&&minimum[1]<3)))throw new Error('This activity requires app1.3.0 or newer.');
       if(activity.reference_asset&&!manifest.assets.some(x=>x.id===activity.reference_asset))throw new Error('Referenced asset is missing.');
       if(activity.type==='quiz'&&(activity.correct_index!>=activity.options!.length))throw new Error('Invalid quiz answer.');
     }
