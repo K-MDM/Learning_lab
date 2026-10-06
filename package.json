@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start --port 3100",
     "typecheck": "tsc --noEmit",
-    "test": "tsx --test ../tools/contracts.test.mjs ../tools/database.test.mjs ../tools/licences.test.ts ../tools/activation.test.ts ../tools/content.test.ts ../tools/activities.test.ts ../tools/remaining-activities.test.ts ../tools/curriculum.test.ts ../tools/demo-content.test.ts ../tools/grade-10-curriculum.test.ts",
+    "test": "tsx --test ../tools/contracts.test.mjs ../tools/database.test.mjs ../tools/licences.test.ts ../tools/activation.test.ts ../tools/content.test.ts ../tools/activities.test.ts ../tools/remaining-activities.test.ts ../tools/curriculum.test.ts ../tools/demo-content.test.ts ../tools/grade-10-curriculum.test.ts ../tools/english-curriculum.test.ts",
     "db:generate": "drizzle-kit generate",
     "db:studio": "drizzle-kit studio",
     "db:migrate": "tsx src/db/migrate.ts",
@@ -15,9 +15,11 @@
     "db:baseline": "tsx src/db/baseline.ts",
     "db:seed:demos": "tsx ../tools/seed-english-demos.ts",
     "db:seed:class10": "tsx ../tools/seed-grade-10-english.ts",
+    "db:seed:curriculum": "tsx ../tools/seed-curriculum-all.ts",
     "db:seed:writing": "tsx ../tools/update-writing-seeds.ts",
     "prebuild": "node scripts/sync-resources.mjs",
-    "predev": "node scripts/sync-resources.mjs"
+    "predev": "node scripts/sync-resources.mjs",
+    "db:seed:english": "tsx ../tools/seed-english-curriculum.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.0",

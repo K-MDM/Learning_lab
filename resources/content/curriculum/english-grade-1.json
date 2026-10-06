@@ -1,0 +1,343 @@
+[
+  {
+    "key": "class1-listening",
+    "skill": "listening",
+    "title": "Fun with Sounds: Animal Voices & Rhymes",
+    "courseTitle": "English · Class 1",
+    "unitTitle": "Listening: Sounds Around Us",
+    "level": "grade-1",
+    "summary": "Listen to animal sounds, nature noises, and cheerful nursery chants.",
+    "outcome": "Identify familiar environmental sounds and recognize rhyming word endings.",
+    "curriculum_references": [
+      "NCF-FS-ENG-01",
+      "CG-SCERT-01-LIST-01"
+    ],
+    "activities": [
+      {
+        "type": "listening",
+        "topic": "listening.rhymes",
+        "prompt": "Listen to the rhyme: Bow-wow says the dog, Mew-mew says the cat, Grunt-grunt goes the hog, And squeak goes the rat."
+      },
+      {
+        "type": "quiz",
+        "topic": "listening.sound_discrimination",
+        "prompt": "Which animal says \"Mew-mew\"?",
+        "options": [
+          "The cat",
+          "The dog",
+          "The hog",
+          "The rat"
+        ],
+        "correct_index": 0,
+        "explanation": "In the rhyme, the cat says \"Mew-mew\"."
+      },
+      {
+        "type": "quiz",
+        "topic": "listening.sound_discrimination",
+        "prompt": "Which animal makes the \"Bow-wow\" sound?",
+        "options": [
+          "The cow",
+          "The dog",
+          "The lion",
+          "The duck"
+        ],
+        "correct_index": 1,
+        "explanation": "Dogs make the \"Bow-wow\" sound."
+      }
+    ]
+  },
+  {
+    "key": "class1-speaking",
+    "skill": "speaking",
+    "title": "Say It Out Loud: Letter Sounds & Hello",
+    "courseTitle": "English · Class 1",
+    "unitTitle": "Speaking: Phonics & Daily Greetings",
+    "level": "grade-1",
+    "summary": "Practice saying letter sounds, cheerful greetings, and names of family members.",
+    "outcome": "Pronounce basic phonemes clearly and respond to greetings with \"Good morning\" and \"Thank you\".",
+    "curriculum_references": [
+      "NCF-FS-ENG-02",
+      "CG-SCERT-01-SPK-01"
+    ],
+    "activities": [
+      {
+        "type": "speaking",
+        "speaking_kind": "phonics",
+        "topic": "speaking.phonics",
+        "prompt": "Say the letter sound clearly: \"/æ/ as in Apple, Ant, Axe\".",
+        "rubric": [
+          {
+            "criterion": "Pronunciation and phonetic clarity",
+            "maximum_score": 5
+          },
+          {
+            "criterion": "Intonation, cadence and fluency",
+            "maximum_score": 5
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "speaking_kind": "words",
+        "topic": "speaking.words",
+        "prompt": "Say aloud: \"Hello, Teacher! Good morning.\"",
+        "rubric": [
+          {
+            "criterion": "Pronunciation and phonetic clarity",
+            "maximum_score": 5
+          },
+          {
+            "criterion": "Intonation, cadence and fluency",
+            "maximum_score": 5
+          }
+        ]
+      },
+      {
+        "type": "dialogue",
+        "topic": "speaking.sentences",
+        "prompt": "Listen and repeat the friendly greeting:",
+        "turns": [
+          {
+            "speaker": "Raju",
+            "text": "Hello, Meena! How are you?"
+          },
+          {
+            "speaker": "Meena",
+            "text": "I am good! Thank you, Raju."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "class1-reading",
+    "skill": "reading",
+    "title": "Look and Read: Meena and Her Pet",
+    "courseTitle": "English · Class 1",
+    "unitTitle": "Reading: Words and Short Sentences",
+    "level": "grade-1",
+    "summary": "Read three-letter CVC words and simple picture stories about pets and toys.",
+    "outcome": "Decode simple 3-letter sight words and read short 20-word sentences with pictures.",
+    "curriculum_references": [
+      "NCF-FS-ENG-03",
+      "CG-SCERT-01-READ-01"
+    ],
+    "activities": [
+      {
+        "type": "reading",
+        "reading_kind": "story",
+        "topic": "reading.contextual_reading",
+        "prompt": "Meena has a little pet cat. The cat is fat. The cat sat on a red mat. Meena loves her cat."
+      },
+      {
+        "type": "comprehension",
+        "topic": "reading.comprehension",
+        "prompt": "Where did the cat sit?",
+        "passage": "The cat sat on a red mat.",
+        "comprehension_focus": "literal",
+        "options": [
+          "On a box",
+          "On a red mat",
+          "Under a tree",
+          "In a car"
+        ],
+        "correct_index": 1,
+        "explanation": "The story says the cat sat on a red mat."
+      },
+      {
+        "type": "sequencing",
+        "topic": "reading.sequencing",
+        "prompt": "Arrange the story events in order:",
+        "items": [
+          {
+            "id": "p1",
+            "text": "Meena has a cat."
+          },
+          {
+            "id": "p2",
+            "text": "The cat sat on a mat."
+          },
+          {
+            "id": "p3",
+            "text": "Meena loves her pet."
+          }
+        ],
+        "correct_order": [
+          "p1",
+          "p2",
+          "p3"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "class1-writing",
+    "skill": "writing",
+    "title": "First Words: Naming Objects & Letters",
+    "courseTitle": "English · Class 1",
+    "unitTitle": "Writing: Tracing & Word Discovery",
+    "level": "grade-1",
+    "summary": "Identify the starting sounds of objects and arrange letters into common words.",
+    "outcome": "Recognize capital and small letters and match initial sounds to familiar pictures.",
+    "curriculum_references": [
+      "NCF-FS-ENG-04",
+      "CG-SCERT-01-WRIT-01"
+    ],
+    "activities": [
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_formation",
+        "prompt": "Which word starts with the letter B?",
+        "options": [
+          "Ball",
+          "Apple",
+          "Cat",
+          "Dog"
+        ],
+        "correct_index": 0,
+        "explanation": "Ball starts with the letter B."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_formation",
+        "prompt": "Complete the word: S _ N (the bright star in the daytime sky)",
+        "options": [
+          "U",
+          "O",
+          "A",
+          "E"
+        ],
+        "correct_index": 0,
+        "explanation": "SUN is spelled S-U-N."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.error_correction",
+        "prompt": "Choose the correct capital letter for \"apple\":",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correct_index": 0,
+        "explanation": "Capital letter A begins Apple."
+      }
+    ]
+  },
+  {
+    "key": "class1-grammar",
+    "skill": "grammar",
+    "title": "One and Many: Naming Things",
+    "courseTitle": "English · Class 1",
+    "unitTitle": "Grammar: Naming Words & Plurals",
+    "level": "grade-1",
+    "summary": "Discover naming words (nouns) for people, animals, and things, and add \"s\" for many.",
+    "outcome": "Differentiate between one object and more than one by adding \"-s\".",
+    "curriculum_references": [
+      "NCF-FS-ENG-05",
+      "CG-SCERT-01-GRAM-01"
+    ],
+    "activities": [
+      {
+        "type": "quiz",
+        "topic": "grammar.subject_verb_agreement",
+        "prompt": "One bird, two ___?",
+        "options": [
+          "Birds",
+          "Bird",
+          "Birdes",
+          "Birding"
+        ],
+        "correct_index": 0,
+        "explanation": "Add \"s\" to make plural: one bird, two birds."
+      },
+      {
+        "type": "quiz",
+        "topic": "grammar.subject_verb_agreement",
+        "prompt": "Which is a naming word for a person?",
+        "options": [
+          "Teacher",
+          "Jump",
+          "Red",
+          "Quickly"
+        ],
+        "correct_index": 0,
+        "explanation": "Teacher is the name of a person."
+      },
+      {
+        "type": "quiz",
+        "topic": "grammar.subject_verb_agreement",
+        "prompt": "One book, three ___?",
+        "options": [
+          "Books",
+          "Book",
+          "Booken",
+          "Bookes"
+        ],
+        "correct_index": 0,
+        "explanation": "One book, three books."
+      }
+    ]
+  },
+  {
+    "key": "class1-vocabulary",
+    "skill": "vocabulary",
+    "title": "Colors, Shapes & Body Parts",
+    "courseTitle": "English · Class 1",
+    "unitTitle": "Vocabulary: Everyday Words",
+    "level": "grade-1",
+    "summary": "Learn colors (red, blue, green) and body parts (eyes, ears, hands).",
+    "outcome": "Identify primary colors and name common body parts in English.",
+    "curriculum_references": [
+      "NCF-FS-ENG-06",
+      "CG-SCERT-01-VOC-01"
+    ],
+    "activities": [
+      {
+        "type": "matching",
+        "topic": "vocabulary.synonyms",
+        "prompt": "Match each item with its color:",
+        "pairs": [
+          {
+            "id": "m1",
+            "left": "Leaf",
+            "right": "Green"
+          },
+          {
+            "id": "m2",
+            "left": "Sun",
+            "right": "Yellow"
+          },
+          {
+            "id": "m3",
+            "left": "Sky",
+            "right": "Blue"
+          }
+        ]
+      },
+      {
+        "type": "spelling",
+        "topic": "vocabulary.spelling",
+        "prompt": "Spell the color of a ripe red apple (3 letters):",
+        "accepted_answers": [
+          "red"
+        ],
+        "explanation": "R-E-D spells red."
+      },
+      {
+        "type": "quiz",
+        "topic": "vocabulary.academic",
+        "prompt": "What do we use to see colors?",
+        "options": [
+          "Eyes",
+          "Ears",
+          "Nose",
+          "Hands"
+        ],
+        "correct_index": 0,
+        "explanation": "We see with our eyes."
+      }
+    ]
+  }
+]

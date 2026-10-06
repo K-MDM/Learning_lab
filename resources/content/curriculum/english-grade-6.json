@@ -1,0 +1,359 @@
+[
+  {
+    "key": "class6-listening",
+    "skill": "listening",
+    "title": "The Bell Metal Artisans: Living Heritage of Bastar",
+    "courseTitle": "English · Class 6",
+    "unitTitle": "Listening: Cultural Heritage & Craftsmanship",
+    "level": "grade-6",
+    "summary": "Listen to an interview with a master craftsman explaining the ancient lost-wax casting technique (Dhokra).",
+    "outcome": "Synthesize historical and procedural information from technical oral discourse.",
+    "curriculum_references": [
+      "NCF-MID-ENG-01",
+      "CG-SCERT-06-LIST-01"
+    ],
+    "activities": [
+      {
+        "type": "listening",
+        "topic": "listening.listening_comprehension",
+        "prompt": "Listen to this artisan monologue: \"Dhokra metal casting is a four-thousand-year-old metallurgical tradition preserved by the Ghadwa community of Bastar. We first construct a clay core model, wrap it meticulously with delicate beeswax threads to create intricate filigree designs, and coat it with another layer of riverbed clay. When fired in an open furnace, the molten brass alloy replaces the melted wax, creating hollow bronze artifacts celebrated worldwide for their rustic elegance.\""
+      },
+      {
+        "type": "quiz",
+        "topic": "listening.listening_comprehension",
+        "prompt": "What replaces the melted beeswax inside the mold during firing?",
+        "options": [
+          "Molten brass alloy",
+          "Fine riverbed sand",
+          "Carved teak wood",
+          "Cold river water"
+        ],
+        "correct_index": 0,
+        "explanation": "The lost-wax technique relies on molten brass alloy replacing the melted wax."
+      },
+      {
+        "type": "quiz",
+        "topic": "listening.listening_comprehension",
+        "prompt": "Which community of Bastar is historically celebrated for preserving Dhokra art?",
+        "options": [
+          "Ghadwa community",
+          "Warli community",
+          "Gond community",
+          "Santhal community"
+        ],
+        "correct_index": 0,
+        "explanation": "The artisan specifically mentions the Ghadwa community of Bastar."
+      }
+    ]
+  },
+  {
+    "key": "class6-speaking",
+    "skill": "speaking",
+    "title": "Conducting an Interview & Speech Cadence",
+    "courseTitle": "English · Class 6",
+    "unitTitle": "Speaking: Conversational Inquiries & Interviews",
+    "level": "grade-6",
+    "summary": "Practice asking open-ended questions in an interview format with polite turn-taking.",
+    "outcome": "Conduct an interview using polite conversational markers and clear syllable articulation.",
+    "curriculum_references": [
+      "NCF-MID-ENG-02",
+      "CG-SCERT-06-SPK-01"
+    ],
+    "activities": [
+      {
+        "type": "dialogue",
+        "topic": "speaking.discussion",
+        "prompt": "Practice this interview between a school journalist and an environmental activist:",
+        "turns": [
+          {
+            "speaker": "Interviewer",
+            "text": "Good morning! Could you share what inspired your river conservation campaign?"
+          },
+          {
+            "speaker": "Activist",
+            "text": "Watching untreated urban sewage choke the local aquatic life compelled us to mobilize youth volunteers."
+          },
+          {
+            "speaker": "Interviewer",
+            "text": "What can students do on a daily basis to support your initiatives?"
+          },
+          {
+            "speaker": "Activist",
+            "text": "Minimizing plastic waste and organizing neighborhood cleanup drives makes an immediate difference."
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "speaking_kind": "stress",
+        "topic": "speaking.stress",
+        "prompt": "Read aloud with deliberate syllable stress: \"Preserving indigenous artistic traditions requires conscious community patronage.\"",
+        "rubric": [
+          {
+            "criterion": "Pronunciation, cadence and phonetic accuracy",
+            "maximum_score": 5
+          },
+          {
+            "criterion": "Intonation, sentence modulation and fluency",
+            "maximum_score": 5
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "speaking_kind": "presentation",
+        "topic": "speaking.presentation",
+        "prompt": "Deliver a 90-second talk about one local folk craft from your district. Highlight its materials and artistic value.",
+        "rubric": [
+          {
+            "criterion": "Pronunciation, cadence and phonetic accuracy",
+            "maximum_score": 5
+          },
+          {
+            "criterion": "Intonation, sentence modulation and fluency",
+            "maximum_score": 5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "class6-reading",
+    "skill": "reading",
+    "title": "The Iron Smelters of Agaria: Ancient Metallurgy",
+    "courseTitle": "English · Class 6",
+    "unitTitle": "Reading: Historical & Scientific Non-fiction",
+    "level": "grade-6",
+    "summary": "Read an analytical historical excerpt on the legendary indigenous iron smelting techniques of Central India.",
+    "outcome": "Analyze informational prose, evaluate technical arguments, and deduce historical facts.",
+    "curriculum_references": [
+      "NCF-MID-ENG-03",
+      "CG-SCERT-06-READ-01"
+    ],
+    "activities": [
+      {
+        "type": "reading",
+        "reading_kind": "passage",
+        "topic": "reading.contextual_reading",
+        "prompt": "Long before modern industrial blast furnaces were engineered, the Agaria tribal metallurgists of Central India developed sustainable clay furnaces powered by foot bellows. Using locally sourced charcoal and magnetite iron ore, they produced rust-resistant wrought iron of exceptional tensile strength. Their metallurgical mastery was so renowned that the famous Wootz steel, celebrated across the ancient Mediterranean and Arab worlds for forged Damascus swords, traced its technical roots to these indigenous Indian furnace innovations."
+      },
+      {
+        "type": "comprehension",
+        "topic": "reading.comprehension",
+        "prompt": "What powered the indigenous clay furnaces of the Agaria metallurgists?",
+        "passage": "The Agaria tribal metallurgists of Central India developed sustainable clay furnaces powered by foot bellows.",
+        "comprehension_focus": "literal",
+        "options": [
+          "Foot bellows manually operated by artisans",
+          "High-voltage electric generators",
+          "Steam turbine engines",
+          "Subterranean natural gas vents"
+        ],
+        "correct_index": 0,
+        "explanation": "The passage explicitly mentions sustainable clay furnaces powered by foot bellows."
+      },
+      {
+        "type": "sequencing",
+        "topic": "reading.sequencing",
+        "prompt": "Reconstruct the historical flow of iron technology described in the text:",
+        "items": [
+          {
+            "id": "ag1",
+            "text": "Agaria metallurgists engineered sustainable clay furnaces."
+          },
+          {
+            "id": "ag2",
+            "text": "Charcoal and magnetite ore produced rust-resistant wrought iron."
+          },
+          {
+            "id": "ag3",
+            "text": "Indian metallurgical innovations influenced world-renowned Wootz steel."
+          }
+        ],
+        "correct_order": [
+          "ag1",
+          "ag2",
+          "ag3"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "class6-writing",
+    "skill": "writing",
+    "title": "Drafting School Notices & Process Flowcharts",
+    "courseTitle": "English · Class 6",
+    "unitTitle": "Writing: Formal Notices & Process Writing",
+    "level": "grade-6",
+    "summary": "Master formal notice writing: issuing authority, headline, date, event details, and target audience.",
+    "outcome": "Draft a 50-word formal school notice complying with standard layout conventions.",
+    "curriculum_references": [
+      "NCF-MID-ENG-04",
+      "CG-SCERT-06-WRIT-01"
+    ],
+    "activities": [
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_formation",
+        "prompt": "Which element is mandatory at the very top of a standard school notice?",
+        "options": [
+          "Name of the Institution / School",
+          "Salutation (\"Dear Sir\")",
+          "Student roll number",
+          "Personal signature of the reader"
+        ],
+        "correct_index": 0,
+        "explanation": "A formal notice must begin with the name of the issuing institution or school."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_rearrangement",
+        "prompt": "Choose the most formal and concise phrasing to announce an event in a notice:",
+        "options": [
+          "This is to notify all students that the annual science exhibition will be held on 15th November.",
+          "Hey everyone, our cool science exhibition is coming up on 15th November so be ready!",
+          "On 15th November science exhibition is there so everyone please attend definitely."
+        ],
+        "correct_index": 0,
+        "explanation": "\"This is to notify all students that...\" represents the accepted formal register."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.error_correction",
+        "prompt": "Choose the correctly punctuated formal sentence:",
+        "options": [
+          "Participants must submit their project abstracts by Friday, 10th October.",
+          "Participants must submit their project abstracts, by Friday 10th October",
+          "Participants, must submit their project abstracts by Friday 10th October."
+        ],
+        "correct_index": 0,
+        "explanation": "Comma properly separates the day from the calendar date without unnecessary pauses."
+      }
+    ]
+  },
+  {
+    "key": "class6-grammar",
+    "skill": "grammar",
+    "title": "Active and Passive Voice & Transitive Verbs",
+    "courseTitle": "English · Class 6",
+    "unitTitle": "Grammar: Voice Transformations & Object Alignment",
+    "level": "grade-6",
+    "summary": "Transform sentences between active voice (Subject performs action) and passive voice (Object receives action).",
+    "outcome": "Convert active sentences into passive voice while maintaining correct past participle forms.",
+    "curriculum_references": [
+      "NCF-MID-ENG-05",
+      "CG-SCERT-06-GRAM-01"
+    ],
+    "activities": [
+      {
+        "type": "quiz",
+        "topic": "grammar.subject_verb_agreement",
+        "prompt": "Convert to passive voice: \"The artisan crafted a bronze idol.\"",
+        "options": [
+          "A bronze idol was crafted by the artisan.",
+          "A bronze idol is crafted by the artisan.",
+          "A bronze idol has been crafted by the artisan.",
+          "The artisan was crafted by a bronze idol."
+        ],
+        "correct_index": 0,
+        "explanation": "Simple past \"crafted\" converts to \"was crafted\" in passive voice."
+      },
+      {
+        "type": "error_correction",
+        "topic": "grammar.subject_verb_agreement",
+        "prompt": "Rectify the auxiliary verb error in the passive sentence:",
+        "source_text": "The solar panels was installed on the school roof yesterday.",
+        "accepted_answers": [
+          "The solar panels were installed on the school roof yesterday."
+        ],
+        "explanation": "Plural subject \"solar panels\" requires plural auxiliary \"were\"."
+      },
+      {
+        "type": "quiz",
+        "topic": "grammar.tenses",
+        "prompt": "Which sentence is written in the passive voice?",
+        "options": [
+          "The annual championship trophy was presented by the principal.",
+          "The principal presented the annual championship trophy.",
+          "The students cheered enthusiastically for the winning team.",
+          "The referee blew the final whistle."
+        ],
+        "correct_index": 0,
+        "explanation": "\"Trophy was presented by the principal\" focuses on the recipient of the action."
+      }
+    ]
+  },
+  {
+    "key": "class6-vocabulary",
+    "skill": "vocabulary",
+    "title": "Craftsmanship, Metallurgy & Archaeological Terms",
+    "courseTitle": "English · Class 6",
+    "unitTitle": "Vocabulary: Technical Diction & Synonyms",
+    "level": "grade-6",
+    "summary": "Build domain-specific vocabulary related to metallurgy, artifacts, and craftsmanship.",
+    "outcome": "Define and correctly use terms such as alloy, crucible, artifact, and smelting.",
+    "curriculum_references": [
+      "NCF-MID-ENG-06",
+      "CG-SCERT-06-VOC-01"
+    ],
+    "activities": [
+      {
+        "type": "glossary",
+        "topic": "vocabulary.academic",
+        "prompt": "Study these essential archaeological and artisanal terms:",
+        "entries": [
+          {
+            "id": "alloy",
+            "term": "alloy",
+            "definition": "A metallic substance formed by fusing two or more metals, or a metal with a non-metal.",
+            "example": "Bronze is a durable alloy made by combining copper with tin."
+          },
+          {
+            "id": "artifact",
+            "term": "artifact",
+            "definition": "An object made or modified by human craftsmanship, typically of archaeological interest.",
+            "example": "The museum displayed clay artifacts recovered from the ancient riverbank site."
+          },
+          {
+            "id": "crucible",
+            "term": "crucible",
+            "definition": "A heat-resistant container capable of melting metals at extremely high furnace temperatures.",
+            "example": "The blacksmith carefully poured the glowing molten iron from the ceramic crucible."
+          }
+        ]
+      },
+      {
+        "type": "matching",
+        "topic": "vocabulary.synonyms",
+        "prompt": "Match each artisanal term with its closest definition:",
+        "pairs": [
+          {
+            "id": "m1",
+            "left": "Alloy",
+            "right": "Mixture of two or more metals"
+          },
+          {
+            "id": "m2",
+            "left": "Crucible",
+            "right": "Heat-resistant melting pot"
+          },
+          {
+            "id": "m3",
+            "left": "Artifact",
+            "right": "Historical handmade object"
+          }
+        ]
+      },
+      {
+        "type": "spelling",
+        "topic": "vocabulary.spelling",
+        "prompt": "Spell the metallurgical term for extracting metal from raw ore using heat (starts with \"s\"):",
+        "accepted_answers": [
+          "smelting",
+          "smelt"
+        ],
+        "explanation": "S-M-E-L-T-I-N-G spells smelting."
+      }
+    ]
+  }
+]

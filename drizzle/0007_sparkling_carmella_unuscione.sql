@@ -1,0 +1,2 @@
+ALTER TABLE "langlab"."package_releases" DROP CONSTRAINT "package_releases_check_5";--> statement-breakpoint
+ALTER TABLE "langlab"."package_releases" ADD CONSTRAINT "package_releases_check_5" CHECK (status <> 'published' OR published_at IS NOT NULL);

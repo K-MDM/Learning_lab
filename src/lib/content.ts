@@ -63,7 +63,7 @@ export async function reviewOrPublish(db:DB,actor:string,id:string,action:'revie
     if(!release)throw new ContentError(404,'Release not found.');if(release.status!=='draft')throw new ContentError(409,'Only drafts can be reviewed or published.');
     const manifest=validateManifest(release.manifest),links=await tx.select({version:s.lessonVersions}).from(s.packageLessons)
       .innerJoin(s.lessonVersions,eq(s.lessonVersions.id,s.packageLessons.lessonVersionId)).where(eq(s.packageLessons.releaseId,id));
-    try {assertKnownAnswerWriting(manifest);} catch {throw new ContentError(400,'Writing is MCQ-only. Replace typed answers before review or publication.');}
+    try {assertKnownAnswerWriting(manifest);} catch {throw new ContentError(400,'Learner answers use choices or reordering only. Replace text input before publication.');}
     if(action==='review'){
       if(manifest.schema_version===2&&!ageAppropriate)throw new ContentError(400,'Confirm staff review of age suitability for the declared level. This is not formal curriculum approval.');
       if(manifest.publication_status==='reviewed')throw new ContentError(409,'Draft already reviewed.');manifest.publication_status='reviewed';

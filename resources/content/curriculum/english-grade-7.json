@@ -1,0 +1,344 @@
+[
+  {
+    "key": "class7-listening",
+    "skill": "listening",
+    "title": "The Lifeline of Chhattisgarh: Mahanadi Ecology",
+    "courseTitle": "English · Class 7",
+    "unitTitle": "Listening: Ecological Science & River Basins",
+    "level": "grade-7",
+    "summary": "Listen to a scientific lecture on river hydrology, wetland preservation, and aquatic biodiversity.",
+    "outcome": "Extract data-driven claims, cause-and-effect conclusions, and ecological imperatives from audio lectures.",
+    "curriculum_references": [
+      "NCF-MID-ENG-07",
+      "CG-SCERT-07-LIST-01"
+    ],
+    "activities": [
+      {
+        "type": "listening",
+        "topic": "listening.listening_comprehension",
+        "prompt": "Listen to this environmental documentary: \"Originating in the highlands of Dhamtari near Sihawa, the Mahanadi traverses over eight hundred kilometers before forming an expansive delta along the Bay of Bengal. Serving as the agricultural backbone of Central India, the river sustains extensive paddy wetlands. However, rampant sand dredging along its riverbed has eroded natural aquifer recharge zones and threatened nesting habitats of endangered gharials and freshwater turtles.\""
+      },
+      {
+        "type": "quiz",
+        "topic": "listening.listening_comprehension",
+        "prompt": "Where does the Mahanadi river originate according to the documentary?",
+        "options": [
+          "Highlands of Dhamtari near Sihawa",
+          "Western Ghats near Mahabaleshwar",
+          "Himalayan glaciers of Gangotri",
+          "Vindhya hills of Amarkantak"
+        ],
+        "correct_index": 0,
+        "explanation": "The Mahanadi originates in the Dhamtari highlands near Sihawa."
+      },
+      {
+        "type": "quiz",
+        "topic": "listening.listening_comprehension",
+        "prompt": "What negative ecological consequence of rampant sand dredging is cited by the speaker?",
+        "options": [
+          "Erosion of natural aquifer recharge zones and habitat loss for gharials",
+          "Immediate freezing of downstream river water",
+          "Uncontrolled growth of desert sand dunes",
+          "Complete depletion of saltwater fish stocks"
+        ],
+        "correct_index": 0,
+        "explanation": "The speaker highlights aquifer erosion and habitat destruction for gharials."
+      }
+    ]
+  },
+  {
+    "key": "class7-speaking",
+    "skill": "speaking",
+    "title": "Public Speaking: Scientific Inventions & Debate",
+    "courseTitle": "English · Class 7",
+    "unitTitle": "Speaking: Public Oratory & Persuasive Exposition",
+    "level": "grade-7",
+    "summary": "Deliver structured 2-minute presentations with clear signposting (\"Firstly\", \"Furthermore\", \"In conclusion\").",
+    "outcome": "Speak before an audience with vocal projection, syntactic cohesion, and persuasive modulation.",
+    "curriculum_references": [
+      "NCF-MID-ENG-08",
+      "CG-SCERT-07-SPK-01"
+    ],
+    "activities": [
+      {
+        "type": "speaking",
+        "speaking_kind": "presentation",
+        "topic": "speaking.presentation",
+        "prompt": "Present a two-minute talk on \"Why Renewable Solar Energy is the Key to Rural Empowerment in India\". Organize your talk with an introduction, two strong arguments, and a conclusion.",
+        "rubric": [
+          {
+            "criterion": "Pronunciation, cadence and phonetic accuracy",
+            "maximum_score": 5
+          },
+          {
+            "criterion": "Intonation, sentence modulation and fluency",
+            "maximum_score": 5
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "speaking_kind": "stress",
+        "topic": "speaking.stress",
+        "prompt": "Articulate this complex sentence with rhythm and clarity: \"Technological innovation without environmental responsibility jeopardizes future generations.\"",
+        "rubric": [
+          {
+            "criterion": "Pronunciation, cadence and phonetic accuracy",
+            "maximum_score": 5
+          },
+          {
+            "criterion": "Intonation, sentence modulation and fluency",
+            "maximum_score": 5
+          }
+        ]
+      },
+      {
+        "type": "dialogue",
+        "topic": "speaking.discussion",
+        "prompt": "Participate in this classroom debate simulation on artificial intelligence in schools:",
+        "turns": [
+          {
+            "speaker": "Debater 1",
+            "text": "Digital AI tutors provide personalized, immediate feedback to every individual student."
+          },
+          {
+            "speaker": "Debater 2",
+            "text": "While algorithmic feedback is helpful, it can never substitute the empathy and mentorship of a dedicated human teacher."
+          },
+          {
+            "speaker": "Debater 1",
+            "text": "That is true, which is why AI should augment our teachers rather than replace them."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "class7-reading",
+    "skill": "reading",
+    "title": "Sir Jagadish Chandra Bose: The Voice of Living Plants",
+    "courseTitle": "English · Class 7",
+    "unitTitle": "Reading: Biographical & Scientific Pioneers",
+    "level": "grade-7",
+    "summary": "Read a biographical account of Sir J.C. Bose and his invention of the crescograph to measure plant responses.",
+    "outcome": "Infer scientific methodology, interpret historical context, and distinguish empirical fact from opinion.",
+    "curriculum_references": [
+      "NCF-MID-ENG-09",
+      "CG-SCERT-07-READ-01"
+    ],
+    "activities": [
+      {
+        "type": "reading",
+        "reading_kind": "passage",
+        "topic": "reading.contextual_reading",
+        "prompt": "In the late nineteenth century, Indian polymath Sir Jagadish Chandra Bose conducted groundbreaking experiments proving that plants possess responsive nervous systems akin to animals. To measure botanical reactions to stimuli such as heat, electrical shock, and chemical toxins, Bose invented the crescograph—a sensitive optical instrument capable of magnifying plant growth by up to ten thousand times. His discoveries dismantled prevailing Eurocentric scientific dogmas and united biological vitality with physical mechanics."
+      },
+      {
+        "type": "comprehension",
+        "topic": "reading.comprehension",
+        "prompt": "What was the revolutionary scientific capability of Bose's crescograph?",
+        "passage": "Bose invented the crescograph—a sensitive optical instrument capable of magnifying plant growth by up to ten thousand times.",
+        "comprehension_focus": "literal",
+        "options": [
+          "Magnifying plant movements and growth by up to ten thousand times",
+          "Transmitting telegraph signals across oceans without wires",
+          "Synthesizing synthetic plant nutrients from soil",
+          "Freezing botanical tissue for microscopic imaging"
+        ],
+        "correct_index": 0,
+        "explanation": "The crescograph magnified plant growth by up to ten thousand times."
+      },
+      {
+        "type": "sequencing",
+        "topic": "reading.sequencing",
+        "prompt": "Order the scientific breakthrough described in the text:",
+        "items": [
+          {
+            "id": "jc1",
+            "text": "Bose hypothesized that plants experience physiological responses to stimuli."
+          },
+          {
+            "id": "jc2",
+            "text": "He engineered the ultra-sensitive crescograph."
+          },
+          {
+            "id": "jc3",
+            "text": "Empirical data demonstrated plant responsiveness to international scientific consensus."
+          }
+        ],
+        "correct_order": [
+          "jc1",
+          "jc2",
+          "jc3"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "class7-writing",
+    "skill": "writing",
+    "title": "Formal Letter to Municipal Authorities",
+    "courseTitle": "English · Class 7",
+    "unitTitle": "Writing: Civic Correspondence & Petitions",
+    "level": "grade-7",
+    "summary": "Write formal letters of complaint and request to civic authorities regarding sanitation and streetlights.",
+    "outcome": "Structure a formal business letter including sender address, recipient designation, subject line, body, and sign-off.",
+    "curriculum_references": [
+      "NCF-MID-ENG-10",
+      "CG-SCERT-07-WRIT-01"
+    ],
+    "activities": [
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_formation",
+        "prompt": "Choose the most appropriate and respectful subject line for a letter regarding broken streetlights:",
+        "options": [
+          "Subject: Urgent grievance regarding non-functional streetlights in Ward 12",
+          "Subject: Fix our streetlights immediately or face protest",
+          "Subject: Dark streets and dangerous roads in our town",
+          "Subject: Hello Municipal Commissioner, read this"
+        ],
+        "correct_index": 0,
+        "explanation": "\"Subject: Urgent grievance regarding...\" maintains formal, respectful civic tone."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_formation",
+        "prompt": "Which introductory sentence is most appropriate for a formal civic letter?",
+        "options": [
+          "I wish to draw the kind attention of the municipal authorities towards the persistent sanitation issues in our sector.",
+          "Hey, I am writing this to complain about the dirty garbage dump near my house.",
+          "Why is nobody cleaning the street corner in our colony?",
+          "Sir, listen to me because our locality is very filthy."
+        ],
+        "correct_index": 0,
+        "explanation": "\"I wish to draw the kind attention...\" is a well-established formal civic opening."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.error_correction",
+        "prompt": "Select the correctly punctuated formal closing for an official petition:",
+        "options": [
+          "Thanking you, Yours faithfully, Rajesh Sharma",
+          "Thanking you yours faithfully Rajesh Sharma.",
+          "Thanking You! Yours Faithfully Rajesh Sharma"
+        ],
+        "correct_index": 0,
+        "explanation": "Commas correctly set apart \"Thanking you\" and the subscription \"Yours faithfully\"."
+      }
+    ]
+  },
+  {
+    "key": "class7-grammar",
+    "skill": "grammar",
+    "title": "Direct and Reported Speech: Transformation Rules",
+    "courseTitle": "English · Class 7",
+    "unitTitle": "Grammar: Indirect Narration & Tense Backshifting",
+    "level": "grade-7",
+    "summary": "Transform direct quotations into reported speech by shifting pronouns, tenses, and time words.",
+    "outcome": "Accurately convert statements and commands into reported speech.",
+    "curriculum_references": [
+      "NCF-MID-ENG-11",
+      "CG-SCERT-07-GRAM-01"
+    ],
+    "activities": [
+      {
+        "type": "quiz",
+        "topic": "grammar.narration",
+        "prompt": "Convert to indirect speech: The teacher said, \"Water boils at one hundred degrees Celsius.\"",
+        "options": [
+          "The teacher said that water boils at one hundred degrees Celsius.",
+          "The teacher said that water boiled at one hundred degrees Celsius.",
+          "The teacher said that water had boiled at one hundred degrees Celsius.",
+          "The teacher told that water will boil at one hundred degrees Celsius."
+        ],
+        "correct_index": 0,
+        "explanation": "Scientific facts and universal truths remain in the simple present tense in indirect speech."
+      },
+      {
+        "type": "error_correction",
+        "topic": "grammar.narration",
+        "prompt": "Fix the tense backshift in the reported statement:",
+        "source_text": "She told me that she is working on the project right now.",
+        "accepted_answers": [
+          "She told me that she was working on the project then.",
+          "She told me that she was working on the project right now."
+        ],
+        "explanation": "When reporting past statements, present continuous \"is working\" shifts to \"was working\", and \"now\" shifts to \"then\"."
+      },
+      {
+        "type": "quiz",
+        "topic": "grammar.narration",
+        "prompt": "Convert to indirect speech: Amit said to Rohan, \"Did you finish the science assignment?\"",
+        "options": [
+          "Amit asked Rohan if he had finished the science assignment.",
+          "Amit asked Rohan that did he finish the science assignment.",
+          "Amit told Rohan whether he finishes the science assignment.",
+          "Amit inquired Rohan that if he finished the assignment."
+        ],
+        "correct_index": 0,
+        "explanation": "Yes/no past questions convert using \"if/whether\" + past perfect (\"had finished\")."
+      }
+    ]
+  },
+  {
+    "key": "class7-vocabulary",
+    "skill": "vocabulary",
+    "title": "Ecology, Hydrology & Biological Systems",
+    "courseTitle": "English · Class 7",
+    "unitTitle": "Vocabulary: Environmental Science & Prefixes",
+    "level": "grade-7",
+    "summary": "Master environmental vocabulary and understand negative prefixes (un-, dis-, in-, non-).",
+    "outcome": "Define ecological terminology and form antonyms using prefixes.",
+    "curriculum_references": [
+      "NCF-MID-ENG-12",
+      "CG-SCERT-07-VOC-01"
+    ],
+    "activities": [
+      {
+        "type": "matching",
+        "topic": "vocabulary.synonyms",
+        "prompt": "Match each ecological term with its scientific meaning:",
+        "pairs": [
+          {
+            "id": "e1",
+            "left": "Biodiversity",
+            "right": "Variety of living species in an ecosystem"
+          },
+          {
+            "id": "e2",
+            "left": "Aquifer",
+            "right": "Underground layer of water-bearing permeable rock"
+          },
+          {
+            "id": "e3",
+            "left": "Erosion",
+            "right": "Gradual wearing away of soil by wind or water"
+          }
+        ]
+      },
+      {
+        "type": "spelling",
+        "topic": "vocabulary.spelling",
+        "prompt": "Spell the scientific term for the biological community of interacting organisms and physical environment (starts with \"e\"):",
+        "accepted_answers": [
+          "ecosystem"
+        ],
+        "explanation": "E-C-O-S-Y-S-T-E-M spells ecosystem."
+      },
+      {
+        "type": "quiz",
+        "topic": "vocabulary.academic",
+        "prompt": "Which prefix creates the opposite of the word \"biodegradable\"?",
+        "options": [
+          "Non-",
+          "Dis-",
+          "Un-",
+          "Mis-"
+        ],
+        "correct_index": 0,
+        "explanation": "\"Non-biodegradable\" refers to substances that cannot be decomposed by natural organisms."
+      }
+    ]
+  }
+]

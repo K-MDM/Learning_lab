@@ -1,0 +1,353 @@
+[
+  {
+    "key": "class11-listening",
+    "skill": "listening",
+    "title": "Epistemology & Scientific Method: The Search for Truth",
+    "courseTitle": "English · Class 11",
+    "unitTitle": "Listening: Epistemology & Scientific Discourse",
+    "level": "grade-11",
+    "summary": "Listen to a university lecture on Karl Popper's principle of falsification and scientific revolutions.",
+    "outcome": "Critique academic arguments, identify logical fallacies, and synthesize philosophical theses.",
+    "curriculum_references": [
+      "NCF-SRSEC-ENG-01",
+      "CG-SCERT-11-LIST-01"
+    ],
+    "activities": [
+      {
+        "type": "listening",
+        "topic": "listening.listening_comprehension",
+        "prompt": "Listen to this academic discourse: \"The defining criterion of scientific demarcation, philosopher Karl Popper asserted, is not inductive verification, but falsifiability. A hypothesis that cannot be subjected to conceivable empirical refutation belongs to dogma rather than science. Progress in human understanding does not accumulate through comforting confirmations of existing belief; rather, knowledge advances through bold conjectures systematically subjected to relentless testing and refutation.\""
+      },
+      {
+        "type": "quiz",
+        "topic": "listening.listening_comprehension",
+        "prompt": "According to Popper, what is the defining criterion that distinguishes empirical science from dogma?",
+        "options": [
+          "Falsifiability—the capacity of a hypothesis to be empirically tested and potentially refuted",
+          "Widespread consensus among popular authorities",
+          "Mathematical equations that cannot be challenged",
+          "Centuries of unbroken cultural tradition"
+        ],
+        "correct_index": 0,
+        "explanation": "Popper asserts that falsifiability is the core demarcation of empirical science."
+      },
+      {
+        "type": "quiz",
+        "topic": "listening.listening_comprehension",
+        "prompt": "How does authentic scientific knowledge advance according to the speaker?",
+        "options": [
+          "Through bold conjectures subjected to relentless testing and refutation",
+          "Through passive acceptance of past dogmas",
+          "By suppressing dissenting contradictory data",
+          "By avoiding experimental trials"
+        ],
+        "correct_index": 0,
+        "explanation": "It advances through bold conjectures tested rigorously."
+      }
+    ]
+  },
+  {
+    "key": "class11-speaking",
+    "skill": "speaking",
+    "title": "Symposium Oratory & Academic Defenses",
+    "courseTitle": "English · Class 11",
+    "unitTitle": "Speaking: Academic Presentations & Defense",
+    "level": "grade-11",
+    "summary": "Deliver structured academic thesis defenses with rhetorical framing, signposting, and answering peer objections.",
+    "outcome": "Defend an academic thesis before an audience with logical rigor and poised rhetorical cadence.",
+    "curriculum_references": [
+      "NCF-SRSEC-ENG-02",
+      "CG-SCERT-11-SPK-01"
+    ],
+    "activities": [
+      {
+        "type": "speaking",
+        "speaking_kind": "presentation",
+        "topic": "speaking.presentation",
+        "prompt": "Deliver a three-minute academic defense of the proposal: \"Ethical Regulation of Generative AI Must Precede Commercial Deployment.\"",
+        "rubric": [
+          {
+            "criterion": "Logical coherence and persuasive assertion",
+            "maximum_score": 5
+          },
+          {
+            "criterion": "Rhetorical sophistication and rebutting precision",
+            "maximum_score": 5
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "speaking_kind": "stress",
+        "topic": "speaking.stress",
+        "prompt": "Articulate this philosophical claim with commanding cadence: \"Intellectual humility is not an admission of ignorance; it is the indispensable prerequisite for scientific discovery.\"",
+        "rubric": [
+          {
+            "criterion": "Pronunciation, cadence and phonetic accuracy",
+            "maximum_score": 5
+          },
+          {
+            "criterion": "Intonation, rhetorical modulation and fluency",
+            "maximum_score": 5
+          }
+        ]
+      },
+      {
+        "type": "dialogue",
+        "topic": "speaking.discussion",
+        "prompt": "Engage in this defense symposium dialogue between an academic presenter and an external auditor:",
+        "turns": [
+          {
+            "speaker": "Auditor",
+            "text": "Does your proposed methodology sufficiently account for sample selection bias in rural demographics?"
+          },
+          {
+            "speaker": "Presenter",
+            "text": "Yes, we utilized stratified cluster sampling across five agro-climatic zones to ensure statistically robust representation."
+          },
+          {
+            "speaker": "Auditor",
+            "text": "How do you propose to validate the qualitative field responses against confounding socioeconomic variables?"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "class11-reading",
+    "skill": "reading",
+    "title": "The Portrait of a Lady: Khushwant Singh's Elegiac Prose",
+    "courseTitle": "English · Class 11",
+    "unitTitle": "Reading: Literary Criticism & Stylistic Nuance",
+    "level": "grade-11",
+    "summary": "Analyze Khushwant Singh's iconic biographical memoir exploring generational transitions, silent love, and mortality.",
+    "outcome": "Deconstruct prose style, thematic symbolism, and emotional understatement in Indian English literature.",
+    "curriculum_references": [
+      "NCF-SRSEC-ENG-03",
+      "CG-SCERT-11-READ-01"
+    ],
+    "activities": [
+      {
+        "type": "reading",
+        "reading_kind": "passage",
+        "topic": "reading.contextual_reading",
+        "prompt": "Khushwant Singh’s \"The Portrait of a Lady\" is celebrated for its consummate restraint and evocative restraint. The author crafts the grandmother’s silhouette through subtle domestic vignettes—her unhurried counting of rosary beads, the morning breadcrumbs tossed to sparrows on the verandah, and her stoic silence when the narrator departs for foreign shores. When death finally claims her, the silence of the grieving sparrows, who refuse to touch the breadcrumbs, transforms everyday rural realism into an unforgettable meditation on transcendence and maternal grace."
+      },
+      {
+        "type": "comprehension",
+        "topic": "reading.comprehension",
+        "prompt": "What literary effect is achieved by the sparrows refusing to touch the breadcrumbs after the grandmother's passing?",
+        "passage": "When death finally claims her, the silence of the grieving sparrows, who refuse to touch the breadcrumbs, transforms everyday rural realism into an unforgettable meditation on transcendence and maternal grace.",
+        "comprehension_focus": "inference",
+        "options": [
+          "It provides a profound symbolic mirror of silent, non-verbal mourning that elevates realistic prose to transcendence",
+          "It indicates that the bread was spoiled or stale",
+          "It shows that sparrows migrate during winter",
+          "It signifies the narrator's lack of care for animals"
+        ],
+        "correct_index": 0,
+        "explanation": "The refusal of the sparrows symbolizes profound communal, non-verbal mourning."
+      },
+      {
+        "type": "sequencing",
+        "topic": "reading.sequencing",
+        "prompt": "Order the thematic evolution of the relationship across the narrative arc:",
+        "items": [
+          {
+            "id": "pl1",
+            "text": "Close rural companionship centered on village school and temple routine."
+          },
+          {
+            "id": "pl2",
+            "text": "Gradual emotional distancing as Western secular education intervenes in the city."
+          },
+          {
+            "id": "pl3",
+            "text": "The solemn, transcendental quietude of the grandmother's farewell and death."
+          }
+        ],
+        "correct_order": [
+          "pl1",
+          "pl2",
+          "pl3"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "class11-writing",
+    "skill": "writing",
+    "title": "Official Executive Reports & Speech Writing",
+    "courseTitle": "English · Class 11",
+    "unitTitle": "Writing: Formal Reports & Rhetorical Speeches",
+    "level": "grade-11",
+    "summary": "Master formal committee reports: title, executive summary, methodology, factual findings, and recommendations.",
+    "outcome": "Draft an executive report evaluating a school infrastructure program with actionable recommendations.",
+    "curriculum_references": [
+      "NCF-SRSEC-ENG-04",
+      "CG-SCERT-11-WRIT-01"
+    ],
+    "activities": [
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_formation",
+        "prompt": "Which section of an executive report condenses the central conclusions and policy recommendations for senior decision-makers?",
+        "options": [
+          "Executive Summary",
+          "Appendix C: Raw Data Logs",
+          "Bibliography",
+          "Glossary of Terms"
+        ],
+        "correct_index": 0,
+        "explanation": "The Executive Summary synthesizes key findings and recommendations."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_rearrangement",
+        "prompt": "Choose the most objective, authoritative recommendation statement for an institutional report:",
+        "options": [
+          "It is strongly recommended that the institution inaugurate a digitized language laboratory to accelerate interactive language acquisition.",
+          "We think the school should definitely get modern computers for English because they look nice.",
+          "Computers are good so please buy them as soon as possible for the lab."
+        ],
+        "correct_index": 0,
+        "explanation": "\"It is strongly recommended that the institution inaugurate...\" exemplifies formal policy phrasing."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.error_correction",
+        "prompt": "Choose the sentence exhibiting immaculate formal subjunctive mood:",
+        "options": [
+          "The committee recommended that the budget be audited immediately.",
+          "The committee recommended that the budget is audited immediately.",
+          "The committee recommended that the budget will be audited immediately."
+        ],
+        "correct_index": 0,
+        "explanation": "Mandative subjunctive requires base form (\"be audited\") following recommendation verbs."
+      }
+    ]
+  },
+  {
+    "key": "class11-grammar",
+    "skill": "grammar",
+    "title": "Advanced Clauses, Subjunctive Mood & Inversion",
+    "courseTitle": "English · Class 11",
+    "unitTitle": "Grammar: Complex Syntax & Rhetorical Inversion",
+    "level": "grade-11",
+    "summary": "Master negative inversions (Rarely have I..., Not only did she...), subjunctive verbs, and nominal clauses.",
+    "outcome": "Construct inverted rhetorical sentences and apply the mandative subjunctive in formal prose.",
+    "curriculum_references": [
+      "NCF-SRSEC-ENG-05",
+      "CG-SCERT-11-GRAM-01"
+    ],
+    "activities": [
+      {
+        "type": "quiz",
+        "topic": "grammar.subject_verb_agreement",
+        "prompt": "Complete the inverted sentence for rhetorical emphasis: \"Seldom ___ a civilization witnessed such swift socio-technological transformation.\"",
+        "options": [
+          "has",
+          "have",
+          "is",
+          "did"
+        ],
+        "correct_index": 0,
+        "explanation": "\"Seldom\" triggers inversion: auxiliary \"has\" precedes singular subject \"a civilization\"."
+      },
+      {
+        "type": "error_correction",
+        "topic": "grammar.subject_verb_agreement",
+        "prompt": "Rectify the inversion syntax error in the formal opening:",
+        "source_text": "Not only the researcher presented the data, but he also defended it brilliantly.",
+        "accepted_answers": [
+          "Not only did the researcher present the data, but he also defended it brilliantly."
+        ],
+        "explanation": "Negative introductory phrases like \"Not only\" require subject-auxiliary inversion (\"did the researcher present\")."
+      },
+      {
+        "type": "quiz",
+        "topic": "grammar.tenses",
+        "prompt": "Choose the correct inverted conditional structure equivalent to \"If they had known\":",
+        "options": [
+          "Had they known the regulatory restrictions, they would have modified the proposal.",
+          "Did they had known the regulatory restrictions, they would have modified the proposal.",
+          "Were they known the regulatory restrictions, they would have modified the proposal."
+        ],
+        "correct_index": 0,
+        "explanation": "\"Had they known...\" is the standard inverted past perfect conditional."
+      }
+    ]
+  },
+  {
+    "key": "class11-vocabulary",
+    "skill": "vocabulary",
+    "title": "Scholarly Registers & Epistemological Diction",
+    "courseTitle": "English · Class 11",
+    "unitTitle": "Vocabulary: Collegiate & Scholarly Lexicon",
+    "level": "grade-11",
+    "summary": "Master sophisticated scholarly diction (antithetical, ubiquitous, dichotomy, pragmatic).",
+    "outcome": "Employ high-register academic vocabulary with precision in formal argument.",
+    "curriculum_references": [
+      "NCF-SRSEC-ENG-06",
+      "CG-SCERT-11-VOC-01"
+    ],
+    "activities": [
+      {
+        "type": "glossary",
+        "topic": "vocabulary.academic",
+        "prompt": "Study these high-register collegiate terms and philosophical definitions:",
+        "entries": [
+          {
+            "id": "dichotomy",
+            "term": "dichotomy",
+            "definition": "A sharp division or contrast between two mutually exclusive or contradictory entities.",
+            "example": "The debate highlighted the false dichotomy between economic growth and ecological conservation."
+          },
+          {
+            "id": "antithetical",
+            "term": "antithetical",
+            "definition": "Directly opposed, mutually incompatible, or diametrically contrary in principle.",
+            "example": "Authoritarian surveillance is fundamentally antithetical to democratic freedom."
+          },
+          {
+            "id": "epistemic",
+            "term": "epistemic",
+            "definition": "Relating to knowledge, cognitive validation, or the degree of certainty in human belief.",
+            "example": "The philosopher investigated the epistemic validity of sensory perceptions."
+          }
+        ]
+      },
+      {
+        "type": "matching",
+        "topic": "vocabulary.synonyms",
+        "prompt": "Match each scholarly word with its precise academic definition:",
+        "pairs": [
+          {
+            "id": "k1",
+            "left": "Dichotomy",
+            "right": "Division into two opposing parts"
+          },
+          {
+            "id": "k2",
+            "left": "Antithetical",
+            "right": "Mutually incompatible or contrary"
+          },
+          {
+            "id": "k3",
+            "left": "Epistemic",
+            "right": "Relating to knowledge and cognition"
+          }
+        ]
+      },
+      {
+        "type": "spelling",
+        "topic": "vocabulary.spelling",
+        "prompt": "Spell the noun meaning \"a division into two sharply contrasting parts\" (starts with \"d\"):",
+        "accepted_answers": [
+          "dichotomy"
+        ],
+        "explanation": "D-I-C-H-O-T-O-M-Y spells dichotomy."
+      }
+    ]
+  }
+]

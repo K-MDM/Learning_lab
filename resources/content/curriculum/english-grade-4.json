@@ -1,0 +1,346 @@
+[
+  {
+    "key": "class4-listening",
+    "skill": "listening",
+    "title": "Celebrations of Green: The Hareli Festival",
+    "courseTitle": "English · Class 4",
+    "unitTitle": "Listening: Cultural Traditions & Nature",
+    "level": "grade-4",
+    "summary": "Listen to an audio narrative on Hareli, Chhattisgarh's beloved agricultural festival.",
+    "outcome": "Extract core cultural facts and traditional customs from spoken informative passages.",
+    "curriculum_references": [
+      "NCF-PREP-ENG-07",
+      "CG-SCERT-04-LIST-01"
+    ],
+    "activities": [
+      {
+        "type": "listening",
+        "topic": "listening.stories",
+        "prompt": "Listen to the festival broadcast: Hareli is the first festival of the agricultural year in Chhattisgarh. Celebrated during the Shravan month, farmers clean and worship their farming tools and cattle. Neem leaves are placed at doorway entrances to ward off insects and disease, while youth and children enjoy racing on tall bamboo stilts known as Gedi."
+      },
+      {
+        "type": "quiz",
+        "topic": "listening.listening_comprehension",
+        "prompt": "What do farmers worship during the Hareli festival?",
+        "options": [
+          "Their agricultural tools and cattle",
+          "Only their newly bought tractors",
+          "The autumn harvest grains",
+          "School books and pens"
+        ],
+        "correct_index": 0,
+        "explanation": "Farmers worship their farming tools and cattle during Hareli."
+      },
+      {
+        "type": "quiz",
+        "topic": "listening.listening_comprehension",
+        "prompt": "What are the bamboo stilts called that children race on during Hareli?",
+        "options": [
+          "Gedi",
+          "Dandi",
+          "Lathi",
+          "Bansuri"
+        ],
+        "correct_index": 0,
+        "explanation": "The bamboo stilts are traditionally called Gedi."
+      }
+    ]
+  },
+  {
+    "key": "class4-speaking",
+    "skill": "speaking",
+    "title": "Describing My Favorite Festival & Trees",
+    "courseTitle": "English · Class 4",
+    "unitTitle": "Speaking: Descriptive Narration",
+    "level": "grade-4",
+    "summary": "Describe an outdoor celebration, festive food, and the importance of planting trees.",
+    "outcome": "Deliver a structured 1-minute descriptive talk with clear vocal expression.",
+    "curriculum_references": [
+      "NCF-PREP-ENG-08",
+      "CG-SCERT-04-SPK-01"
+    ],
+    "activities": [
+      {
+        "type": "speaking",
+        "speaking_kind": "story_narration",
+        "topic": "speaking.fluency",
+        "prompt": "Speak aloud for one minute about why trees are essential for rain, shade, and fresh air.",
+        "rubric": [
+          {
+            "criterion": "Pronunciation and phonetic clarity",
+            "maximum_score": 5
+          },
+          {
+            "criterion": "Intonation, cadence and fluency",
+            "maximum_score": 5
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "speaking_kind": "sentences",
+        "topic": "speaking.stress",
+        "prompt": "Read with joyful expression: \"The monsoon rains have arrived! The fields are lush, green, and full of life.\"",
+        "rubric": [
+          {
+            "criterion": "Pronunciation and phonetic clarity",
+            "maximum_score": 5
+          },
+          {
+            "criterion": "Intonation, cadence and fluency",
+            "maximum_score": 5
+          }
+        ]
+      },
+      {
+        "type": "dialogue",
+        "topic": "speaking.discussion",
+        "prompt": "Roleplay this conversation about planning a school tree plantation drive:",
+        "turns": [
+          {
+            "speaker": "Deepak",
+            "text": "Which sapling should we plant near the playground boundary?"
+          },
+          {
+            "speaker": "Rashmi",
+            "text": "I think we should plant Neem and Gulmohar saplings because they provide dense shade."
+          },
+          {
+            "speaker": "Deepak",
+            "text": "Excellent idea! Let us ask our science teacher for permission."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "class4-reading",
+    "skill": "reading",
+    "title": "The Whispering Sal Forests of Kanger Valley",
+    "courseTitle": "English · Class 4",
+    "unitTitle": "Reading: Expository Nature Texts",
+    "level": "grade-4",
+    "summary": "Read an informational travelogue about the wildlife and limestone caves in Bastar.",
+    "outcome": "Read a 150-word informational passage, identify main ideas, and infer context.",
+    "curriculum_references": [
+      "NCF-PREP-ENG-09",
+      "CG-SCERT-04-READ-01"
+    ],
+    "activities": [
+      {
+        "type": "reading",
+        "reading_kind": "passage",
+        "topic": "reading.contextual_reading",
+        "prompt": "Kanger Valley National Park is one of the most picturesque natural reserves in Central India. Nestled near Jagdalpur, it is famous for its dense Sal and Teak canopies, the magnificent Tirathgarh waterfall, and subterranean limestone caves like Kutumsar. In these deep subterranean chambers, blind cave fish swim silently in underground pools, having adapted to perpetual darkness over thousands of years."
+      },
+      {
+        "type": "comprehension",
+        "topic": "reading.comprehension",
+        "prompt": "Why are the cave fish of Kutumsar caves blind?",
+        "passage": "In these deep subterranean chambers, blind cave fish swim silently in underground pools, having adapted to perpetual darkness over thousands of years.",
+        "comprehension_focus": "inference",
+        "options": [
+          "They have adapted to perpetual darkness underground",
+          "They were injured by subterranean rocks",
+          "They only swim at nighttime",
+          "The river water is too salty"
+        ],
+        "correct_index": 0,
+        "explanation": "They adapted to life in total subterranean darkness over millennia."
+      },
+      {
+        "type": "sequencing",
+        "topic": "reading.sequencing",
+        "prompt": "Order the highlights of Kanger Valley described in the text:",
+        "items": [
+          {
+            "id": "k1",
+            "text": "Dense Sal and Teak tree canopies."
+          },
+          {
+            "id": "k2",
+            "text": "The cascading Tirathgarh waterfall."
+          },
+          {
+            "id": "k3",
+            "text": "Subterranean limestone caves with blind cave fish."
+          }
+        ],
+        "correct_order": [
+          "k1",
+          "k2",
+          "k3"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "class4-writing",
+    "skill": "writing",
+    "title": "Writing a Short Diary Entry & Postcard",
+    "courseTitle": "English · Class 4",
+    "unitTitle": "Writing: Personal Notes & Reflections",
+    "level": "grade-4",
+    "summary": "Learn the format of a diary entry: date, opening feeling, events, and closing thought.",
+    "outcome": "Write a 40-50 word personal reflection about an exciting day at school.",
+    "curriculum_references": [
+      "NCF-PREP-ENG-10",
+      "CG-SCERT-04-WRIT-01"
+    ],
+    "activities": [
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_rearrangement",
+        "prompt": "Choose the correct chronological order for a diary opening:",
+        "options": [
+          "Today was the most wonderful day because our school won the district football trophy.",
+          "Because our school won today was district football trophy the most wonderful day.",
+          "District football trophy won today wonderful school day."
+        ],
+        "correct_index": 0,
+        "explanation": "Sentence starts with time anchor followed by cause and effect."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_formation",
+        "prompt": "Which phrase is the best closing line for a personal diary entry?",
+        "options": [
+          "I cannot wait to see what tomorrow brings!",
+          "Yours faithfully, Class 4 Student.",
+          "Dear Sir or Madam,",
+          "Subject: Application for leave"
+        ],
+        "correct_index": 0,
+        "explanation": "A diary concludes with a personal reflection or anticipation."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.error_correction",
+        "prompt": "Choose the sentence with correct adjective order:",
+        "options": [
+          "She bought a lovely, small wooden box.",
+          "She bought a wooden small lovely box.",
+          "She bought a box lovely wooden small."
+        ],
+        "correct_index": 0,
+        "explanation": "Opinion (lovely) precedes size (small) precedes material (wooden)."
+      }
+    ]
+  },
+  {
+    "key": "class4-grammar",
+    "skill": "grammar",
+    "title": "Describing Words (Adjectives) & Degrees",
+    "courseTitle": "English · Class 4",
+    "unitTitle": "Grammar: Adjectives of Comparison",
+    "level": "grade-4",
+    "summary": "Compare objects using positive, comparative (-er), and superlative (-est) degrees.",
+    "outcome": "Use comparative and superlative forms (tall, taller, tallest) accurately in sentences.",
+    "curriculum_references": [
+      "NCF-PREP-ENG-11",
+      "CG-SCERT-04-GRAM-01"
+    ],
+    "activities": [
+      {
+        "type": "quiz",
+        "topic": "grammar.subject_verb_agreement",
+        "prompt": "Mount Everest is the ___ mountain peak on Earth.",
+        "options": [
+          "highest",
+          "higher",
+          "high",
+          "most high"
+        ],
+        "correct_index": 0,
+        "explanation": "With \"the\" comparing all mountains on Earth, use superlative degree \"highest\"."
+      },
+      {
+        "type": "quiz",
+        "topic": "grammar.subject_verb_agreement",
+        "prompt": "An elephant is ___ than a leopard.",
+        "options": [
+          "heavier",
+          "heavy",
+          "heaviest",
+          "more heavy"
+        ],
+        "correct_index": 0,
+        "explanation": "Comparing two animals with \"than\" requires comparative degree \"heavier\"."
+      },
+      {
+        "type": "quiz",
+        "topic": "grammar.tenses",
+        "prompt": "Right now, the students ___ a science experiment in the laboratory.",
+        "options": [
+          "are conducting",
+          "conducted",
+          "will conduct",
+          "conducts"
+        ],
+        "correct_index": 0,
+        "explanation": "\"Right now\" demands present continuous tense (\"are conducting\")."
+      }
+    ]
+  },
+  {
+    "key": "class4-vocabulary",
+    "skill": "vocabulary",
+    "title": "Forests, Landforms & Weather Words",
+    "courseTitle": "English · Class 4",
+    "unitTitle": "Vocabulary: Nature & Geography",
+    "level": "grade-4",
+    "summary": "Explore vocabulary for landforms (valley, plateau, waterfall) and weather (breezy, humid).",
+    "outcome": "Define geographical features and apply nature terms in written and spoken sentences.",
+    "curriculum_references": [
+      "NCF-PREP-ENG-12",
+      "CG-SCERT-04-VOC-01"
+    ],
+    "activities": [
+      {
+        "type": "matching",
+        "topic": "vocabulary.synonyms",
+        "prompt": "Match each geographical landform with its description:",
+        "pairs": [
+          {
+            "id": "m1",
+            "left": "Valley",
+            "right": "Low land between hills or mountains"
+          },
+          {
+            "id": "m2",
+            "left": "Plateau",
+            "right": "An elevated flat land with steep sides"
+          },
+          {
+            "id": "m3",
+            "left": "Waterfall",
+            "right": "River water falling from a great height"
+          }
+        ]
+      },
+      {
+        "type": "spelling",
+        "topic": "vocabulary.spelling",
+        "prompt": "Spell the word for water falling in misty drops from clouds (starts with \"r\"):",
+        "accepted_answers": [
+          "rain",
+          "rainfall"
+        ],
+        "explanation": "R-A-I-N spells rain."
+      },
+      {
+        "type": "quiz",
+        "topic": "vocabulary.academic",
+        "prompt": "What weather term describes air full of moisture and damp heat?",
+        "options": [
+          "Humid",
+          "Freezing",
+          "Arid",
+          "Chilly"
+        ],
+        "correct_index": 0,
+        "explanation": "Humid means containing a high concentration of water vapor."
+      }
+    ]
+  }
+]

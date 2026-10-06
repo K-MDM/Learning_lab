@@ -181,30 +181,23 @@
     ],
     "activities": [
       {
-        "type": "error_correction",
-        "topic": "grammar.subject_verb_agreement",
-        "prompt": "Identify the concord error and rewrite the sentence correctly:",
-        "source_text": "Neither the principal nor the senior teachers was informed about the schedule change.",
-        "accepted_answers": [
-          "Neither the principal nor the senior teachers were informed about the schedule change."
+        "type": "quiz",
+        "prompt": "Choose the corrected sentence: Neither the principal nor the senior teachers was informed about the schedule change.",
+        "options": [
+          "Neither the principal nor the senior teachers were informed about the schedule change.",
+          "Neither the principal nor the senior teachers was informed about the schedule change."
         ],
+        "correct_index": 0,
         "explanation": "In sentences with 'neither... nor', the verb agrees with the subject closest to it ('senior teachers' is plural, so use 'were')."
       },
       {
-        "type": "gap_fill",
-        "topic": "grammar.tenses",
-        "prompt": "Complete the conditional sentence with the correct past perfect verb phrase:",
-        "segments": [
-          "Had the environmental delegates ",
-          " the empirical data sooner, the treaty would have been ratified."
+        "type": "quiz",
+        "prompt": "Complete the conditional sentence with the correct past perfect verb phrase: Had the environmental delegates ___ the empirical data sooner, the treaty would have been ratified.",
+        "options": [
+          "examined",
+          "is"
         ],
-        "answers": [
-          [
-            "examined",
-            "reviewed",
-            "analyzed"
-          ]
-        ],
+        "correct_index": 0,
         "explanation": "An inverted third conditional begins with 'Had' followed by the subject and the past participle ('examined' / 'reviewed' / 'analyzed')."
       },
       {
@@ -418,12 +411,13 @@
         ]
       },
       {
-        "type": "spelling",
-        "topic": "vocabulary.spelling",
-        "prompt": "Spell the academic adjective meaning 'present everywhere simultaneously' (starts with 'u'):",
-        "accepted_answers": [
-          "ubiquitous"
+        "type": "quiz",
+        "prompt": "Choose the spelling of the academic adjective meaning 'present everywhere simultaneously' (starts with 'u'):",
+        "options": [
+          "ubiquitous",
+          "suotiuqibu"
         ],
+        "correct_index": 0,
         "explanation": "Ubiquitous is spelled u-b-i-q-u-i-t-o-u-s."
       }
     ]

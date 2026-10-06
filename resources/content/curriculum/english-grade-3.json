@@ -1,0 +1,345 @@
+[
+  {
+    "key": "class3-listening",
+    "skill": "listening",
+    "title": "Stories of Our Town: The Helpful Potter",
+    "courseTitle": "English · Class 3",
+    "unitTitle": "Listening: Community & Folktales",
+    "level": "grade-3",
+    "summary": "Listen to a warm story about an artisan crafting earthen lamps and pots for Diwali.",
+    "outcome": "Follow sequential audio stories and answer specific factual questions about characters.",
+    "curriculum_references": [
+      "NCF-PREP-ENG-01",
+      "CG-SCERT-03-LIST-01"
+    ],
+    "activities": [
+      {
+        "type": "listening",
+        "topic": "listening.stories",
+        "prompt": "Listen to the story: Uncle Shyamlal is a potter in Kumharpara. Every morning, he collects clay from the riverbank, shapes beautiful round pots on his wheel, and dries them in the sunshine. During Diwali, villagers buy his earthen diyas to brighten their houses."
+      },
+      {
+        "type": "quiz",
+        "topic": "listening.listening_comprehension",
+        "prompt": "Where does Uncle Shyamlal collect clay from?",
+        "options": [
+          "The riverbank",
+          "The forest hill",
+          "The market square",
+          "The school playground"
+        ],
+        "correct_index": 0,
+        "explanation": "The story states that Uncle Shyamlal collects clay from the riverbank."
+      },
+      {
+        "type": "quiz",
+        "topic": "listening.listening_comprehension",
+        "prompt": "Why do the villagers buy his earthen diyas during Diwali?",
+        "options": [
+          "To brighten their houses",
+          "To feed their birds",
+          "To store extra water",
+          "To cook food"
+        ],
+        "correct_index": 0,
+        "explanation": "Villagers buy diyas to brighten their houses for Diwali."
+      }
+    ]
+  },
+  {
+    "key": "class3-speaking",
+    "skill": "speaking",
+    "title": "Talking About What I Want to Be",
+    "courseTitle": "English · Class 3",
+    "unitTitle": "Speaking: Expressing Ambitions & Roles",
+    "level": "grade-3",
+    "summary": "Speak about doctors, teachers, police officers, and farmers who help our society.",
+    "outcome": "Express future ambitions in 3-5 linked sentences with proper word stress.",
+    "curriculum_references": [
+      "NCF-PREP-ENG-02",
+      "CG-SCERT-03-SPK-01"
+    ],
+    "activities": [
+      {
+        "type": "speaking",
+        "speaking_kind": "sentences",
+        "topic": "speaking.sentences",
+        "prompt": "Say clearly: \"When I grow up, I want to become a teacher because I love helping children learn.\"",
+        "rubric": [
+          {
+            "criterion": "Pronunciation and phonetic clarity",
+            "maximum_score": 5
+          },
+          {
+            "criterion": "Intonation, cadence and fluency",
+            "maximum_score": 5
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "speaking_kind": "picture_description",
+        "topic": "speaking.fluency",
+        "prompt": "Describe in two sentences how a farmer works hard in the fields to grow food.",
+        "rubric": [
+          {
+            "criterion": "Pronunciation and phonetic clarity",
+            "maximum_score": 5
+          },
+          {
+            "criterion": "Intonation, cadence and fluency",
+            "maximum_score": 5
+          }
+        ]
+      },
+      {
+        "type": "dialogue",
+        "topic": "speaking.sentences",
+        "prompt": "Practice this dialogue between two friends discussing their favorite subject:",
+        "turns": [
+          {
+            "speaker": "Kavita",
+            "text": "Which subject do you like best, Tarun?"
+          },
+          {
+            "speaker": "Tarun",
+            "text": "I really enjoy English because we read interesting stories!"
+          },
+          {
+            "speaker": "Kavita",
+            "text": "Me too! Writing poems is also so much fun."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "class3-reading",
+    "skill": "reading",
+    "title": "The Brave Little Squirrel",
+    "courseTitle": "English · Class 3",
+    "unitTitle": "Reading: Narrative Comprehension",
+    "level": "grade-3",
+    "summary": "Read how a tiny squirrel helped build the grand bridge across the ocean.",
+    "outcome": "Read a 100-word narrative, identify character motivations, and arrange events chronologically.",
+    "curriculum_references": [
+      "NCF-PREP-ENG-03",
+      "CG-SCERT-03-READ-01"
+    ],
+    "activities": [
+      {
+        "type": "reading",
+        "reading_kind": "story",
+        "topic": "reading.contextual_reading",
+        "prompt": "While huge monkeys lifted heavy rocks to build a bridge across the turbulent sea, a tiny squirrel dipped his furry body into the water, rolled in the sand, and ran to shake the tiny sand grains between the boulders. When the animals laughed, the great leader smiled and gently thanked the squirrel, saying: \"Small hands with great devotion can achieve wonders.\""
+      },
+      {
+        "type": "comprehension",
+        "topic": "reading.comprehension",
+        "prompt": "How did the little squirrel contribute to the bridge?",
+        "passage": "A tiny squirrel dipped his furry body into the water, rolled in the sand, and ran to shake the tiny sand grains between the boulders.",
+        "comprehension_focus": "literal",
+        "options": [
+          "By carrying grains of sand stuck to his wet fur",
+          "By lifting massive heavy boulders alone",
+          "By swimming across the sea to call for help",
+          "By gathering coconuts for the workers"
+        ],
+        "correct_index": 0,
+        "explanation": "The squirrel dipped into the water, rolled in sand, and carried grains between the boulders."
+      },
+      {
+        "type": "sequencing",
+        "topic": "reading.sequencing",
+        "prompt": "Arrange the sequence of the story:",
+        "items": [
+          {
+            "id": "sq1",
+            "text": "Big monkeys carried heavy rocks to build a bridge."
+          },
+          {
+            "id": "sq2",
+            "text": "A small squirrel rolled in sand and brought sand grains."
+          },
+          {
+            "id": "sq3",
+            "text": "The leader praised the squirrel for his great devotion."
+          }
+        ],
+        "correct_order": [
+          "sq1",
+          "sq2",
+          "sq3"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "class3-writing",
+    "skill": "writing",
+    "title": "My Favorite Pet & Guided Paragraphs",
+    "courseTitle": "English · Class 3",
+    "unitTitle": "Writing: Simple Descriptive Sentences",
+    "level": "grade-3",
+    "summary": "Write complete descriptive sentences using linking words and action verbs.",
+    "outcome": "Produce a 4-to-5 sentence paragraph about an animal or family member.",
+    "curriculum_references": [
+      "NCF-PREP-ENG-04",
+      "CG-SCERT-03-WRIT-01"
+    ],
+    "activities": [
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_rearrangement",
+        "prompt": "Choose the sentence ordered correctly:",
+        "options": [
+          "My dog runs happily in the green garden.",
+          "Happily in the green garden my dog runs.",
+          "Runs my dog green garden in happily."
+        ],
+        "correct_index": 0,
+        "explanation": "\"My dog runs happily in the green garden.\" is logically and grammatically sound."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_formation",
+        "prompt": "Choose the correct joining word: \"Anita loves to read, ___ she borrowed a book from the library.\"",
+        "options": [
+          "so",
+          "but",
+          "because",
+          "or"
+        ],
+        "correct_index": 0,
+        "explanation": "\"So\" shows the natural result of her love for reading."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.error_correction",
+        "prompt": "Find the sentence with correct punctuation:",
+        "options": [
+          "Where are you going, Priya?",
+          "Where are you going Priya.",
+          "where are you going, Priya?"
+        ],
+        "correct_index": 0,
+        "explanation": "Questions require a capital letter at the start, a comma before direct address, and a question mark at the end."
+      }
+    ]
+  },
+  {
+    "key": "class3-grammar",
+    "skill": "grammar",
+    "title": "Action Words in the Present and Past",
+    "courseTitle": "English · Class 3",
+    "unitTitle": "Grammar: Verbs & Simple Tenses",
+    "level": "grade-3",
+    "summary": "Understand how regular verbs change from present to past (play -> played, jump -> jumped).",
+    "outcome": "Identify past tense forms of common action verbs and use them in sentences.",
+    "curriculum_references": [
+      "NCF-PREP-ENG-05",
+      "CG-SCERT-03-GRAM-01"
+    ],
+    "activities": [
+      {
+        "type": "quiz",
+        "topic": "grammar.tenses",
+        "prompt": "Yesterday, the children ___ football in the school playground.",
+        "options": [
+          "played",
+          "play",
+          "playing",
+          "will play"
+        ],
+        "correct_index": 0,
+        "explanation": "\"Yesterday\" indicates past time, so use the past tense \"played\"."
+      },
+      {
+        "type": "quiz",
+        "topic": "grammar.tenses",
+        "prompt": "What is the past tense of the verb \"cook\"?",
+        "options": [
+          "Cooked",
+          "Cooking",
+          "Cooks",
+          "Cooker"
+        ],
+        "correct_index": 0,
+        "explanation": "The past tense of \"cook\" is \"cooked\"."
+      },
+      {
+        "type": "quiz",
+        "topic": "grammar.subject_verb_agreement",
+        "prompt": "The birds ___ sweetly every morning.",
+        "options": [
+          "sing",
+          "sings",
+          "singed",
+          "singing"
+        ],
+        "correct_index": 0,
+        "explanation": "Plural subject \"birds\" takes base verb \"sing\" in simple present tense."
+      }
+    ]
+  },
+  {
+    "key": "class3-vocabulary",
+    "skill": "vocabulary",
+    "title": "Words for Professions & Opposites",
+    "courseTitle": "English · Class 3",
+    "unitTitle": "Vocabulary: Occupations & Antonyms",
+    "level": "grade-3",
+    "summary": "Learn pairs of opposite words (hot/cold, big/small) and occupations.",
+    "outcome": "Match antonyms and define basic community roles.",
+    "curriculum_references": [
+      "NCF-PREP-ENG-06",
+      "CG-SCERT-03-VOC-01"
+    ],
+    "activities": [
+      {
+        "type": "matching",
+        "topic": "vocabulary.synonyms",
+        "prompt": "Match each word with its opposite (antonym):",
+        "pairs": [
+          {
+            "id": "m1",
+            "left": "Hot",
+            "right": "Cold"
+          },
+          {
+            "id": "m2",
+            "left": "Fast",
+            "right": "Slow"
+          },
+          {
+            "id": "m3",
+            "left": "Heavy",
+            "right": "Light"
+          }
+        ]
+      },
+      {
+        "type": "spelling",
+        "topic": "vocabulary.spelling",
+        "prompt": "Spell the word for someone who heals sick people (starts with \"d\"):",
+        "accepted_answers": [
+          "doctor"
+        ],
+        "explanation": "D-O-C-T-O-R spells doctor."
+      },
+      {
+        "type": "quiz",
+        "topic": "vocabulary.academic",
+        "prompt": "Who repairs leaky water pipes and taps in houses?",
+        "options": [
+          "Plumber",
+          "Carpenter",
+          "Tailor",
+          "Baker"
+        ],
+        "correct_index": 0,
+        "explanation": "A plumber repairs pipes and taps."
+      }
+    ]
+  }
+]

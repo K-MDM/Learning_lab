@@ -231,7 +231,7 @@ export const packageReleases=lab.table('package_releases',{
   check('package_releases_check_2',sql.raw("jsonb_typeof(manifest)='object'")),
   check('package_releases_check_3',sql.raw("manifest_digest ~ '^[a-f0-9]{64}$'")),
   unique('package_releases_unique_4').on(t.unitId,t.version),
-  check('package_releases_check_5',sql.raw("status='draft' OR published_at IS NOT NULL"))
+  check('package_releases_check_5',sql.raw("status <> 'published' OR published_at IS NOT NULL"))
 ]).enableRLS();
 
 export const packageLessons=lab.table('package_lessons',{

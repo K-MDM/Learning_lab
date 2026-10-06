@@ -1,0 +1,354 @@
+[
+  {
+    "key": "class12-listening",
+    "skill": "listening",
+    "title": "Diplomatic Discourse: Global Multilateral Accords",
+    "courseTitle": "English · Class 12",
+    "unitTitle": "Listening: Geopolitics & Multilateral Negotiations",
+    "level": "grade-12",
+    "summary": "Listen to a simulated United Nations plenary session addressing global climate treaties and carbon offsets.",
+    "outcome": "Dissect nuances of international diplomacy, decode diplomatic subtext, and evaluate negotiation tradeoffs.",
+    "curriculum_references": [
+      "NCF-SRSEC-ENG-07",
+      "CG-SCERT-12-LIST-01"
+    ],
+    "activities": [
+      {
+        "type": "listening",
+        "topic": "listening.listening_comprehension",
+        "prompt": "Listen to this diplomatic intervention: \"Distinguished delegates, while sovereign nations acknowledge the urgent imperative to decelerate global temperature anomalies, historical emissions burdens must not be conflated with present developmental needs. The principle of Common But Differentiated Responsibilities remains non-negotiable. Developing economies cannot be coerced into unilateral decarbonization targets without predictable, concessional climate financing and unhindered green technology transfers from industrialized signatories.\""
+      },
+      {
+        "type": "quiz",
+        "topic": "listening.listening_comprehension",
+        "prompt": "What foundational multilateral principle does the delegate assert is non-negotiable?",
+        "options": [
+          "Common But Differentiated Responsibilities",
+          "Unconditional immediate carbon tariffs",
+          "Immediate cessation of domestic manufacturing",
+          "Universal equal per-capita penalties"
+        ],
+        "correct_index": 0,
+        "explanation": "The delegate explicitly upholds the principle of Common But Differentiated Responsibilities."
+      },
+      {
+        "type": "quiz",
+        "topic": "listening.listening_comprehension",
+        "prompt": "What twin conditions do developing economies demand before committing to expedited targets?",
+        "options": [
+          "Predictable concessional climate financing and unhindered technology transfers",
+          "Exemption from all environmental reporting",
+          "Free trade access to all global shipping lanes",
+          "Military assistance during natural crises"
+        ],
+        "correct_index": 0,
+        "explanation": "Financing and technology transfers are cited as vital prerequisites."
+      }
+    ]
+  },
+  {
+    "key": "class12-speaking",
+    "skill": "speaking",
+    "title": "Professional Job Interviews & Executive Pitching",
+    "courseTitle": "English · Class 12",
+    "unitTitle": "Speaking: Executive Communication & Professional Interviews",
+    "level": "grade-12",
+    "summary": "Deliver professional elevator pitches, answer behavioral interview questions (STAR method), and negotiate proposals.",
+    "outcome": "Perform convincingly in a high-stakes professional interview using the STAR method (Situation, Task, Action, Result).",
+    "curriculum_references": [
+      "NCF-SRSEC-ENG-08",
+      "CG-SCERT-12-SPK-01"
+    ],
+    "activities": [
+      {
+        "type": "speaking",
+        "speaking_kind": "situational",
+        "topic": "speaking.situational",
+        "prompt": "Deliver a concise two-minute professional self-introduction and value proposition for an entry-level managerial position in an educational technology firm.",
+        "rubric": [
+          {
+            "criterion": "Logical coherence and persuasive assertion",
+            "maximum_score": 5
+          },
+          {
+            "criterion": "Rhetorical sophistication and rebutting precision",
+            "maximum_score": 5
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "speaking_kind": "stress",
+        "topic": "speaking.stress",
+        "prompt": "Deliver this professional executive summary statement with authoritative clarity: \"Strategic alignment between human capital and technological automation is the solitary driver of sustainable institutional growth.\"",
+        "rubric": [
+          {
+            "criterion": "Pronunciation, cadence and phonetic accuracy",
+            "maximum_score": 5
+          },
+          {
+            "criterion": "Intonation, rhetorical modulation and fluency",
+            "maximum_score": 5
+          }
+        ]
+      },
+      {
+        "type": "dialogue",
+        "topic": "speaking.discussion",
+        "prompt": "Simulate this executive panel interview on ethical leadership in corporate governance:",
+        "turns": [
+          {
+            "speaker": "Interviewer",
+            "text": "Can you describe a scenario where you mediated an ethical deadlock within a project team?"
+          },
+          {
+            "speaker": "Candidate",
+            "text": "In our collegiate tech symposium, when a lead programmer proposed scraping proprietary competitor data, I intervened by establishing a clear code of ethics."
+          },
+          {
+            "speaker": "Interviewer",
+            "text": "How did the rest of the team react to the resulting postponement of the deliverables?"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "class12-reading",
+    "skill": "reading",
+    "title": "The Last Lesson: Alphonse Daudet & Linguistic Identity",
+    "courseTitle": "English · Class 12",
+    "unitTitle": "Reading: Sociolinguistic Politics & Identity",
+    "level": "grade-12",
+    "summary": "Deconstruct Alphonse Daudet's masterpiece exploring linguistic imperialism, cultural memory, and language preservation.",
+    "outcome": "Evaluate sociolinguistic sovereignty, interpret allegorical motifs, and analyze rhetorical pathos.",
+    "curriculum_references": [
+      "NCF-SRSEC-ENG-09",
+      "CG-SCERT-12-READ-01"
+    ],
+    "activities": [
+      {
+        "type": "reading",
+        "reading_kind": "passage",
+        "topic": "reading.contextual_reading",
+        "prompt": "Set against the traumatic backdrop of the Franco-Prussian War, Alphonse Daudet’s \"The Last Lesson\" captures the devastating moment when an invading order dictates that only German shall be taught in the schools of Alsace and Lorraine. M. Hamel, dressed in his finest Sunday attire, reminds the remorseful villagers that when a people are enslaved, as long as they hold fast to their native language, it is as if they held the key to their prison. The narrative endures as an immortal testament to how mother tongues encapsulate identity, dignity, and collective freedom."
+      },
+      {
+        "type": "comprehension",
+        "topic": "reading.comprehension",
+        "prompt": "According to M. Hamel, why is holding fast to one's native language akin to holding the key to a prison?",
+        "passage": "M. Hamel, dressed in his finest Sunday attire, reminds the remorseful villagers that when a people are enslaved, as long as they hold fast to their native language, it is as if they held the key to their prison.",
+        "comprehension_focus": "inference",
+        "options": [
+          "Because indigenous language preserves cultural memory, autonomy, and the inextinguishable spirit of sovereignty",
+          "Because prisoners can speak in code to prison guards",
+          "Because dictionaries can hide metallic prison keys",
+          "Because foreign languages are inherently impossible to learn"
+        ],
+        "correct_index": 0,
+        "explanation": "Language serves as the spiritual fortress of identity and freedom against subjugation."
+      },
+      {
+        "type": "sequencing",
+        "topic": "reading.sequencing",
+        "prompt": "Order the psychological progression of Franz in Daudet's narrative:",
+        "items": [
+          {
+            "id": "ll1",
+            "text": "Franz regards French grammar lessons as tedious and trivial."
+          },
+          {
+            "id": "ll2",
+            "text": "The Berlin decree banning French evokes intense grief and remorse."
+          },
+          {
+            "id": "ll3",
+            "text": "Franz awakens to the sacred majesty of his mother tongue as Hamel writes \"Vive La France!\"."
+          }
+        ],
+        "correct_order": [
+          "ll1",
+          "ll2",
+          "ll3"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "class12-writing",
+    "skill": "writing",
+    "title": "Curriculum Vitae (Resume) & Official Applications",
+    "courseTitle": "English · Class 12",
+    "unitTitle": "Writing: Job Applications & Professional Resumes",
+    "level": "grade-12",
+    "summary": "Master corporate correspondence: professional cover letters, chronological resumes, references, and bio-data.",
+    "outcome": "Draft a professional job application with accompanying bio-data complying with corporate hiring standards.",
+    "curriculum_references": [
+      "NCF-SRSEC-ENG-10",
+      "CG-SCERT-12-WRIT-01"
+    ],
+    "activities": [
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_formation",
+        "prompt": "Which opening sentence establishes the most professional tone in a formal cover letter applying for an advertised vacancy?",
+        "options": [
+          "In response to your advertisement published in The National Chronicle dated 4th October, I hereby offer my candidature for the post of Software Analyst.",
+          "I saw your job post in the newspaper and I really want to work for your company because I need a job.",
+          "Please give me an interview for the job opening mentioned yesterday.",
+          "I am the best candidate for your open vacancy so hire me."
+        ],
+        "correct_index": 0,
+        "explanation": "\"In response to your advertisement published in...\" is the polished standard for job applications."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_rearrangement",
+        "prompt": "Choose the standard chronological sequence for a formal Curriculum Vitae (Bio-Data):",
+        "options": [
+          "Personal Details -> Educational Qualifications -> Work Experience -> Skills & Honors -> References",
+          "References -> Hobbies -> Personal Details -> Salary Demands",
+          "Educational Qualifications -> Personal Gossip -> References -> Photos",
+          "Work Experience -> Favorite Movies -> Signature -> Address"
+        ],
+        "correct_index": 0,
+        "explanation": "Standard CV flow proceeds logically from identity to education, experience, competencies, and references."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.error_correction",
+        "prompt": "Identify the sentence with flawless formal executive register:",
+        "options": [
+          "Enclosed herewith, please find my comprehensive resume for your favorable consideration.",
+          "Enclosed herewith please find my resume for your consideration",
+          "Enclosed here with, please find my resume for your favorable consideration."
+        ],
+        "correct_index": 0,
+        "explanation": "Proper commas frame the transitional archaic legal phrase \"Enclosed herewith\"."
+      }
+    ]
+  },
+  {
+    "key": "class12-grammar",
+    "skill": "grammar",
+    "title": "Syntactic Nominalization & Legal Precision",
+    "courseTitle": "English · Class 12",
+    "unitTitle": "Grammar: Nominalization, Clauses & Register",
+    "level": "grade-12",
+    "summary": "Master nominalization (converting verbs to nouns: \"analyze\" -> \"analysis\") to achieve compact, formal academic register.",
+    "outcome": "Transform verb-heavy conversational drafts into concise, nominalized executive prose.",
+    "curriculum_references": [
+      "NCF-SRSEC-ENG-11",
+      "CG-SCERT-12-GRAM-01"
+    ],
+    "activities": [
+      {
+        "type": "quiz",
+        "topic": "grammar.subject_verb_agreement",
+        "prompt": "Which sentence demonstrates effective syntactic nominalization of \"The team analyzed the water and discovered pathogens\"?",
+        "options": [
+          "The team's geochemical analysis revealed the presence of hazardous pathogens.",
+          "The team analyzed the water a lot and they found pathogens.",
+          "Water was analyzed by the team and pathogens were discovered by them.",
+          "Analyzing water by the team made them discover pathogens."
+        ],
+        "correct_index": 0,
+        "explanation": "\"Analysis revealed the presence...\" nominalizes the action into an authoritative, concise formal statement."
+      },
+      {
+        "type": "error_correction",
+        "topic": "grammar.subject_verb_agreement",
+        "prompt": "Rectify the misplaced modifier in this formal corporate memo:",
+        "source_text": "Having completed the fiscal audit, the financial discrepancies were identified by the committee.",
+        "accepted_answers": [
+          "Having completed the fiscal audit, the committee identified the financial discrepancies."
+        ],
+        "explanation": "The modifier \"Having completed the fiscal audit\" must logically attach to \"the committee\", not \"the financial discrepancies\"."
+      },
+      {
+        "type": "quiz",
+        "topic": "grammar.tenses",
+        "prompt": "Choose the sentence with correct parallel legal structure:",
+        "options": [
+          "The licensee agrees to safeguard data, maintain firewalls, and notify authorities in the event of an unauthorized breach.",
+          "The licensee agrees to safeguarding data, maintaining firewalls, and to notify authorities in the event of an unauthorized breach.",
+          "The licensee agrees to safeguard data, maintain firewalls, and notification of authorities."
+        ],
+        "correct_index": 0,
+        "explanation": "Three bare infinitives maintain parallel legal obligation: \"safeguard..., maintain..., and notify...\"."
+      }
+    ]
+  },
+  {
+    "key": "class12-vocabulary",
+    "skill": "vocabulary",
+    "title": "Corporate, Legal & Diplomatic Lexicon",
+    "courseTitle": "English · Class 12",
+    "unitTitle": "Vocabulary: Professional, Jurisprudential & Global Diction",
+    "level": "grade-12",
+    "summary": "Master high-stakes professional terminology (indemnity, fiduciary, caveat, jurisdiction).",
+    "outcome": "Define and correctly employ specialized legal, corporate, and multilateral vocabulary.",
+    "curriculum_references": [
+      "NCF-SRSEC-ENG-12",
+      "CG-SCERT-12-VOC-01"
+    ],
+    "activities": [
+      {
+        "type": "glossary",
+        "topic": "vocabulary.academic",
+        "prompt": "Review these fundamental corporate and legal terms:",
+        "entries": [
+          {
+            "id": "fiduciary",
+            "term": "fiduciary",
+            "definition": "Involving trust, especially regarding the relationship between a trustee and a beneficiary.",
+            "example": "Corporate directors bear a strict fiduciary responsibility to protect shareholder equity."
+          },
+          {
+            "id": "indemnity",
+            "term": "indemnity",
+            "definition": "Security or protection against financial liability, damage, or legal loss.",
+            "example": "The contract contained an indemnity clause compensating the vendor for unforeseen transit damage."
+          },
+          {
+            "id": "caveat",
+            "term": "caveat",
+            "definition": "A warning, proviso, or specific condition limiting a broader statement.",
+            "example": "The statistical projections were approved with the crucial caveat that inflation rates remain stable."
+          }
+        ]
+      },
+      {
+        "type": "matching",
+        "topic": "vocabulary.synonyms",
+        "prompt": "Match each specialized term with its corporate or legal definition:",
+        "pairs": [
+          {
+            "id": "j1",
+            "left": "Fiduciary",
+            "right": "Involving ethical or financial trust"
+          },
+          {
+            "id": "j2",
+            "left": "Indemnity",
+            "right": "Protection against legal liability or loss"
+          },
+          {
+            "id": "j3",
+            "left": "Caveat",
+            "right": "Qualifying warning or stipulation"
+          }
+        ]
+      },
+      {
+        "type": "spelling",
+        "topic": "vocabulary.spelling",
+        "prompt": "Spell the adjective describing a legal or ethical relationship of utmost financial trust (starts with \"f\"):",
+        "accepted_answers": [
+          "fiduciary"
+        ],
+        "explanation": "F-I-D-U-C-I-A-R-Y spells fiduciary."
+      }
+    ]
+  }
+]

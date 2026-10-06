@@ -31,7 +31,7 @@ export async function updateWritingSeeds(db: DB, actor: string) {
       const source = validateManifest(release.manifest);
       const writing = source.lessons.filter(l => l.skill === 'writing');
       if (writing.length !== 1) throw new ContentError(409, 'Seeded Writing lesson identity is ambiguous.');
-      if (!writing[0].activities.some(a => a.type !== 'quiz')) {
+      if (!writing[0].activities.some(a => ['writing','gap_fill','spelling','error_correction','picture'].includes(a.type))) {
         results.push({code, id: release.id, status: 'already_updated'}); continue;
       }
       if (release.status === 'published') {

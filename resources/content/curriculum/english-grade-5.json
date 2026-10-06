@@ -1,0 +1,347 @@
+[
+  {
+    "key": "class5-listening",
+    "skill": "listening",
+    "title": "The Clever Crow & The Drought: Listening to Wisdom",
+    "courseTitle": "English · Class 5",
+    "unitTitle": "Listening: Critical Fables & Moral Stories",
+    "level": "grade-5",
+    "summary": "Listen to an extended fable about resourcefulness, perseverance, and problem-solving.",
+    "outcome": "Identify cause-and-effect relationships and infer moral lessons from oral narratives.",
+    "curriculum_references": [
+      "NCF-PREP-ENG-13",
+      "CG-SCERT-05-LIST-01"
+    ],
+    "activities": [
+      {
+        "type": "listening",
+        "topic": "listening.stories",
+        "prompt": "Listen to the audio story: During a harsh summer drought, a thirsty crow flew across barren fields searching for water. At last, he spotted an earthen pitcher in a courtyard. However, the water level was too low for his beak to reach. Instead of flying away in despair, the crow noticed smooth pebbles lying nearby. One by one, he picked up the pebbles and dropped them into the pitcher until the water rose to the brim."
+      },
+      {
+        "type": "quiz",
+        "topic": "listening.listening_comprehension",
+        "prompt": "What obstacle did the crow face when he found the pitcher?",
+        "options": [
+          "The water level was too low for his beak to reach",
+          "The water was poisoned and dirty",
+          "Other larger birds attacked him",
+          "The pitcher had a sealed lid"
+        ],
+        "correct_index": 0,
+        "explanation": "The pitcher had water, but it was too low for his beak to reach."
+      },
+      {
+        "type": "quiz",
+        "topic": "listening.listening_comprehension",
+        "prompt": "What central lesson does this story teach?",
+        "options": [
+          "Patience and clever thinking can overcome difficult problems",
+          "Never fly in hot weather",
+          "Always wait for someone else to bring water",
+          "Pitchers are unsafe for birds"
+        ],
+        "correct_index": 0,
+        "explanation": "The fable illustrates how intelligence and persistence solve tough challenges."
+      }
+    ]
+  },
+  {
+    "key": "class5-speaking",
+    "skill": "speaking",
+    "title": "Storytelling & Roleplay: Solving Problems Together",
+    "courseTitle": "English · Class 5",
+    "unitTitle": "Speaking: Expressive Delivery & Retelling",
+    "level": "grade-5",
+    "summary": "Retell a familiar story in your own words, maintaining animated voice modulation.",
+    "outcome": "Narrate a 1-to-2 minute story using sequence words (First, Then, After that, Finally).",
+    "curriculum_references": [
+      "NCF-PREP-ENG-14",
+      "CG-SCERT-05-SPK-01"
+    ],
+    "activities": [
+      {
+        "type": "speaking",
+        "speaking_kind": "story_narration",
+        "topic": "speaking.fluency",
+        "prompt": "Retell a short incident where you helped a friend or family member. Use transition words like \"First\", \"Next\", and \"Finally\".",
+        "rubric": [
+          {
+            "criterion": "Pronunciation and phonetic clarity",
+            "maximum_score": 5
+          },
+          {
+            "criterion": "Intonation, cadence and fluency",
+            "maximum_score": 5
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "speaking_kind": "stress",
+        "topic": "speaking.stress",
+        "prompt": "Speak this sentence with dramatic excitement: \"Look at the sky! The dark monsoon clouds have gathered, and rain is about to pour!\"",
+        "rubric": [
+          {
+            "criterion": "Pronunciation and phonetic clarity",
+            "maximum_score": 5
+          },
+          {
+            "criterion": "Intonation, cadence and fluency",
+            "maximum_score": 5
+          }
+        ]
+      },
+      {
+        "type": "dialogue",
+        "topic": "speaking.discussion",
+        "prompt": "Engage in this conversation about keeping the school campus plastic-free:",
+        "turns": [
+          {
+            "speaker": "Vikram",
+            "text": "I noticed single-use plastic wrappers near the cafeteria benches."
+          },
+          {
+            "speaker": "Ananya",
+            "text": "Let us place segregated blue and green dustbins so everyone sorts dry and wet waste."
+          },
+          {
+            "speaker": "Vikram",
+            "text": "Great idea! We can also make posters reminding our classmates to use cloth bags."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "class5-reading",
+    "skill": "reading",
+    "title": "The Great Banyan of Shivpur: A Living Canopy",
+    "courseTitle": "English · Class 5",
+    "unitTitle": "Reading: Informative & Scientific Prose",
+    "level": "grade-5",
+    "summary": "Read about the architectural marvel of the Banyan tree and its aerial prop roots.",
+    "outcome": "Analyze informational texts, identify supporting details, and deduce scientific vocabulary.",
+    "curriculum_references": [
+      "NCF-PREP-ENG-15",
+      "CG-SCERT-05-READ-01"
+    ],
+    "activities": [
+      {
+        "type": "reading",
+        "reading_kind": "passage",
+        "topic": "reading.contextual_reading",
+        "prompt": "The Banyan tree is India’s national tree and a self-sustaining ecosystem in miniature. Unlike ordinary trees that grow from a single trunk, the Banyan sends down aerial prop roots from its massive lateral branches. Once these roots strike the soil, they thicken into sturdy pillars that support the ever-expanding canopy. A single mature banyan can span over several acres, providing nesting shade for hundreds of bird species, fruit bats, and insects."
+      },
+      {
+        "type": "comprehension",
+        "topic": "reading.comprehension",
+        "prompt": "How do the aerial prop roots help the Banyan tree expand across acres?",
+        "passage": "Once these roots strike the soil, they thicken into sturdy pillars that support the ever-expanding canopy.",
+        "comprehension_focus": "inference",
+        "options": [
+          "They thicken into sturdy pillar-like trunks that support heavy lateral branches",
+          "They store fresh rainwater during droughts",
+          "They attract insects that protect the leaves",
+          "They keep animals from climbing the branches"
+        ],
+        "correct_index": 0,
+        "explanation": "The roots become woody support pillars for the spreading canopy."
+      },
+      {
+        "type": "sequencing",
+        "topic": "reading.sequencing",
+        "prompt": "Order the biological process of Banyan root development:",
+        "items": [
+          {
+            "id": "b1",
+            "text": "Aerial roots dangle from high lateral branches."
+          },
+          {
+            "id": "b2",
+            "text": "The roots reach and penetrate the fertile soil."
+          },
+          {
+            "id": "b3",
+            "text": "They thicken into woody pillar-like supportive trunks."
+          }
+        ],
+        "correct_order": [
+          "b1",
+          "b2",
+          "b3"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "class5-writing",
+    "skill": "writing",
+    "title": "Writing an Informal Letter to a Cousin",
+    "courseTitle": "English · Class 5",
+    "unitTitle": "Writing: Informal Letters & Notices",
+    "level": "grade-5",
+    "summary": "Master informal letter writing: sender address, date, friendly greeting, body, and sign-off.",
+    "outcome": "Compose an informal letter of 60-80 words inviting a friend for vacation.",
+    "curriculum_references": [
+      "NCF-PREP-ENG-16",
+      "CG-SCERT-05-WRIT-01"
+    ],
+    "activities": [
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_rearrangement",
+        "prompt": "Choose the best opening line for an informal letter to a friend:",
+        "options": [
+          "I hope this letter finds you in cheerful spirits and good health.",
+          "With reference to your memo dated yesterday, I am writing.",
+          "Respected Sir, with due respect I beg to say that I am unwell.",
+          "Subject: Invitation for vacation visit."
+        ],
+        "correct_index": 0,
+        "explanation": "\"I hope this letter finds you in cheerful spirits...\" is a warm and natural informal opening."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_formation",
+        "prompt": "Which sign-off is most suitable for an informal letter to a cousin?",
+        "options": [
+          "With lots of love, Your cousin",
+          "Yours obediently,",
+          "Yours faithfully,",
+          "Sincerely yours, Manager"
+        ],
+        "correct_index": 0,
+        "explanation": "\"With lots of love\" is appropriate for close family and friends."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.error_correction",
+        "prompt": "Find the sentence with correctly positioned adverbs of frequency:",
+        "options": [
+          "Pooja always finishes her homework before dinner.",
+          "Pooja finishes always her homework before dinner.",
+          "Always Pooja finishes her homework before dinner."
+        ],
+        "correct_index": 0,
+        "explanation": "Adverbs of frequency like \"always\" go before the main verb."
+      }
+    ]
+  },
+  {
+    "key": "class5-grammar",
+    "skill": "grammar",
+    "title": "Adverbs of Manner & Modal Auxiliaries",
+    "courseTitle": "English · Class 5",
+    "unitTitle": "Grammar: How, When & Modal Ability",
+    "level": "grade-5",
+    "summary": "Explore how adverbs describe actions (quietly, eagerly) and modals indicate ability/permission (can, may).",
+    "outcome": "Convert adjectives to adverbs of manner (-ly) and choose correct modal verbs.",
+    "curriculum_references": [
+      "NCF-PREP-ENG-17",
+      "CG-SCERT-05-GRAM-01"
+    ],
+    "activities": [
+      {
+        "type": "quiz",
+        "topic": "grammar.subject_verb_agreement",
+        "prompt": "The tortoise walked ___ along the forest trail.",
+        "options": [
+          "slowly",
+          "slow",
+          "slowness",
+          "slowest"
+        ],
+        "correct_index": 0,
+        "explanation": "Adverbs of manner ending in \"-ly\" describe how a verb is performed."
+      },
+      {
+        "type": "quiz",
+        "topic": "grammar.modals",
+        "prompt": "Which sentence correctly uses \"may\" to request polite permission?",
+        "options": [
+          "May I enter the library, Madam?",
+          "I may run very fast in sports day.",
+          "You may must read this book today.",
+          "May you are hungry now?"
+        ],
+        "correct_index": 0,
+        "explanation": "\"May I enter...\" is the formal, polite request for permission."
+      },
+      {
+        "type": "quiz",
+        "topic": "grammar.subject_verb_agreement",
+        "prompt": "Neither Manoj nor his brothers ___ present at the assembly today.",
+        "options": [
+          "were",
+          "was",
+          "is",
+          "be"
+        ],
+        "correct_index": 0,
+        "explanation": "With \"neither... nor\", the verb agrees with the closer plural subject (\"brothers\")."
+      }
+    ]
+  },
+  {
+    "key": "class5-vocabulary",
+    "skill": "vocabulary",
+    "title": "Idiomatic Expressions & Descriptive Words",
+    "courseTitle": "English · Class 5",
+    "unitTitle": "Vocabulary: Similes & Rich Expressions",
+    "level": "grade-5",
+    "summary": "Learn expressive similes (as brave as a lion, as clear as crystal) and vivid adjectives.",
+    "outcome": "Use similes and context-rich descriptive words in speech and writing.",
+    "curriculum_references": [
+      "NCF-PREP-ENG-18",
+      "CG-SCERT-05-VOC-01"
+    ],
+    "activities": [
+      {
+        "type": "matching",
+        "topic": "vocabulary.synonyms",
+        "prompt": "Match each popular simile with its common comparison:",
+        "pairs": [
+          {
+            "id": "s1",
+            "left": "As brave as",
+            "right": "A lion"
+          },
+          {
+            "id": "s2",
+            "left": "As wise as",
+            "right": "An owl"
+          },
+          {
+            "id": "s3",
+            "left": "As busy as",
+            "right": "A bee"
+          }
+        ]
+      },
+      {
+        "type": "spelling",
+        "topic": "vocabulary.spelling",
+        "prompt": "Spell the word meaning \"having courage to face danger\" (starts with \"b\"):",
+        "accepted_answers": [
+          "brave",
+          "bravery"
+        ],
+        "explanation": "B-R-A-V-E spells brave."
+      },
+      {
+        "type": "quiz",
+        "topic": "vocabulary.academic",
+        "prompt": "What does the idiom \"once in a blue moon\" mean?",
+        "options": [
+          "Something that happens very rarely",
+          "Something that occurs every full moon",
+          "A cloudy night sky",
+          "An impossible scientific event"
+        ],
+        "correct_index": 0,
+        "explanation": "\"Once in a blue moon\" describes an exceptionally rare occurrence."
+      }
+    ]
+  }
+]

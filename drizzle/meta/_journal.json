@@ -50,6 +50,13 @@
       "when": 1791120883854,
       "tag": "0006_bored_starfox",
       "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1791265143921,
+      "tag": "0007_sparkling_carmella_unuscione",
+      "breakpoints": true
     }
   ]
 }

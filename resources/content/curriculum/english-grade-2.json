@@ -1,0 +1,346 @@
+[
+  {
+    "key": "class2-listening",
+    "skill": "listening",
+    "title": "A Day at School: Instructions & Story",
+    "courseTitle": "English · Class 2",
+    "unitTitle": "Listening: Classroom Directions",
+    "level": "grade-2",
+    "summary": "Listen to short teacher instructions, morning bell routines, and playful tales.",
+    "outcome": "Follow two-step verbal directions and understand key details in spoken stories.",
+    "curriculum_references": [
+      "NCF-FS-ENG-07",
+      "CG-SCERT-02-LIST-01"
+    ],
+    "activities": [
+      {
+        "type": "listening",
+        "topic": "listening.instructions",
+        "prompt": "Teacher says: \"Good morning, children! Please open your English books to page five and take out your pencils.\""
+      },
+      {
+        "type": "quiz",
+        "topic": "listening.listening_comprehension",
+        "prompt": "What page did the teacher ask the children to open?",
+        "options": [
+          "Page five",
+          "Page ten",
+          "Page one",
+          "Page eight"
+        ],
+        "correct_index": 0,
+        "explanation": "The teacher said: \"open your English books to page five\"."
+      },
+      {
+        "type": "quiz",
+        "topic": "listening.instructions",
+        "prompt": "What did the teacher ask students to take out?",
+        "options": [
+          "Their pencils",
+          "Their lunchboxes",
+          "Their rulers",
+          "Their crayons"
+        ],
+        "correct_index": 0,
+        "explanation": "The teacher asked students to take out their pencils."
+      }
+    ]
+  },
+  {
+    "key": "class2-speaking",
+    "skill": "speaking",
+    "title": "My Daily Routine & Action Chants",
+    "courseTitle": "English · Class 2",
+    "unitTitle": "Speaking: Expressing Needs & Actions",
+    "level": "grade-2",
+    "summary": "Speak about waking up, brushing teeth, and asking polite questions in school.",
+    "outcome": "Speak 3-to-4 word sentences clearly and request assistance using \"May I...\".",
+    "curriculum_references": [
+      "NCF-FS-ENG-08",
+      "CG-SCERT-02-SPK-01"
+    ],
+    "activities": [
+      {
+        "type": "speaking",
+        "speaking_kind": "sentences",
+        "topic": "speaking.sentences",
+        "prompt": "Say clearly: \"May I drink water, please?\"",
+        "rubric": [
+          {
+            "criterion": "Pronunciation and phonetic clarity",
+            "maximum_score": 5
+          },
+          {
+            "criterion": "Intonation, cadence and fluency",
+            "maximum_score": 5
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "speaking_kind": "fluency",
+        "topic": "speaking.stress",
+        "prompt": "Recite with rhythm: \"This is the way we wash our hands, wash our hands, wash our hands!\"",
+        "rubric": [
+          {
+            "criterion": "Pronunciation and phonetic clarity",
+            "maximum_score": 5
+          },
+          {
+            "criterion": "Intonation, cadence and fluency",
+            "maximum_score": 5
+          }
+        ]
+      },
+      {
+        "type": "dialogue",
+        "topic": "speaking.sentences",
+        "prompt": "Practice this classroom conversation:",
+        "turns": [
+          {
+            "speaker": "Aman",
+            "text": "Can I borrow your sharpener, Sunita?"
+          },
+          {
+            "speaker": "Sunita",
+            "text": "Yes, here it is, Aman."
+          },
+          {
+            "speaker": "Aman",
+            "text": "Thank you very much!"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "class2-reading",
+    "skill": "reading",
+    "title": "The Mango Tree in the Village",
+    "courseTitle": "English · Class 2",
+    "unitTitle": "Reading: Simple Paragraphs & Tales",
+    "level": "grade-2",
+    "summary": "Read about birds nesting in a big green mango tree near Raipur village.",
+    "outcome": "Read a 50-word story aloud with correct pauses and identify main characters.",
+    "curriculum_references": [
+      "NCF-FS-ENG-09",
+      "CG-SCERT-02-READ-01"
+    ],
+    "activities": [
+      {
+        "type": "reading",
+        "reading_kind": "story",
+        "topic": "reading.contextual_reading",
+        "prompt": "In our village, there is a big mango tree. In summer, sweet yellow mangoes grow on its branches. Two green parrots built a cozy nest in the tree. Every morning, the parrots sing sweet songs."
+      },
+      {
+        "type": "comprehension",
+        "topic": "reading.comprehension",
+        "prompt": "What kind of fruit grows on the tree in summer?",
+        "passage": "In summer, sweet yellow mangoes grow on its branches.",
+        "comprehension_focus": "literal",
+        "options": [
+          "Sweet yellow mangoes",
+          "Sour red apples",
+          "Ripe bananas",
+          "Green guavas"
+        ],
+        "correct_index": 0,
+        "explanation": "The passage mentions sweet yellow mangoes."
+      },
+      {
+        "type": "sequencing",
+        "topic": "reading.sequencing",
+        "prompt": "Order the story sequence:",
+        "items": [
+          {
+            "id": "s1",
+            "text": "There is a big mango tree in the village."
+          },
+          {
+            "id": "s2",
+            "text": "Green parrots built a cozy nest."
+          },
+          {
+            "id": "s3",
+            "text": "Every morning, the parrots sing sweet songs."
+          }
+        ],
+        "correct_order": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "class2-writing",
+    "skill": "writing",
+    "title": "Sentence Builder: Capital Letters & Full Stops",
+    "courseTitle": "English · Class 2",
+    "unitTitle": "Writing: Simple Sentence Formation",
+    "level": "grade-2",
+    "summary": "Form complete sentences starting with a capital letter and ending with a full stop.",
+    "outcome": "Assemble scrambled words into meaningful sentences with proper punctuation.",
+    "curriculum_references": [
+      "NCF-FS-ENG-10",
+      "CG-SCERT-02-WRIT-01"
+    ],
+    "activities": [
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_rearrangement",
+        "prompt": "Arrange the words correctly: \"likes / Rohan / apples / sweet\"",
+        "options": [
+          "Rohan likes sweet apples.",
+          "Apples sweet Rohan likes.",
+          "Likes Rohan sweet apples."
+        ],
+        "correct_index": 0,
+        "explanation": "\"Rohan likes sweet apples.\" follows Subject-Verb-Object order."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.error_correction",
+        "prompt": "Choose the sentence written with correct capital letter and full stop:",
+        "options": [
+          "The dog runs fast.",
+          "the dog runs fast",
+          "The dog runs fast"
+        ],
+        "correct_index": 0,
+        "explanation": "Sentences must begin with a capital letter and end with a full stop."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_formation",
+        "prompt": "Fill in the blank: The sun ___ in the sky.",
+        "options": [
+          "shines",
+          "shining",
+          "shine",
+          "shined"
+        ],
+        "correct_index": 0,
+        "explanation": "The singular subject \"sun\" takes \"shines\"."
+      }
+    ]
+  },
+  {
+    "key": "class2-grammar",
+    "skill": "grammar",
+    "title": "Position Words: In, On, Under & Behind",
+    "courseTitle": "English · Class 2",
+    "unitTitle": "Grammar: Prepositions & Pronouns",
+    "level": "grade-2",
+    "summary": "Learn spatial prepositions (in, on, under, behind) and pronouns (He, She, It, They).",
+    "outcome": "Identify the spatial location of objects using simple prepositions.",
+    "curriculum_references": [
+      "NCF-FS-ENG-11",
+      "CG-SCERT-02-GRAM-01"
+    ],
+    "activities": [
+      {
+        "type": "quiz",
+        "topic": "grammar.subject_verb_agreement",
+        "prompt": "The ball is ___ the table. (resting on its surface)",
+        "options": [
+          "on",
+          "in",
+          "under",
+          "between"
+        ],
+        "correct_index": 0,
+        "explanation": "When an object rests on top of a surface, use \"on\"."
+      },
+      {
+        "type": "quiz",
+        "topic": "grammar.subject_verb_agreement",
+        "prompt": "The puppy is sleeping ___ the bed. (below the bed)",
+        "options": [
+          "under",
+          "over",
+          "into",
+          "on"
+        ],
+        "correct_index": 0,
+        "explanation": "Below or beneath something is \"under\"."
+      },
+      {
+        "type": "quiz",
+        "topic": "grammar.subject_verb_agreement",
+        "prompt": "Pooja is a smart girl. ___ reads every day.",
+        "options": [
+          "She",
+          "He",
+          "It",
+          "They"
+        ],
+        "correct_index": 0,
+        "explanation": "Use the pronoun \"She\" for a female person."
+      }
+    ]
+  },
+  {
+    "key": "class2-vocabulary",
+    "skill": "vocabulary",
+    "title": "Words for Home, Family & Animals",
+    "courseTitle": "English · Class 2",
+    "unitTitle": "Vocabulary: Home & Surroundings",
+    "level": "grade-2",
+    "summary": "Build everyday vocabulary for family relationships, rooms, and baby animals.",
+    "outcome": "Match animals with their young ones (cow/calf, dog/puppy, cat/kitten).",
+    "curriculum_references": [
+      "NCF-FS-ENG-12",
+      "CG-SCERT-02-VOC-01"
+    ],
+    "activities": [
+      {
+        "type": "matching",
+        "topic": "vocabulary.synonyms",
+        "prompt": "Match each mother animal with its baby:",
+        "pairs": [
+          {
+            "id": "m1",
+            "left": "Dog",
+            "right": "Puppy"
+          },
+          {
+            "id": "m2",
+            "left": "Cat",
+            "right": "Kitten"
+          },
+          {
+            "id": "m3",
+            "left": "Cow",
+            "right": "Calf"
+          }
+        ]
+      },
+      {
+        "type": "spelling",
+        "topic": "vocabulary.spelling",
+        "prompt": "Spell the word for where we sleep (starts with \"b\"):",
+        "accepted_answers": [
+          "bed",
+          "bedroom"
+        ],
+        "explanation": "B-E-D spells bed."
+      },
+      {
+        "type": "quiz",
+        "topic": "vocabulary.academic",
+        "prompt": "What do we call our mother's brother?",
+        "options": [
+          "Uncle",
+          "Aunt",
+          "Nephew",
+          "Brother"
+        ],
+        "correct_index": 0,
+        "explanation": "Our mother's brother is our uncle."
+      }
+    ]
+  }
+]

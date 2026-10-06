@@ -1,8 +1,11 @@
 import {copyFileSync, existsSync, mkdirSync, readFileSync} from 'node:fs';
 import {dirname, resolve} from 'node:path';
-const files = ['contracts/package.schema.json', 'contracts/learning-registry.json',
+const gradeFiles = Array.from({length: 12}, (_, i) => `content/curriculum/english-grade-${i + 1}.json`);
+const files = [
+  'contracts/package.schema.json', 'contracts/learning-registry.json',
   'contracts/curriculum-topics.json', 'content/demos/english.json',
-  'content/curriculum/english-grade-10.json', 'content/samples/library-story.wav'];
+  ...gradeFiles, 'content/samples/library-story.wav'
+];
 for (const file of files) {
   const original = resolve('..', file), bundled = resolve('resources', file);
   if (existsSync(original)) {

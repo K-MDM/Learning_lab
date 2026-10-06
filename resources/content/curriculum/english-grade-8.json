@@ -1,0 +1,361 @@
+[
+  {
+    "key": "class8-listening",
+    "skill": "listening",
+    "title": "The Resilient Athlete: Sportsmanship Under Pressure",
+    "courseTitle": "English · Class 8",
+    "unitTitle": "Listening: Athletics, Grit & Sports Psychology",
+    "level": "grade-8",
+    "summary": "Listen to a sports commentary analyzing the psychology of resilience during high-stakes athletic competition.",
+    "outcome": "Synthesize spoken sports journalism, extract emotional arcs, and evaluate ethical values.",
+    "curriculum_references": [
+      "NCF-MID-ENG-13",
+      "CG-SCERT-08-LIST-01"
+    ],
+    "activities": [
+      {
+        "type": "listening",
+        "topic": "listening.listening_comprehension",
+        "prompt": "Listen to this sports commentary: \"In the championship kabaddi final between Bastar and Bilaspur, trailing by four points with barely ninety seconds remaining on the match clock, captain Sunita exhibited extraordinary tactical poise. Instead of gambling on aggressive lunges, she orchestrated a disciplined chain tackle that immobilized the star raider. When awarded the match-winning point, Sunita immediately knelt to assist the bruised opponent to her feet—a profound reminder that true sportsmanship transcends victorious medals.\""
+      },
+      {
+        "type": "quiz",
+        "topic": "listening.listening_comprehension",
+        "prompt": "How did captain Sunita secure the decisive defensive points in the final ninety seconds?",
+        "options": [
+          "By orchestrating a disciplined chain tackle",
+          "By demanding an official referee timeout",
+          "By committing reckless solo tackles",
+          "By forfeiting the remaining raids"
+        ],
+        "correct_index": 0,
+        "explanation": "She orchestrated a disciplined chain tackle to immobilize the opposing raider."
+      },
+      {
+        "type": "quiz",
+        "topic": "listening.listening_comprehension",
+        "prompt": "What sportsmanlike gesture did Sunita make after securing victory?",
+        "options": [
+          "She assisted her bruised opponent to her feet",
+          "She celebrated alone in front of the cameras",
+          "She criticized the opposing team's tactics",
+          "She refused to accept the championship medal"
+        ],
+        "correct_index": 0,
+        "explanation": "Sunita knelt to assist the bruised opponent to her feet."
+      }
+    ]
+  },
+  {
+    "key": "class8-speaking",
+    "skill": "speaking",
+    "title": "Debate Mastery: Persuasive Arguments & Rebuttals",
+    "courseTitle": "English · Class 8",
+    "unitTitle": "Speaking: Parliamentary Debate & Persuasive Oratory",
+    "level": "grade-8",
+    "summary": "Structure parliamentary debate speeches with point assertions, evidence backing, and polite refutations.",
+    "outcome": "Deliver a structured 2-minute debate speech with rhetorical conviction and formal rebuttal language.",
+    "curriculum_references": [
+      "NCF-MID-ENG-14",
+      "CG-SCERT-08-SPK-01"
+    ],
+    "activities": [
+      {
+        "type": "speaking",
+        "speaking_kind": "discussion",
+        "topic": "speaking.discussion",
+        "prompt": "Deliver a 2-minute rebuttal supporting the motion: \"Competitive sports build stronger leadership skills than purely academic examinations.\"",
+        "rubric": [
+          {
+            "criterion": "Clarity of argument and counter-assertion",
+            "maximum_score": 5
+          },
+          {
+            "criterion": "Formal rhetorical modulation and persuasive delivery",
+            "maximum_score": 5
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "speaking_kind": "stress",
+        "topic": "speaking.stress",
+        "prompt": "Read this oratorical sentence emphasizing the bold contrast: \"Victory without integrity is hollow; defeat met with honor is a triumphant masterclass in character.\"",
+        "rubric": [
+          {
+            "criterion": "Pronunciation, cadence and phonetic accuracy",
+            "maximum_score": 5
+          },
+          {
+            "criterion": "Intonation, sentence modulation and fluency",
+            "maximum_score": 5
+          }
+        ]
+      },
+      {
+        "type": "dialogue",
+        "topic": "speaking.discussion",
+        "prompt": "Engage in this debate exchange between two parliamentary speakers on screen time in schools:",
+        "turns": [
+          {
+            "speaker": "Affirmative",
+            "text": "Digital interactive modules accelerate self-paced conceptual learning far beyond traditional chalkboards."
+          },
+          {
+            "speaker": "Negative",
+            "text": "Excessive reliance on illuminated screens diminishes attention spans and deprives students of collaborative peer interaction."
+          },
+          {
+            "speaker": "Affirmative",
+            "text": "That risk is minimized when screen time is structured collaboratively in dedicated language lab sessions."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "class8-reading",
+    "skill": "reading",
+    "title": "The Great Expedition of 1857: Echoes of Freedom",
+    "courseTitle": "English · Class 8",
+    "unitTitle": "Reading: Historical Narratives & Primary Sources",
+    "level": "grade-8",
+    "summary": "Analyze a historical account of Veer Narayan Singh of Sonakhan and the resistance of 1857 in Chhattisgarh.",
+    "outcome": "Interpret historical motivations, extract evidence of leadership, and critically analyze author perspectives.",
+    "curriculum_references": [
+      "NCF-MID-ENG-15",
+      "CG-SCERT-08-READ-01"
+    ],
+    "activities": [
+      {
+        "type": "reading",
+        "reading_kind": "passage",
+        "topic": "reading.contextual_reading",
+        "prompt": "During the severe famine of 1856 in Central India, when colonial merchants hoarded grain while rural peasants faced starvation, Veer Narayan Singh of Sonakhan broke open merchant silos and distributed food equitably among starving families. When colonial regiments launched punitive expeditions against Sonakhan, Singh organized a guerrilla defense in the dense Sal hills. Regarded today as the First Martyr of Chhattisgarh in the 1857 independence struggle, his legacy exemplifies moral courage against institutional exploitation."
+      },
+      {
+        "type": "comprehension",
+        "topic": "reading.comprehension",
+        "prompt": "Why did Veer Narayan Singh take grain from merchant warehouses in 1856?",
+        "passage": "When colonial merchants hoarded grain while rural peasants faced starvation, Veer Narayan Singh of Sonakhan broke open merchant silos and distributed food equitably among starving families.",
+        "comprehension_focus": "inference",
+        "options": [
+          "To distribute food equitably to starving peasants during a catastrophic famine",
+          "To sell grain at higher prices in neighboring provinces",
+          "To supply colonial army regiments",
+          "To build military fortifications in the forest"
+        ],
+        "correct_index": 0,
+        "explanation": "He acted to save starving rural families from famine caused by hoarding."
+      },
+      {
+        "type": "sequencing",
+        "topic": "reading.sequencing",
+        "prompt": "Arrange the historical chronology of Veer Narayan Singh's struggle:",
+        "items": [
+          {
+            "id": "vn1",
+            "text": "Severe famine hit Central India while merchants hoarded grain."
+          },
+          {
+            "id": "vn2",
+            "text": "Singh distributed hoarded grain to starving villagers."
+          },
+          {
+            "id": "vn3",
+            "text": "He mounted a defense in Sonakhan, becoming Chhattisgarh's legendary first martyr."
+          }
+        ],
+        "correct_order": [
+          "vn1",
+          "vn2",
+          "vn3"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "class8-writing",
+    "skill": "writing",
+    "title": "Analytical Article Writing & Editorials",
+    "courseTitle": "English · Class 8",
+    "unitTitle": "Writing: Editorial Columns & Balanced Essays",
+    "level": "grade-8",
+    "summary": "Write structured articles for school magazines: catchy title, byline, background, analysis, and solution.",
+    "outcome": "Draft a 100-word cohesive article with balanced arguments and transition words.",
+    "curriculum_references": [
+      "NCF-MID-ENG-16",
+      "CG-SCERT-08-WRIT-01"
+    ],
+    "activities": [
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_formation",
+        "prompt": "Which connector is best suited to introduce an opposing viewpoint in an analytical article?",
+        "options": [
+          "Conversely, critics argue that...",
+          "Similarly, everyone knows that...",
+          "Therefore, it is obvious that...",
+          "In the same way, we can see that..."
+        ],
+        "correct_index": 0,
+        "explanation": "\"Conversely, critics argue that...\" establishes a clear, formal counter-argument."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_rearrangement",
+        "prompt": "Choose the sentence that serves as an effective conclusion for an editorial on road safety:",
+        "options": [
+          "Strict adherence to traffic regulations, combined with vigilant civic education, is our only defense against preventable tragedies.",
+          "Traffic accidents happen all the time and people should just drive very slowly always.",
+          "We should stop all cars from coming onto the highway forever."
+        ],
+        "correct_index": 0,
+        "explanation": "Synthesizes regulation with education in a formal, authoritative concluding tone."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.error_correction",
+        "prompt": "Identify the sentence with correct parallel grammatical structure:",
+        "options": [
+          "The program encourages students to read critically, write coherently, and think independently.",
+          "The program encourages students to read critically, writing coherently, and to think independently.",
+          "The program encourages students reading critically, write coherently, and think independent."
+        ],
+        "correct_index": 0,
+        "explanation": "All three infinitives share identical parallel form: \"read critically, write coherently, and think independently\"."
+      }
+    ]
+  },
+  {
+    "key": "class8-grammar",
+    "skill": "grammar",
+    "title": "Conditional Clauses & Conjunction Connectors",
+    "courseTitle": "English · Class 8",
+    "unitTitle": "Grammar: Real & Hypothetical Conditionals",
+    "level": "grade-8",
+    "summary": "Master Zero, First, and Second Conditional sentence patterns (If + past simple, would + base verb).",
+    "outcome": "Construct first and second conditional sentences without tense errors.",
+    "curriculum_references": [
+      "NCF-MID-ENG-17",
+      "CG-SCERT-08-GRAM-01"
+    ],
+    "activities": [
+      {
+        "type": "quiz",
+        "topic": "grammar.tenses",
+        "prompt": "Complete the second conditional sentence: \"If human societies ___ fossil fuels responsibly, global temperatures would stabilize.\"",
+        "options": [
+          "utilized",
+          "utilize",
+          "will utilize",
+          "had utilized"
+        ],
+        "correct_index": 0,
+        "explanation": "Second conditional uses \"if + simple past\" with \"would + base verb\"."
+      },
+      {
+        "type": "gap_fill",
+        "topic": "grammar.tenses",
+        "prompt": "Complete the conditional warning:",
+        "segments": [
+          "Unless we ",
+          " our ground water reserves now, future generations will face acute water shortages."
+        ],
+        "answers": [
+          [
+            "conserve",
+            "protect",
+            "safeguard"
+          ]
+        ],
+        "explanation": "\"Unless\" takes a simple present verb to indicate a future condition."
+      },
+      {
+        "type": "quiz",
+        "topic": "grammar.subject_verb_agreement",
+        "prompt": "Choose the sentence with correct concord:",
+        "options": [
+          "The team of researchers has published its findings.",
+          "The team of researchers have published their findings.",
+          "The team of researchers are publishing its findings.",
+          "The team of researchers were published its findings."
+        ],
+        "correct_index": 0,
+        "explanation": "Collective noun \"team\" acting as a single unit takes singular verb \"has published\"."
+      }
+    ]
+  },
+  {
+    "key": "class8-vocabulary",
+    "skill": "vocabulary",
+    "title": "Rhetorical Devices, Latin Roots & Prefixes",
+    "courseTitle": "English · Class 8",
+    "unitTitle": "Vocabulary: Etymology & Formal Diction",
+    "level": "grade-8",
+    "summary": "Examine words derived from Latin and Greek roots (bene, bio, chron, geo, scrib/script).",
+    "outcome": "Deduce word meanings using etymological roots and apply nuanced formal synonyms.",
+    "curriculum_references": [
+      "NCF-MID-ENG-18",
+      "CG-SCERT-08-VOC-01"
+    ],
+    "activities": [
+      {
+        "type": "glossary",
+        "topic": "vocabulary.academic",
+        "prompt": "Examine these common Latin roots and their modern English derivatives:",
+        "entries": [
+          {
+            "id": "bene",
+            "term": "bene (well / good)",
+            "definition": "Root meaning well or good, forming words like benevolent, beneficial, and benefactor.",
+            "example": "A nutritious diet is highly beneficial for growing adolescents."
+          },
+          {
+            "id": "chron",
+            "term": "chron (time)",
+            "definition": "Root meaning time, forming words like chronic, synchronize, and chronology.",
+            "example": "The historian arranged the historical battles in chronological order."
+          },
+          {
+            "id": "benevolent",
+            "term": "benevolent",
+            "definition": "Characterized by goodwill, generosity, and charitable kindness.",
+            "example": "The benevolent doctor treated impoverished village patients without charge."
+          }
+        ]
+      },
+      {
+        "type": "matching",
+        "topic": "vocabulary.synonyms",
+        "prompt": "Match each root word with its English meaning:",
+        "pairs": [
+          {
+            "id": "r1",
+            "left": "Chron",
+            "right": "Time"
+          },
+          {
+            "id": "r2",
+            "left": "Bene",
+            "right": "Good or Well"
+          },
+          {
+            "id": "r3",
+            "left": "Script",
+            "right": "To write"
+          }
+        ]
+      },
+      {
+        "type": "spelling",
+        "topic": "vocabulary.spelling",
+        "prompt": "Spell the adjective meaning \"lasting for a long time or constantly recurring\" (starts with \"c\"):",
+        "accepted_answers": [
+          "chronic"
+        ],
+        "explanation": "C-H-R-O-N-I-C spells chronic."
+      }
+    ]
+  }
+]

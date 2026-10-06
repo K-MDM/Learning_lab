@@ -249,27 +249,23 @@
         "explanation": "Use walks with she in the simple present."
       },
       {
-        "type": "gap_fill",
-        "prompt": "Complete the sentence.",
-        "segments": [
-          "The birds ",
-          " in the morning."
+        "type": "quiz",
+        "prompt": "Complete the sentence. The birds ___ in the morning.",
+        "options": [
+          "sing",
+          "is"
         ],
-        "answers": [
-          [
-            "sing"
-          ]
-        ],
+        "correct_index": 0,
         "explanation": "Birds is plural, so the verb is sing."
       },
       {
-        "type": "error_correction",
-        "topic": "subject_verb_agreement",
-        "prompt": "Rewrite the sentence with the correct verb.",
-        "source_text": "He play in the garden.",
-        "accepted_answers": [
-          "He plays in the garden."
+        "type": "quiz",
+        "prompt": "Choose the corrected sentence: He play in the garden.",
+        "options": [
+          "He plays in the garden.",
+          "He play in the garden."
         ],
+        "correct_index": 0,
         "explanation": "Use plays with he."
       }
     ]
@@ -328,11 +324,13 @@
         ]
       },
       {
-        "type": "spelling",
-        "prompt": "Spell the word that means a gentle wind.",
-        "accepted_answers": [
-          "breeze"
+        "type": "quiz",
+        "prompt": "Choose the spelling of the word that means a gentle wind.",
+        "options": [
+          "breeze",
+          "ezeerb"
         ],
+        "correct_index": 0,
         "explanation": "Breeze is spelled b-r-e-e-z-e."
       }
     ]

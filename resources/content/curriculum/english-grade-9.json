@@ -1,0 +1,354 @@
+[
+  {
+    "key": "class9-listening",
+    "skill": "listening",
+    "title": "Disaster Resilience: The Supercyclone of Ersama",
+    "courseTitle": "English · Class 9",
+    "unitTitle": "Listening: Crisis Leadership & Civic Mobilization",
+    "level": "grade-9",
+    "summary": "Listen to an audio narrative on how a nineteen-year-old mobilized rural youth during a devastating tropical cyclone.",
+    "outcome": "Synthesize complex crisis communications, extract operational logistics, and infer leadership ethics.",
+    "curriculum_references": [
+      "NCF-SEC-ENG-01",
+      "CG-SCERT-09-LIST-01"
+    ],
+    "activities": [
+      {
+        "type": "listening",
+        "topic": "listening.listening_comprehension",
+        "prompt": "Listen to this crisis retrospective: \"When the apocalyptic supercyclone of 1999 struck coastal Odisha, devastating infrastructure and stranding thousands without potable water or shelter, nineteen-year-old Prashant stepped into the leadership vacuum. Instead of succumbing to despair, he organized a brigade of young volunteers to pressurize merchant suppliers for emergency rice, clean the shelter of filth and floating debris, and tend to the wounds of hundreds. Furthermore, recognizing that grief was paralyzing widowed women, he mobilized them to lead food-for-work programs, proving that grassroots resilience can rebuild devastated communities.\""
+      },
+      {
+        "type": "quiz",
+        "topic": "listening.listening_comprehension",
+        "prompt": "How did Prashant address the emotional paralysis of widowed women in the shelter?",
+        "options": [
+          "By mobilizing them into productive food-for-work initiatives",
+          "By distributing sedative medication",
+          "By asking them to leave the coastal village",
+          "By waiting for international rescue aircraft"
+        ],
+        "correct_index": 0,
+        "explanation": "He engaged widowed women in food-for-work programs to restore agency and dignity."
+      },
+      {
+        "type": "quiz",
+        "topic": "listening.listening_comprehension",
+        "prompt": "What was the immediate first action taken by Prashant's youth brigade?",
+        "options": [
+          "Pressuring merchant suppliers for emergency food and cleaning the shelter",
+          "Building concrete permanent seawalls",
+          "Constructing commercial cell phone towers",
+          "Traveling inland to seek personal employment"
+        ],
+        "correct_index": 0,
+        "explanation": "The youth brigade immediately secured rice and cleaned the shelter."
+      }
+    ]
+  },
+  {
+    "key": "class9-speaking",
+    "skill": "speaking",
+    "title": "Extempore & Crisis Communications",
+    "courseTitle": "English · Class 9",
+    "unitTitle": "Speaking: Extempore Delivery & Crisis De-escalation",
+    "level": "grade-9",
+    "summary": "Practice extempore speech on civic leadership and formal dialogue turn-taking in tense situations.",
+    "outcome": "Deliver an unscripted 2-minute extempore speech on civic duty with commanding vocal projection.",
+    "curriculum_references": [
+      "NCF-SEC-ENG-02",
+      "CG-SCERT-09-SPK-01"
+    ],
+    "activities": [
+      {
+        "type": "speaking",
+        "speaking_kind": "presentation",
+        "topic": "speaking.presentation",
+        "prompt": "Deliver a two-minute extempore speech on: \"How Youth Volunteerism Can Mitigate Natural Disasters in Rural India.\"",
+        "rubric": [
+          {
+            "criterion": "Logical coherence and persuasive assertion",
+            "maximum_score": 5
+          },
+          {
+            "criterion": "Rhetorical sophistication and rebutting precision",
+            "maximum_score": 5
+          }
+        ]
+      },
+      {
+        "type": "speaking",
+        "speaking_kind": "stress",
+        "topic": "speaking.stress",
+        "prompt": "Articulate this complex sentence with measured cadence: \"In moments of existential crisis, true leadership is not defined by official rank, but by compassionate, unyielding action.\"",
+        "rubric": [
+          {
+            "criterion": "Pronunciation, cadence and phonetic accuracy",
+            "maximum_score": 5
+          },
+          {
+            "criterion": "Intonation, rhetorical modulation and fluency",
+            "maximum_score": 5
+          }
+        ]
+      },
+      {
+        "type": "dialogue",
+        "topic": "speaking.discussion",
+        "prompt": "Practice this crisis coordination dialogue between an incident commander and a logistics coordinator:",
+        "turns": [
+          {
+            "speaker": "Commander",
+            "text": "Have the medical relief convoys secured safe passage across the flooded causeway?"
+          },
+          {
+            "speaker": "Logistics",
+            "text": "The water levels have receded sufficiently. Four all-terrain supply trucks are en route to the evacuation camp."
+          },
+          {
+            "speaker": "Commander",
+            "text": "Prioritize water purification tablets and tetanus vaccines upon their arrival."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "class9-reading",
+    "skill": "reading",
+    "title": "The Sound of Music: Evelyn Glennie's Acoustical Journey",
+    "courseTitle": "English · Class 9",
+    "unitTitle": "Reading: Biographical & Aesthetic Analysis",
+    "level": "grade-9",
+    "summary": "Analyze the extraordinary artistic journey of multi-percussionist Evelyn Glennie, who hears through tactile vibration.",
+    "outcome": "Evaluate rhetorical structure, analyze metaphors, and synthesize thematic depth in discursive biographical texts.",
+    "curriculum_references": [
+      "NCF-SEC-ENG-03",
+      "CG-SCERT-09-READ-01"
+    ],
+    "activities": [
+      {
+        "type": "reading",
+        "reading_kind": "passage",
+        "topic": "reading.contextual_reading",
+        "prompt": "When profound hearing impairment threatened to derail Evelyn Glennie’s musical aspirations at age eleven, percussion master Ron Forbes urged her not to attempt listening through her ears. Instead, he tuned two large drums to disparate pitches and instructed her to feel the vibrations. Glennie discovered she could register the higher drum from the waist up and the lower drum from the waist down. By learning to open her physical body to acoustical resonances, Glennie not only earned international acclaim as a solo percussionist but revolutionized our perceptual definitions of hearing and human resilience."
+      },
+      {
+        "type": "comprehension",
+        "topic": "reading.comprehension",
+        "prompt": "How did Ron Forbes unlock Evelyn Glennie’s alternative musical perception?",
+        "passage": "He tuned two large drums to disparate pitches and instructed her to feel the vibrations. Glennie discovered she could register the higher drum from the waist up and the lower drum from the waist down.",
+        "comprehension_focus": "inference",
+        "options": [
+          "By teaching her to sense distinct acoustical frequencies through tactile vibrations across different parts of her body",
+          "By prescribing surgical hearing aids",
+          "By asking her to switch from percussion to written composition only",
+          "By advising her to play only silent keyboards"
+        ],
+        "correct_index": 0,
+        "explanation": "Forbes trained her to perceive different drum frequencies through bodily tactile vibrations."
+      },
+      {
+        "type": "sequencing",
+        "topic": "reading.sequencing",
+        "prompt": "Order Glennie's path to mastery outlined in the excerpt:",
+        "items": [
+          {
+            "id": "eg1",
+            "text": "Onset of severe sensory hearing impairment at age eleven."
+          },
+          {
+            "id": "eg2",
+            "text": "Ron Forbes trained her to sense acoustical vibrations bodily."
+          },
+          {
+            "id": "eg3",
+            "text": "Glennie revolutionized classical solo percussion internationally."
+          }
+        ],
+        "correct_order": [
+          "eg1",
+          "eg2",
+          "eg3"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "class9-writing",
+    "skill": "writing",
+    "title": "Analytical Paragraph & Formal Letter to the Editor",
+    "courseTitle": "English · Class 9",
+    "unitTitle": "Writing: Analytical Exposition & Letters to Editors",
+    "level": "grade-9",
+    "summary": "Write analytical paragraphs interpreting statistical charts and compose persuasive letters to national daily editors.",
+    "outcome": "Draft an analytical paragraph synthesizing data with formal connectors and objective evaluation.",
+    "curriculum_references": [
+      "NCF-SEC-ENG-04",
+      "CG-SCERT-09-WRIT-01"
+    ],
+    "activities": [
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_formation",
+        "prompt": "Choose the most authoritative opening line for a letter to the editor regarding public transport:",
+        "options": [
+          "Through the esteemed columns of your widely circulated daily, I wish to draw the attention of the transport authorities towards erratic bus schedules.",
+          "Hey Editor, please put this letter in your newspaper because our buses are always late.",
+          "Buses in our city are useless and someone should complain to the transport department.",
+          "I am writing to your paper to say that nobody likes the transport system."
+        ],
+        "correct_index": 0,
+        "explanation": "\"Through the esteemed columns of your widely circulated daily...\" is the gold-standard formal opening."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.sentence_rearrangement",
+        "prompt": "Select the optimal transitional sentence for an analytical paragraph interpreting chart data:",
+        "options": [
+          "A comparative scrutiny of the bar graph demonstrates a steep sixty-percent surge in renewable energy adoption between 2020 and 2025.",
+          "Looking at the bars we see that green energy jumped up by sixty percent which is very huge.",
+          "The bars are showing numbers that went sixty percent higher in five years."
+        ],
+        "correct_index": 0,
+        "explanation": "\"A comparative scrutiny of the bar graph demonstrates...\" maintains high academic precision."
+      },
+      {
+        "type": "quiz",
+        "topic": "writing.error_correction",
+        "prompt": "Identify the sentence with immaculate formal punctuation:",
+        "options": [
+          "Consequently, urban planners must prioritize non-motorized transport; otherwise, vehicular congestion will become insurmountable.",
+          "Consequently urban planners must prioritize non-motorized transport, otherwise vehicular congestion will become insurmountable.",
+          "Consequently, urban planners must prioritize non-motorized transport otherwise vehicular congestion will become insurmountable"
+        ],
+        "correct_index": 0,
+        "explanation": "Semicolon and comma correctly coordinate two independent clauses joined by \"otherwise\"."
+      }
+    ]
+  },
+  {
+    "key": "class9-grammar",
+    "skill": "grammar",
+    "title": "Advanced Determiners, Modals & Tense Concord",
+    "courseTitle": "English · Class 9",
+    "unitTitle": "Grammar: Syntactic Precision & Concord Rules",
+    "level": "grade-9",
+    "summary": "Master determiners (each, every, either, neither, few, a few) and complex subject-verb concord.",
+    "outcome": "Identify and rectify subtle concord discrepancies in complex compound sentences.",
+    "curriculum_references": [
+      "NCF-SEC-ENG-05",
+      "CG-SCERT-09-GRAM-01"
+    ],
+    "activities": [
+      {
+        "type": "quiz",
+        "topic": "grammar.subject_verb_agreement",
+        "prompt": "Choose the sentence with correct concord:",
+        "options": [
+          "Each of the participating scientists was awarded an honorary fellowship.",
+          "Each of the participating scientists were awarded an honorary fellowship.",
+          "Each of the participating scientists have been awarded an honorary fellowship.",
+          "Each of the participating scientists are awarded an honorary fellowship."
+        ],
+        "correct_index": 0,
+        "explanation": "\"Each\" is a singular distributive pronoun and requires the singular verb \"was awarded\"."
+      },
+      {
+        "type": "error_correction",
+        "topic": "grammar.subject_verb_agreement",
+        "prompt": "Fix the concord error in this formal statement:",
+        "source_text": "A large proportion of the agricultural land were submerged during the monsoon flood.",
+        "accepted_answers": [
+          "A large proportion of the agricultural land was submerged during the monsoon flood."
+        ],
+        "explanation": "Uncountable noun \"agricultural land\" governs singular verb \"was submerged\"."
+      },
+      {
+        "type": "quiz",
+        "topic": "grammar.modals",
+        "prompt": "Which modal verb expresses logical certainty based on empirical evidence?",
+        "options": [
+          "The laboratory samples must be contaminated given the erratic chemical readings.",
+          "The laboratory samples might be contaminated given the erratic chemical readings.",
+          "The laboratory samples shall be contaminated given the erratic chemical readings.",
+          "The laboratory samples can be contaminated given the erratic chemical readings."
+        ],
+        "correct_index": 0,
+        "explanation": "\"Must\" indicates strong deductive deduction/certainty based on evidence."
+      }
+    ]
+  },
+  {
+    "key": "class9-vocabulary",
+    "skill": "vocabulary",
+    "title": "Discursive Prose & Lexical Nuance",
+    "courseTitle": "English · Class 9",
+    "unitTitle": "Vocabulary: Analytical Diction & Collocations",
+    "level": "grade-9",
+    "summary": "Expand academic vocabulary with high-frequency analytical terms (catalyst, paradigm, empirical).",
+    "outcome": "Apply nuanced analytical terms and differentiate subtle shades of meaning in formal writing.",
+    "curriculum_references": [
+      "NCF-SEC-ENG-06",
+      "CG-SCERT-09-VOC-01"
+    ],
+    "activities": [
+      {
+        "type": "glossary",
+        "topic": "vocabulary.academic",
+        "prompt": "Examine these core analytical terms and illustrative examples:",
+        "entries": [
+          {
+            "id": "catalyst",
+            "term": "catalyst",
+            "definition": "An agent that precipitates significant change or accelerates an event without being consumed.",
+            "example": "The pioneering invention served as a vital catalyst for rural industrial development."
+          },
+          {
+            "id": "paradigm",
+            "term": "paradigm",
+            "definition": "A distinct framework, model, or set of overarching concepts.",
+            "example": "Quantum mechanics introduced an entirely new philosophical paradigm into physics."
+          },
+          {
+            "id": "empirical",
+            "term": "empirical",
+            "definition": "Verifiable through observation, experimentation, or experience rather than purely theoretical deduction.",
+            "example": "The epidemiological hypothesis was corroborated by rigorous empirical field trials."
+          }
+        ]
+      },
+      {
+        "type": "matching",
+        "topic": "vocabulary.synonyms",
+        "prompt": "Match each analytical word with its synonym:",
+        "pairs": [
+          {
+            "id": "w1",
+            "left": "Catalyst",
+            "right": "Trigger or accelerator"
+          },
+          {
+            "id": "w2",
+            "left": "Paradigm",
+            "right": "Archetype or conceptual model"
+          },
+          {
+            "id": "w3",
+            "left": "Empirical",
+            "right": "Evidence-based or observed"
+          }
+        ]
+      },
+      {
+        "type": "spelling",
+        "topic": "vocabulary.spelling",
+        "prompt": "Spell the adjective meaning \"provable by physical observation or experimentation\" (starts with \"e\"):",
+        "accepted_answers": [
+          "empirical"
+        ],
+        "explanation": "E-M-P-I-R-I-C-A-L spells empirical."
+      }
+    ]
+  }
+]

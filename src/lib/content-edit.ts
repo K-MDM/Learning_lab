@@ -35,7 +35,7 @@ export async function cloneContentDraft(db:DB,actor:string,id:string){
 
 export async function saveContentDraft(db:DB,actor:string,id:string,expectedDigest:string,input:unknown){
   let incoming:Manifest;try{incoming=validateManifest(input);}catch{throw new ContentError(400,'Check lesson IDs, activities, media references and quiz answers.');}
-  try {assertKnownAnswerWriting(incoming);} catch {throw new ContentError(400,'Writing is MCQ-only. Replace typed answers with a quiz containing selectable options.');}
+  try {assertKnownAnswerWriting(incoming);} catch {throw new ContentError(400,'Learner answers use choices or reordering only. Replace text input with selectable options.');}
   return db.transaction(async tx=>{
     await contentStaff(tx,actor,['owner','content_editor']);
     const [release]=await tx.select().from(s.packageReleases).where(eq(s.packageReleases.id,id)).for('update');
